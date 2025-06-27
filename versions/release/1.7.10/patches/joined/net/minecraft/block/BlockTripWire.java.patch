@@ -1,0 +1,11 @@
+--- a/net/minecraft/block/BlockTripWire.java
++++ b/net/minecraft/block/BlockTripWire.java
+@@ -154,7 +154,7 @@
+         int i = p_150140_1_.func_72805_g(p_150140_2_, p_150140_3_, p_150140_4_);
+         boolean flag = (i & 1) == 1;
+         boolean flag1 = false;
+-        List list = p_150140_1_.func_72839_b(
++        List<Entity> list = p_150140_1_.func_72839_b(
+             null,
+             AxisAlignedBB.func_72330_a(
+                 p_150140_2_ + this.field_149759_B,

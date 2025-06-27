@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/storage/MapData.java
++++ b/net/minecraft/world/storage/MapData.java
+@@ -21,7 +21,7 @@
+     public byte[] field_76198_e = new byte[16384];
+     public List field_76196_g = new ArrayList();
+     private Map field_76202_j = new HashMap();
+-    public Map field_76203_h = new LinkedHashMap();
++    public Map<String, MapData.MapCoord> field_76203_h = new LinkedHashMap();
+ 
+     public MapData(String p_i2140_1_) {
+         super(p_i2140_1_);

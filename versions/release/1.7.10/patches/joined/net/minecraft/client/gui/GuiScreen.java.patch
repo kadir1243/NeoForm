@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/gui/GuiScreen.java
++++ b/net/minecraft/client/gui/GuiScreen.java
+@@ -25,7 +25,7 @@
+     protected Minecraft field_146297_k;
+     public int field_146294_l;
+     public int field_146295_m;
+-    protected List field_146292_n = new ArrayList();
++    protected List<GuiButton> field_146292_n = new ArrayList();
+     protected List field_146293_o = new ArrayList();
+     public boolean field_146291_p;
+     protected FontRenderer field_146289_q;
+@@ -89,7 +89,7 @@
+         this.func_146283_a(Arrays.asList(p_146279_1_), p_146279_2_, p_146279_3_);
+     }
+ 
+-    protected void func_146283_a(List p_146283_1_, int p_146283_2_, int p_146283_3_) {
++    protected void func_146283_a(List<String> p_146283_1_, int p_146283_2_, int p_146283_3_) {
+         if (!p_146283_1_.isEmpty()) {
+             GL11.glDisable(32826);
+             RenderHelper.func_74518_a();

@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderCreeper.java
++++ b/net/minecraft/client/renderer/entity/RenderCreeper.java
+@@ -10,7 +10,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderCreeper extends RenderLiving {
++public class RenderCreeper extends RenderLiving<EntityCreeper> {
+     private static final ResourceLocation field_110831_a = new ResourceLocation("textures/entity/creeper/creeper_armor.png");
+     private static final ResourceLocation field_110830_f = new ResourceLocation("textures/entity/creeper/creeper.png");
+     private ModelBase field_77064_a = new ModelCreeper(2.0F);

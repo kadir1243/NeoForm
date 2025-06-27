@@ -1,0 +1,29 @@
+{
+    "java_target": 8,
+    "encoding": "UTF-8",
+    "mcinjector" : {
+        "version" : "de.oceanlabs.mcp:mcinjector:3.8.0:fatjar",
+        "args": ["--in", "{input}", "--out", "{output}", "--log", "{log}", "--exc", "{exceptions}", "--ctr", "{constructors}"]
+    },
+    "fernflower": {
+        "version": "org.vineflower:vineflower:1.11.1",
+        "java_version": 21,
+        "args": ["--decompile-inner", "--remove-bridge", "--decompile-generics", "--ascii-strings", "--remove-synthetic", "--include-classpath", "--variable-renaming=jad", "--ignore-invalid-bytecode", "--bytecode-source-mapping", "--dump-code-lines", "--indent-string=    ", "--log-level=TRACE", "-cfg", "{libraries}", "{input}", "{output}"],
+        "jvmargs": ["-Xmx4G"]
+    },
+    "merge": {
+        "version": "net.neoforged:mergetool:2.0.7:fatjar",
+        "args": ["--client", "{client}", "--server", "{server}", "--ann", "api", "--output", "{output}", "--inject", "false"],
+        "jvmargs": []
+    },
+    "rename": {
+        "version": "net.neoforged:AutoRenamingTool:2.0.8-Patched:all",
+        "args": ["--input", "{input}", "--output", "{output}", "--map", "{mappings}", "--cfg", "{libraries}", "--inject-signatures", "{signaturizer}", "--inner-class-fix", "{exceptor}", "--ann-fix", "--ids-fix", "--src-fix", "--record-fix", "--unfinal-params"],
+        "repo": "https://mymavenrepo.com/repo/y9bmQiqluv2BrIIsqiol/"
+    },
+    "libraries": {
+        "client": ["com.google.code.findbugs:jsr305:3.0.2"],
+        "server": ["com.google.code.findbugs:jsr305:3.0.2"],
+        "joined": ["com.google.code.findbugs:jsr305:3.0.2", "net.neoforged:mergetool:2.0.7:api"]
+    }
+}

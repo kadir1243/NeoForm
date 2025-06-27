@@ -1,0 +1,11 @@
+--- a/net/minecraft/item/crafting/ShapelessRecipes.java
++++ b/net/minecraft/item/crafting/ShapelessRecipes.java
+@@ -22,7 +22,7 @@
+ 
+     @Override
+     public boolean func_77569_a(InventoryCrafting p_77569_1_, World p_77569_2_) {
+-        ArrayList arraylist = new ArrayList(this.field_77579_b);
++        ArrayList<ItemStack> arraylist = new ArrayList(this.field_77579_b);
+ 
+         for (int i = 0; i < 3; i++) {
+             for (int j = 0; j < 3; j++) {

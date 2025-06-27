@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C17PacketCustomPayload.java
++++ b/net/minecraft/network/play/client/C17PacketCustomPayload.java
+@@ -6,7 +6,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayServer;
+ 
+-public class C17PacketCustomPayload extends Packet {
++public class C17PacketCustomPayload extends Packet<INetHandlerPlayServer> {
+     private String field_149562_a;
+     private int field_149560_b;
+     private byte[] field_149561_c;

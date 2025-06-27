@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S07PacketRespawn.java
++++ b/net/minecraft/network/play/server/S07PacketRespawn.java
+@@ -10,7 +10,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S07PacketRespawn extends Packet {
++public class S07PacketRespawn extends Packet<INetHandlerPlayClient> {
+     private int field_149088_a;
+     private EnumDifficulty field_149086_b;
+     private WorldSettings.GameType field_149087_c;

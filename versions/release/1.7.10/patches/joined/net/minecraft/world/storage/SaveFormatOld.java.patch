@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/storage/SaveFormatOld.java
++++ b/net/minecraft/world/storage/SaveFormatOld.java
+@@ -34,7 +34,7 @@
+ 
+     @OnlyIn(Dist.CLIENT)
+     @Override
+-    public List func_75799_b() throws AnvilConverterException {
++    public List<SaveFormatComparator> func_75799_b() throws AnvilConverterException {
+         ArrayList arraylist = new ArrayList();
+ 
+         for (int i = 0; i < 5; i++) {

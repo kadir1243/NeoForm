@@ -1,0 +1,11 @@
+--- a/net/minecraft/item/ItemLead.java
++++ b/net/minecraft/item/ItemLead.java
+@@ -44,7 +44,7 @@
+         EntityLeashKnot entityleashknot = EntityLeashKnot.func_110130_b(p_150909_1_, p_150909_2_, p_150909_3_, p_150909_4_);
+         boolean flag = false;
+         double d0 = 7.0;
+-        List list = p_150909_1_.func_72872_a(
++        List<EntityLiving> list = p_150909_1_.func_72872_a(
+             EntityLiving.class,
+             AxisAlignedBB.func_72330_a(p_150909_2_ - d0, p_150909_3_ - d0, p_150909_4_ - d0, p_150909_2_ + d0, p_150909_3_ + d0, p_150909_4_ + d0)
+         );

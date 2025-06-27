@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderLeashKnot.java
++++ b/net/minecraft/client/renderer/entity/RenderLeashKnot.java
+@@ -8,7 +8,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderLeashKnot extends Render {
++public class RenderLeashKnot extends Render<EntityLeashKnot> {
+     private static final ResourceLocation field_110802_a = new ResourceLocation("textures/entity/lead_knot.png");
+     private ModelLeashKnot field_110801_f = new ModelLeashKnot();
+ 

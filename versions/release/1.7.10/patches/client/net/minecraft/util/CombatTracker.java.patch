@@ -1,0 +1,11 @@
+--- a/net/minecraft/util/CombatTracker.java
++++ b/net/minecraft/util/CombatTracker.java
+@@ -10,7 +10,7 @@
+ import net.minecraft.item.ItemStack;
+ 
+ public class CombatTracker {
+-    private final List field_94556_a = new ArrayList();
++    private final List<CombatEntry> field_94556_a = new ArrayList();
+     private final EntityLivingBase field_94554_b;
+     private int field_94555_c;
+     private int field_152775_d;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/NextTickListEntry.java
++++ b/net/minecraft/world/NextTickListEntry.java
+@@ -2,7 +2,7 @@
+ 
+ import net.minecraft.block.Block;
+ 
+-public class NextTickListEntry implements Comparable {
++public class NextTickListEntry implements Comparable<NextTickListEntry> {
+     private static long field_77177_f;
+     private final Block field_151352_g;
+     public int field_77183_a;

@@ -1,0 +1,19 @@
+--- a/net/minecraft/world/SpawnerAnimals.java
++++ b/net/minecraft/world/SpawnerAnimals.java
+@@ -17,7 +17,7 @@
+ import net.minecraft.world.chunk.Chunk;
+ 
+ public final class SpawnerAnimals {
+-    private HashMap field_77193_b = new HashMap();
++    private HashMap<ChunkCoordIntPair, Boolean> field_77193_b = new HashMap();
+ 
+     protected static ChunkPosition func_151350_a(World p_151350_0_, int p_151350_1_, int p_151350_2_) {
+         Chunk chunk = p_151350_0_.func_72964_e(p_151350_1_, p_151350_2_);
+@@ -100,6 +100,7 @@
+                                                         }
+                                                     }
+ 
++                                                    EntityLiving entityliving;
+                                                     try {
+                                                         entityliving = (EntityLiving)biomegenbase$spawnlistentry.field_76300_b
+                                                             .getConstructor(World.class)

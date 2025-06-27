@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S06PacketUpdateHealth.java
++++ b/net/minecraft/network/play/server/S06PacketUpdateHealth.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayClient;
+ 
+-public class S06PacketUpdateHealth extends Packet {
++public class S06PacketUpdateHealth extends Packet<INetHandlerPlayClient> {
+     private float field_149336_a;
+     private int field_149334_b;
+     private float field_149335_c;

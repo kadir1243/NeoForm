@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S2APacketParticles.java
++++ b/net/minecraft/network/play/server/S2APacketParticles.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S2APacketParticles extends Packet {
++public class S2APacketParticles extends Packet<INetHandlerPlayClient> {
+     private String field_149236_a;
+     private float field_149234_b;
+     private float field_149235_c;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S03PacketTimeUpdate.java
++++ b/net/minecraft/network/play/server/S03PacketTimeUpdate.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayClient;
+ 
+-public class S03PacketTimeUpdate extends Packet {
++public class S03PacketTimeUpdate extends Packet<INetHandlerPlayClient> {
+     private long field_149369_a;
+     private long field_149368_b;
+ 

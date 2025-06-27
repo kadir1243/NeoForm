@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S40PacketDisconnect.java
++++ b/net/minecraft/network/play/server/S40PacketDisconnect.java
+@@ -8,7 +8,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S40PacketDisconnect extends Packet {
++public class S40PacketDisconnect extends Packet<INetHandlerPlayClient> {
+     private IChatComponent field_149167_a;
+ 
+     public S40PacketDisconnect() {

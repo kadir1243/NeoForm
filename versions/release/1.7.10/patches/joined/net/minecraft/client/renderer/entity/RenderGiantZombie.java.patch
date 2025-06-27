@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderGiantZombie.java
++++ b/net/minecraft/client/renderer/entity/RenderGiantZombie.java
+@@ -8,7 +8,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderGiantZombie extends RenderLiving {
++public class RenderGiantZombie extends RenderLiving<EntityGiantZombie> {
+     private static final ResourceLocation field_110871_a = new ResourceLocation("textures/entity/zombie/zombie.png");
+     private float field_77073_a;
+ 

@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/player/EntityPlayer.java
++++ b/net/minecraft/entity/player/EntityPlayer.java
+@@ -537,7 +537,7 @@
+     @Override
+     public void func_70084_c(Entity p_70084_1_, int p_70084_2_) {
+         this.func_85039_t(p_70084_2_);
+-        Collection collection = this.func_96123_co().func_96520_a(IScoreObjectiveCriteria.field_96640_e);
++        Collection<ScoreObjective> collection = this.func_96123_co().func_96520_a(IScoreObjectiveCriteria.field_96640_e);
+         if (p_70084_1_ instanceof EntityPlayer) {
+             this.func_71064_a(StatList.field_75932_A, 1);
+             collection.addAll(this.func_96123_co().func_96520_a(IScoreObjectiveCriteria.field_96639_d));

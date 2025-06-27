@@ -1,0 +1,22 @@
+--- a/net/minecraft/entity/ai/EntityAITasks.java
++++ b/net/minecraft/entity/ai/EntityAITasks.java
+@@ -9,8 +9,8 @@
+ 
+ public class EntityAITasks {
+     private static final Logger field_151506_a = LogManager.getLogger();
+-    private List field_75782_a = new ArrayList();
+-    private List field_75780_b = new ArrayList();
++    private List<EntityAITasks.EntityAITaskEntry> field_75782_a = new ArrayList();
++    private List<EntityAITasks.EntityAITaskEntry> field_75780_b = new ArrayList();
+     private final Profiler field_75781_c;
+     private int field_75778_d;
+     private int field_75779_e = 3;
+@@ -41,7 +41,7 @@
+     }
+ 
+     public void func_75774_a() {
+-        ArrayList arraylist = new ArrayList();
++        ArrayList<EntityAITasks.EntityAITaskEntry> arraylist = new ArrayList();
+         if (this.field_75778_d++ % this.field_75779_e == 0) {
+             for (EntityAITasks.EntityAITaskEntry entityaitasks$entityaitaskentry : this.field_75782_a) {
+                 boolean flag = this.field_75780_b.contains(entityaitasks$entityaitaskentry);

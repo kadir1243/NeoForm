@@ -11,7 +11,7 @@ import net.neoforged.srgutils.*
 public abstract class RenameSources extends DefaultTask {
     @InputDirectory abstract RegularFileProperty getInput()
     @InputFile abstract RegularFileProperty getSrg()
-    @InputFile abstract RegularFileProperty getOfficial()
+    @InputFile @Optional abstract RegularFileProperty getOfficial()
     @OutputDirectory abstract RegularFileProperty getDest()
     
     @TaskAction
@@ -46,6 +46,7 @@ public abstract class RenameSources extends DefaultTask {
     
     def loadMappings() {
         def ret = [:]
+        if (!getOfficial().isPresent()) return ret
         def msrg = IMappingFile.load(srg.get().getAsFile())
         def moff = IMappingFile.load(official.get().getAsFile()).reverse()
         msrg.classes.each{scls -> 

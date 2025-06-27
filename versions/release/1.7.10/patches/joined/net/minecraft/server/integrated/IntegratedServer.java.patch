@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/integrated/IntegratedServer.java
++++ b/net/minecraft/server/integrated/IntegratedServer.java
+@@ -99,7 +99,7 @@
+     }
+ 
+     @Override
+-    protected void func_71217_p() {
++    public void func_71217_p() {
+         boolean flag = this.field_71348_o;
+         this.field_71348_o = Minecraft.func_71410_x().func_147114_u() != null && Minecraft.func_71410_x().func_147113_T();
+         if (!flag && this.field_71348_o) {

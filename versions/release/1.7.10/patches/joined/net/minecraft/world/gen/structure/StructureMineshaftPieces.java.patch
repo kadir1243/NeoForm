@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/gen/structure/StructureMineshaftPieces.java
++++ b/net/minecraft/world/gen/structure/StructureMineshaftPieces.java
+@@ -884,7 +884,7 @@
+     }
+ 
+     public static class Room extends StructureComponent {
+-        private List field_74949_a = new LinkedList();
++        private List<StructureBoundingBox> field_74949_a = new LinkedList();
+ 
+         public Room() {
+         }

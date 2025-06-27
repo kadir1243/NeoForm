@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/monster/EntityWitch.java
++++ b/net/minecraft/entity/monster/EntityWitch.java
+@@ -104,7 +104,7 @@
+                     ItemStack itemstack = this.func_70694_bm();
+                     this.func_70062_b(0, null);
+                     if (itemstack != null && itemstack.func_77973_b() == Items.field_151068_bn) {
+-                        List list = Items.field_151068_bn.func_77832_l(itemstack);
++                        List<PotionEffect> list = Items.field_151068_bn.func_77832_l(itemstack);
+                         if (list != null) {
+                             for (PotionEffect potioneffect : list) {
+                                 this.func_70690_d(new PotionEffect(potioneffect));

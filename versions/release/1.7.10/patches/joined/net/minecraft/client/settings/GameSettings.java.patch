@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/settings/GameSettings.java
++++ b/net/minecraft/client/settings/GameSettings.java
+@@ -76,7 +76,7 @@
+     public boolean field_74347_j = true;
+     public int field_74348_k = 2;
+     public boolean field_74345_l = true;
+-    public List field_151453_l = new ArrayList();
++    public List<String> field_151453_l = new ArrayList();
+     public EntityPlayer.EnumChatVisibility field_74343_n = EntityPlayer.EnumChatVisibility.FULL;
+     public boolean field_74344_o = true;
+     public boolean field_74359_p = true;

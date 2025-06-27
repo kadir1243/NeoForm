@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C15PacketClientSettings.java
++++ b/net/minecraft/network/play/client/C15PacketClientSettings.java
+@@ -9,7 +9,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class C15PacketClientSettings extends Packet {
++public class C15PacketClientSettings extends Packet<INetHandlerPlayServer> {
+     private String field_149530_a;
+     private int field_149528_b;
+     private EntityPlayer.EnumChatVisibility field_149529_c;

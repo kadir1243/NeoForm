@@ -1,0 +1,11 @@
+--- a/net/minecraft/stats/StatFileWriter.java
++++ b/net/minecraft/stats/StatFileWriter.java
+@@ -7,7 +7,7 @@
+ import net.minecraft.util.TupleIntJsonSerializable;
+ 
+ public class StatFileWriter {
+-    protected final Map field_150875_a = Maps.newConcurrentMap();
++    protected final Map<StatBase, TupleIntJsonSerializable> field_150875_a = Maps.newConcurrentMap();
+ 
+     public boolean func_77443_a(Achievement p_77443_1_) {
+         return this.func_77444_a(p_77443_1_) > 0;

@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/renderer/entity/RenderDragon.java
++++ b/net/minecraft/client/renderer/entity/RenderDragon.java
+@@ -15,7 +15,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderDragon extends RenderLiving {
++public class RenderDragon extends RenderLiving<EntityDragon> {
+     private static final ResourceLocation field_110842_f = new ResourceLocation("textures/entity/enderdragon/dragon_exploding.png");
+     private static final ResourceLocation field_110843_g = new ResourceLocation("textures/entity/endercrystal/endercrystal_beam.png");
+     private static final ResourceLocation field_110845_h = new ResourceLocation("textures/entity/enderdragon/dragon_eyes.png");
+@@ -75,7 +75,7 @@
+ 
+     public void func_76986_a(EntityDragon p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
+         BossStatus.func_82824_a(p_76986_1_, false);
+-        super.func_76986_a((EntityLiving)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
++        super.func_76986_a(p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+         if (p_76986_1_.field_70992_bH != null) {
+             float f = p_76986_1_.field_70992_bH.field_70261_a + p_76986_9_;
+             float f1 = MathHelper.func_76126_a(f * 0.2F) / 2.0F + 0.5F;

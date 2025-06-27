@@ -1,0 +1,11 @@
+--- a/net/minecraft/scoreboard/ScoreHealthCriteria.java
++++ b/net/minecraft/scoreboard/ScoreHealthCriteria.java
+@@ -10,7 +10,7 @@
+     }
+ 
+     @Override
+-    public int func_96635_a(List p_96635_1_) {
++    public int func_96635_a(List<EntityPlayer> p_96635_1_) {
+         float f = 0.0F;
+ 
+         for (EntityPlayer entityplayer : p_96635_1_) {

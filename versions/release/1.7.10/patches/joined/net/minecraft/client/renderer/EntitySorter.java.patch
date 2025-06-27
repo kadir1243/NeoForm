@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/EntitySorter.java
++++ b/net/minecraft/client/renderer/EntitySorter.java
+@@ -6,7 +6,7 @@
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class EntitySorter implements Comparator {
++public class EntitySorter implements Comparator<WorldRenderer> {
+     private double field_78949_a;
+     private double field_78947_b;
+     private double field_78948_c;

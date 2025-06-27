@@ -214,6 +214,7 @@ subprojects {
         quiet true
     }
     ['client', 'server', 'client_mappings', 'server_mappings'].each { id ->
+        if (!CONFIG.official && id.endsWith("_mappings")) return
         def name = 'download' + id.replace('_m', 'M').capitalize()
         task "${name}"(type: Download, dependsOn: downloadJson) {
             def json = downloadJson.dest
@@ -288,7 +289,8 @@ subprojects {
         dest = file(PATH_CACHED_VERSION + 'joined.jar')
     }
 
-    task makeObfToIntermediate(type: CONFIG.mergemap ? MergeMappings : RenameMappings, dependsOn: [downloadClientMappings]) {
+    task makeObfToIntermediate(type: CONFIG.mergemap ? MergeMappings : RenameMappings) {
+        if (CONFIG.official) dependsOn(downloadClientMappings)
         if (CONFIG.mergemap) {
             config MERGEMAPTOOL, configurations.mergemaptool
             mappings = file('joined.tsrg')
@@ -326,6 +328,8 @@ subprojects {
             input = 'joined'.equals(s) ? child.slim.dest : child.slim.slim
             mappings = makeObfToIntermediate.dest
             libraries = child.libraries.dest
+            exceptor = project.file('exceptor.json')
+            signaturizer = project.file('signaturizer.json')
             dest = file(PATH_CACHED_VERSION + s + '.mapped.jar')
             log = file(PATH_CACHED_VERSION + s + '.mapped.log')
         }
@@ -335,7 +339,7 @@ subprojects {
                 config MCINJECTOR, configurations.mcinjector
                 access = makeEmptyFile.dest //fixAccessLevels.dest
                 constructors = project.file('constructors.txt')
-                exceptions = makeEmptyFile.dest //makeExceptions.dest
+                exceptions = project.file('exceptions.txt')
                 doFirst {
                     standardOutput = JarExec.NULL_OUTPUT
                 }
@@ -437,7 +441,8 @@ subprojects {
             from zipTree(deduplicateSources.duplicates)
             into project.file('projects/shared')
         }
-        task renameSourcesShared(type: RenameSources, dependsOn: [projectSharedApplyPatches, makeObfToIntermediate, downloadClientMappings]) {
+        task renameSourcesShared(type: RenameSources, dependsOn: [projectSharedApplyPatches, makeObfToIntermediate]) {
+            if (CONFIG.official) dependsOn(downloadClientMappings)
             input = projectSharedApplyPatches.output
             srg = makeObfToIntermediate.dest
             official = downloadClientMappings.dest
@@ -511,10 +516,12 @@ subprojects {
         }
         projectMakeAll.dependsOn child.makePatches
         
-        child.renameSources = task "renameSources${child.Name}"(type: RenameSources, dependsOn: [child.apply, makeObfToIntermediate, downloadClientMappings] + (MERGE_PATCHES ? [renameSourcesShared] : [])) {
+        child.renameSources = task "renameSources${child.Name}"(type: RenameSources, dependsOn: [child.apply, makeObfToIntermediate] + (MERGE_PATCHES ? [renameSourcesShared] : [])) {
+            if (CONFIG.official) dependsOn(downloadClientMappings)
             input = new File(project_dir, 'src/main/java')
             srg = makeObfToIntermediate.dest
-            official = downloadClientMappings.dest
+            if (CONFIG.official)
+                official = downloadClientMappings.dest
             dest = project.file(PATH_CACHED_VERSION + "test/official/${side}/src/")
         }
         
@@ -531,22 +538,10 @@ subprojects {
         def jdks = [
             [name: 'hotspot8',   Name: 'HotSpot8',   version: 8,  official: false],
             [name: 'hotspot11',  Name: 'HotSpot11',  version: 11, official: false],
-            [name: 'hotspot15',  Name: 'HotSpot15',  version: 15, official: false],
-            [name: 'hotspot16',  Name: 'HotSpot16',  version: 16, official: false],
             [name: 'hotspot17',  Name: 'HotSpot17',  version: 17, official: false],
-            [name: 'hotspot18',  Name: 'HotSpot18',  version: 18, official: false],
-            [name: 'hotspot19',  Name: 'HotSpot19',  version: 19, official: false],
-            [name: 'hotspot20',  Name: 'HotSpot20',  version: 20, official: false],
             [name: 'hotspot21',  Name: 'HotSpot21',  version: 21, official: false],
-            [name: 'hotspot22',  Name: 'HotSpot22',  version: 22, official: false],
-            [name: 'hotspot23',  Name: 'HotSpot23',  version: 23, official: false],
-            [name: 'hotspot24',  Name: 'HotSpot24',  version: 24, official: false],
             [name: 'official8',  Name: 'Official8',  version: 8,  official: true ],
-            [name: 'official16', Name: 'Official16', version: 16, official: true ],
             [name: 'official17', Name: 'Official17', version: 17, official: true ],
-            [name: 'official18', Name: 'Official18', version: 18, official: true ],
-            [name: 'official19', Name: 'Official19', version: 19, official: true ],
-            [name: 'official20', Name: 'Official20', version: 20, official: true ],
             [name: 'official21', Name: 'Official21', version: 21, official: true ]
         ]
         jdks.findAll{ it.version >= JAVA_TARGET }.each{ jdk ->
@@ -616,7 +611,7 @@ subprojects {
         inputs.property('mergetool', MERGETOOL)
         inputs.property('renametool', RENAMETOOL)
         inputs.property('mergemaptool', MERGEMAPTOOL)
-        inputs.property('bundle_extract_jar', BUNDLE_EXTRACT_JAR)
+        inputs.property('bundle_extract_jar', BUNDLE_EXTRACT_JAR).optional(true)
         inputs.property('java_target', JAVA_TARGET)
         inputs.property('encoding', ENCODING)
         dest = file(PATH_CACHED_VERSION_DATA + 'config.json')
@@ -760,6 +755,8 @@ subprojects {
                     data {
                         access 'config/access.txt'
                         constructors 'config/constructors.txt'
+                        exceptor 'config/exceptor.json'
+                        signaturizer 'config/signaturizer.json'
                         exceptions 'config/exceptions.txt'
                         mappings 'config/joined.tsrg'
                         inject 'config/inject/'
@@ -791,6 +788,11 @@ subprojects {
 
         from generateConfiguration
         from(file('joined.tsrg')){ into 'config/' }
+
+        if (file('constructors.txt').exists()) { from(file('constructors.txt')) { into 'config/' } }
+        if (file('exceptions.txt').exists()) { from(file('exceptions.txt')) { into 'config/' } }
+        if (file('exceptor.json').exists()) { from(file('exceptor.json')) { into 'config/' } }
+        if (file('signaturizer.json').exists()) { from(file('signaturizer.json')) { into 'config/' } }
 
         def patches = file('patches')
         if (patches.exists()) {

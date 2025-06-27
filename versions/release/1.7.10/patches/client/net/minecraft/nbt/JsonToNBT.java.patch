@@ -1,0 +1,20 @@
+--- a/net/minecraft/nbt/JsonToNBT.java
++++ b/net/minecraft/nbt/JsonToNBT.java
+@@ -266,7 +266,7 @@
+     }
+ 
+     static class Compound extends JsonToNBT.Any {
+-        protected ArrayList field_150491_b = new ArrayList();
++        protected ArrayList<JsonToNBT.Any> field_150491_b = new ArrayList();
+ 
+         public Compound(String p_i45137_1_) {
+             this.field_150490_a = p_i45137_1_;
+@@ -285,7 +285,7 @@
+     }
+ 
+     static class List extends JsonToNBT.Any {
+-        protected ArrayList field_150492_b = new ArrayList();
++        protected ArrayList<JsonToNBT.Any> field_150492_b = new ArrayList();
+ 
+         public List(String p_i45138_1_) {
+             this.field_150490_a = p_i45138_1_;

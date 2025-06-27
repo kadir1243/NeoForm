@@ -1,0 +1,62 @@
+--- a/net/minecraft/client/main/Main.java
++++ b/net/minecraft/client/main/Main.java
+@@ -62,29 +62,29 @@
+         optionparser.allowsUnrecognizedOptions();
+         optionparser.accepts("demo");
+         optionparser.accepts("fullscreen");
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec = optionparser.accepts("server").withRequiredArg();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec1 = optionparser.accepts("port").withRequiredArg().ofType(Integer.class).defaultsTo(25565);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec2 = optionparser.accepts("gameDir")
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec = optionparser.accepts("server").withRequiredArg();
++        ArgumentAcceptingOptionSpec<Integer> argumentacceptingoptionspec1 = optionparser.accepts("port").withRequiredArg().ofType(Integer.class).defaultsTo(25565);
++        ArgumentAcceptingOptionSpec<File> argumentacceptingoptionspec2 = optionparser.accepts("gameDir")
+             .withRequiredArg()
+             .ofType(File.class)
+             .defaultsTo(new File("."));
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec3 = optionparser.accepts("assetsDir").withRequiredArg().ofType(File.class);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec4 = optionparser.accepts("resourcePackDir").withRequiredArg().ofType(File.class);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec5 = optionparser.accepts("proxyHost").withRequiredArg();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec6 = optionparser.accepts("proxyPort").withRequiredArg().defaultsTo("8080").ofType(Integer.class);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec7 = optionparser.accepts("proxyUser").withRequiredArg();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec8 = optionparser.accepts("proxyPass").withRequiredArg();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec9 = optionparser.accepts("username")
++        ArgumentAcceptingOptionSpec<File> argumentacceptingoptionspec3 = optionparser.accepts("assetsDir").withRequiredArg().ofType(File.class);
++        ArgumentAcceptingOptionSpec<File> argumentacceptingoptionspec4 = optionparser.accepts("resourcePackDir").withRequiredArg().ofType(File.class);
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec5 = optionparser.accepts("proxyHost").withRequiredArg();
++        ArgumentAcceptingOptionSpec<Integer> argumentacceptingoptionspec6 = optionparser.accepts("proxyPort").withRequiredArg().defaultsTo("8080").ofType(Integer.class);
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec7 = optionparser.accepts("proxyUser").withRequiredArg();
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec8 = optionparser.accepts("proxyPass").withRequiredArg();
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec9 = optionparser.accepts("username")
+             .withRequiredArg()
+             .defaultsTo("Player" + Minecraft.func_71386_F() % 1000L);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec10 = optionparser.accepts("uuid").withRequiredArg();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec11 = optionparser.accepts("accessToken").withRequiredArg().required();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec12 = optionparser.accepts("version").withRequiredArg().required();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec13 = optionparser.accepts("width").withRequiredArg().ofType(Integer.class).defaultsTo(854);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec14 = optionparser.accepts("height").withRequiredArg().ofType(Integer.class).defaultsTo(480);
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec15 = optionparser.accepts("userProperties").withRequiredArg().required();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec16 = optionparser.accepts("assetIndex").withRequiredArg();
+-        ArgumentAcceptingOptionSpec argumentacceptingoptionspec17 = optionparser.accepts("userType").withRequiredArg().defaultsTo("legacy");
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec10 = optionparser.accepts("uuid").withRequiredArg();
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec11 = optionparser.accepts("accessToken").withRequiredArg().required();
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec12 = optionparser.accepts("version").withRequiredArg().required();
++        ArgumentAcceptingOptionSpec<Integer> argumentacceptingoptionspec13 = optionparser.accepts("width").withRequiredArg().ofType(Integer.class).defaultsTo(854);
++        ArgumentAcceptingOptionSpec<Integer> argumentacceptingoptionspec14 = optionparser.accepts("height").withRequiredArg().ofType(Integer.class).defaultsTo(480);
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec15 = optionparser.accepts("userProperties").withRequiredArg().required();
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec16 = optionparser.accepts("assetIndex").withRequiredArg();
++        ArgumentAcceptingOptionSpec<String> argumentacceptingoptionspec17 = optionparser.accepts("userType").withRequiredArg().defaultsTo("legacy");
+         NonOptionArgumentSpec nonoptionargumentspec = optionparser.nonOptions();
+         OptionSet optionset = optionparser.parse(p_main_0_);
+         List list = optionset.valuesOf(nonoptionargumentspec);
+@@ -113,9 +113,9 @@
+         boolean flag = optionset.has("fullscreen");
+         boolean flag1 = optionset.has("demo");
+         String s3 = optionset.valueOf(argumentacceptingoptionspec12);
+-        HashMultimap hashmultimap = HashMultimap.create();
++        HashMultimap<String, String> hashmultimap = HashMultimap.create();
+ 
+-        for (Entry entry : new Gson().<Map>fromJson(optionset.valueOf(argumentacceptingoptionspec15), field_152370_a).entrySet()) {
++        for (Entry<String, Iterable<String>> entry : new Gson().<Map<String, Iterable<String>>>fromJson(optionset.valueOf(argumentacceptingoptionspec15), field_152370_a).entrySet()) {
+             hashmultimap.putAll(entry.getKey(), (Iterable)entry.getValue());
+         }
+ 

@@ -1,0 +1,19 @@
+--- a/net/minecraft/client/resources/data/LanguageMetadataSection.java
++++ b/net/minecraft/client/resources/data/LanguageMetadataSection.java
+@@ -6,13 +6,13 @@
+ 
+ @OnlyIn(Dist.CLIENT)
+ public class LanguageMetadataSection implements IMetadataSection {
+-    private final Collection field_135019_a;
++    private final Collection<net.minecraft.client.resources.Language> field_135019_a;
+ 
+-    public LanguageMetadataSection(Collection p_i1311_1_) {
++    public LanguageMetadataSection(Collection<net.minecraft.client.resources.Language> p_i1311_1_) {
+         this.field_135019_a = p_i1311_1_;
+     }
+ 
+-    public Collection func_135018_a() {
++    public Collection<net.minecraft.client.resources.Language> func_135018_a() {
+         return this.field_135019_a;
+     }
+ }

@@ -1,0 +1,74 @@
+--- a/net/minecraft/item/ItemPotion.java
++++ b/net/minecraft/item/ItemPotion.java
+@@ -28,7 +28,7 @@
+ 
+ public class ItemPotion extends Item {
+     private HashMap field_77836_a = new HashMap();
+-    private static final Map field_77835_b = new LinkedHashMap();
++    private static final Map<List, Integer> field_77835_b = new LinkedHashMap();
+     @OnlyIn(Dist.CLIENT)
+     private IIcon field_94591_c;
+     @OnlyIn(Dist.CLIENT)
+@@ -43,7 +43,7 @@
+         this.func_77637_a(CreativeTabs.field_78038_k);
+     }
+ 
+-    public List func_77832_l(ItemStack p_77832_1_) {
++    public List<PotionEffect> func_77832_l(ItemStack p_77832_1_) {
+         if (p_77832_1_.func_77942_o() && p_77832_1_.func_77978_p().func_150297_b("CustomPotionEffects", 9)) {
+             ArrayList arraylist = new ArrayList();
+             NBTTagList nbttaglist = p_77832_1_.func_77978_p().func_150295_c("CustomPotionEffects", 10);
+@@ -68,7 +68,7 @@
+         }
+     }
+ 
+-    public List func_77834_f(int p_77834_1_) {
++    public List<PotionEffect> func_77834_f(int p_77834_1_) {
+         List list = (List)this.field_77836_a.get(p_77834_1_);
+         if (list == null) {
+             list = PotionHelper.func_77917_b(p_77834_1_, false);
+@@ -85,7 +85,7 @@
+         }
+ 
+         if (!p_77654_2_.field_72995_K) {
+-            List list = this.func_77832_l(p_77654_1_);
++            List<PotionEffect> list = this.func_77832_l(p_77654_1_);
+             if (list != null) {
+                 for (PotionEffect potioneffect : list) {
+                     p_77654_3_.func_70690_d(new PotionEffect(potioneffect));
+@@ -184,7 +184,7 @@
+ 
+     @OnlyIn(Dist.CLIENT)
+     public boolean func_77833_h(int p_77833_1_) {
+-        List list = this.func_77834_f(p_77833_1_);
++        List<PotionEffect> list = this.func_77834_f(p_77833_1_);
+         if (list != null && !list.isEmpty()) {
+             for (PotionEffect potioneffect : list) {
+                 if (Potion.field_76425_a[potioneffect.func_76456_a()].func_76403_b()) {
+@@ -224,13 +224,13 @@
+     @Override
+     public void func_77624_a(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List p_77624_3_, boolean p_77624_4_) {
+         if (p_77624_1_.func_77960_j() != 0) {
+-            List list = Items.field_151068_bn.func_77832_l(p_77624_1_);
+-            HashMultimap hashmultimap = HashMultimap.create();
++            List<PotionEffect> list = Items.field_151068_bn.func_77832_l(p_77624_1_);
++            HashMultimap<String, AttributeModifier> hashmultimap = HashMultimap.create();
+             if (list != null && !list.isEmpty()) {
+                 for (PotionEffect potioneffect : list) {
+-                    Object object1 = StatCollector.func_74838_a(potioneffect.func_76453_d()).trim();
++                    String object1 = StatCollector.func_74838_a(potioneffect.func_76453_d()).trim();
+                     Potion potion = Potion.field_76425_a[potioneffect.func_76456_a()];
+-                    Map map = potion.func_111186_k();
++                    Map<IAttribute, AttributeModifier> map = potion.func_111186_k();
+                     if (map != null && map.size() > 0) {
+                         for (Entry entry : map.entrySet()) {
+                             AttributeModifier attributemodifier = (AttributeModifier)entry.getValue();
+@@ -258,7 +258,7 @@
+                     }
+                 }
+             } else {
+-                Object object = StatCollector.func_74838_a("potion.empty").trim();
++                String object = StatCollector.func_74838_a("potion.empty").trim();
+                 p_77624_3_.add(EnumChatFormatting.GRAY + object);
+             }
+ 

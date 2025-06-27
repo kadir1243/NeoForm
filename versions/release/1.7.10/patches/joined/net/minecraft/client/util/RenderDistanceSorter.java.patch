@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/util/RenderDistanceSorter.java
++++ b/net/minecraft/client/util/RenderDistanceSorter.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderDistanceSorter implements Comparator {
++public class RenderDistanceSorter implements Comparator<RenderList> {
+     int field_152632_a;
+     int field_152633_b;
+ 

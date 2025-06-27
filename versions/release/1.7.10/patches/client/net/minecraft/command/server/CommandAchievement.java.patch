@@ -1,0 +1,11 @@
+--- a/net/minecraft/command/server/CommandAchievement.java
++++ b/net/minecraft/command/server/CommandAchievement.java
+@@ -56,7 +56,7 @@
+                     if (statbase instanceof Achievement) {
+                         Achievement achievement2 = (Achievement)statbase;
+ 
+-                        ArrayList arraylist;
++                        ArrayList<Achievement> arraylist;
+                         for (arraylist = Lists.newArrayList();
+                             achievement2.field_75992_c != null && !entityplayermp.func_147099_x().func_77443_a(achievement2.field_75992_c);
+                             achievement2 = achievement2.field_75992_c

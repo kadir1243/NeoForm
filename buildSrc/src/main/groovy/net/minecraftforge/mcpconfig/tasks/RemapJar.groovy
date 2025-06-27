@@ -12,6 +12,16 @@ abstract class RemapJar extends ToolJarExec {
 
     @PathSensitive(PathSensitivity.NONE)
     @InputFile
+    @Optional
+    abstract RegularFileProperty getExceptor()
+
+    @PathSensitive(PathSensitivity.NONE)
+    @InputFile
+    @Optional
+    abstract RegularFileProperty getSignaturizer()
+
+    @PathSensitive(PathSensitivity.NONE)
+    @InputFile
     abstract RegularFileProperty getInput()
 
     @PathSensitive(PathSensitivity.NONE)
@@ -20,7 +30,7 @@ abstract class RemapJar extends ToolJarExec {
 
     @OutputFile abstract RegularFileProperty getDest()
     @OutputFile @Optional abstract RegularFileProperty getLog()
-    
+
     @Override
     protected void preExec() {
         def logStream = log.isPresent() ? log.get().getAsFile().newOutputStream() : JarExec.NULL_OUTPUT
@@ -30,7 +40,9 @@ abstract class RemapJar extends ToolJarExec {
             'mappings': mappings.get().getAsFile().absolutePath,
             'input': input.get().getAsFile().absolutePath,
             'output': dest.get().getAsFile().absolutePath,
-            'libraries': libraries.get().getAsFile().absolutePath
+            'libraries': libraries.get().getAsFile().absolutePath,
+            'exceptor': exceptor.map {it -> it.getAsFile()}.getOrNull(),
+            'signaturizer': signaturizer.map {it -> it.getAsFile()}.getOrNull()
         ]))
     }
 }

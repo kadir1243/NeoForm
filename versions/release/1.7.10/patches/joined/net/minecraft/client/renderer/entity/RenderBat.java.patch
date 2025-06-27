@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/renderer/entity/RenderBat.java
++++ b/net/minecraft/client/renderer/entity/RenderBat.java
+@@ -10,7 +10,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderBat extends RenderLiving {
++public class RenderBat extends RenderLiving<EntityBat> {
+     private static final ResourceLocation field_110835_a = new ResourceLocation("textures/entity/bat.png");
+     private int field_82446_a = ((ModelBat)this.field_77045_g).func_82889_a();
+ 
+@@ -25,7 +25,7 @@
+             this.field_77045_g = new ModelBat();
+         }
+ 
+-        super.func_76986_a((EntityLiving)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
++        super.func_76986_a(p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+     }
+ 
+     protected ResourceLocation func_110775_a(EntityBat p_110775_1_) {

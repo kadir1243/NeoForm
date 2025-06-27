@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/GuiDisconnected.java
++++ b/net/minecraft/client/gui/GuiDisconnected.java
+@@ -10,7 +10,7 @@
+ public class GuiDisconnected extends GuiScreen {
+     private String field_146306_a;
+     private IChatComponent field_146304_f;
+-    private List field_146305_g;
++    private List<String> field_146305_g;
+     private final GuiScreen field_146307_h;
+ 
+     public GuiDisconnected(GuiScreen p_i45020_1_, String p_i45020_2_, IChatComponent p_i45020_3_) {

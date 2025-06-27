@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/ai/EntityAIHurtByTarget.java
++++ b/net/minecraft/entity/ai/EntityAIHurtByTarget.java
+@@ -26,7 +26,7 @@
+         if (this.field_75312_a) {
+             double d0 = this.func_111175_f();
+ 
+-            for (EntityCreature entitycreature : this.field_75299_d
++            for (EntityCreature entitycreature : (Iterable<EntityCreature>)this.field_75299_d
+                 .field_70170_p
+                 .func_72872_a(
+                     this.field_75299_d.getClass(),

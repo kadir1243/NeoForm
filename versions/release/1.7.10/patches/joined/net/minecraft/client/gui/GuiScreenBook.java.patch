@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/GuiScreenBook.java
++++ b/net/minecraft/client/gui/GuiScreenBook.java
+@@ -313,7 +313,7 @@
+             this.field_146289_q.func_78276_b(s1, i + 36 + (116 - j) / 2, b0 + 16 + 16, 0);
+             int k = this.field_146289_q.func_78256_a(s);
+             this.field_146289_q.func_78276_b(s, i + 36 + (116 - k) / 2, b0 + 48, 0);
+-            Object object = I18n.func_135052_a("book.byAuthor", this.field_146468_g.func_70005_c_());
++            String object = I18n.func_135052_a("book.byAuthor", this.field_146468_g.func_70005_c_());
+             int l = this.field_146289_q.func_78256_a((String)object);
+             this.field_146289_q.func_78276_b(EnumChatFormatting.DARK_GRAY + object, i + 36 + (116 - l) / 2, b0 + 48 + 10, 0);
+             String s2 = I18n.func_135052_a("book.finalizeWarning");

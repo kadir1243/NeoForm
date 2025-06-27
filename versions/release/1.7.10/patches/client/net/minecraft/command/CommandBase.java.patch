@@ -1,0 +1,14 @@
+--- a/net/minecraft/command/CommandBase.java
++++ b/net/minecraft/command/CommandBase.java
+@@ -313,9 +313,9 @@
+         return arraylist;
+     }
+ 
+-    public static List func_71531_a(String[] p_71531_0_, Iterable p_71531_1_) {
++    public static List<String> func_71531_a(String[] p_71531_0_, Iterable<String> p_71531_1_) {
+         String s = p_71531_0_[p_71531_0_.length - 1];
+-        ArrayList arraylist = new ArrayList();
++        ArrayList<String> arraylist = new ArrayList();
+ 
+         for (String s1 : p_71531_1_) {
+             if (func_71523_a(s, s1)) {

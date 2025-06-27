@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/gen/structure/MapGenMineshaft.java
++++ b/net/minecraft/world/gen/structure/MapGenMineshaft.java
+@@ -15,7 +15,7 @@
+         return "Mineshaft";
+     }
+ 
+-    public MapGenMineshaft(Map p_i2034_1_) {
++    public MapGenMineshaft(Map<String, String> p_i2034_1_) {
+         for (Entry entry : p_i2034_1_.entrySet()) {
+             if (((String)entry.getKey()).equals("chance")) {
+                 this.field_82673_e = MathHelper.func_82712_a((String)entry.getValue(), this.field_82673_e);

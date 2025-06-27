@@ -1,0 +1,11 @@
+--- a/net/minecraft/util/MessageSerializer.java
++++ b/net/minecraft/util/MessageSerializer.java
+@@ -14,7 +14,7 @@
+ import org.apache.logging.log4j.Marker;
+ import org.apache.logging.log4j.MarkerManager;
+ 
+-public class MessageSerializer extends MessageToByteEncoder {
++public class MessageSerializer extends MessageToByteEncoder<Packet> {
+     private static final Logger field_150798_a = LogManager.getLogger();
+     private static final Marker field_150797_b = MarkerManager.getMarker("PACKET_SENT", NetworkManager.field_150738_b);
+     private final NetworkStatistics field_152500_c;

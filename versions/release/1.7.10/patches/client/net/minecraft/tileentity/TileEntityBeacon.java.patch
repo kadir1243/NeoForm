@@ -1,0 +1,20 @@
+--- a/net/minecraft/tileentity/TileEntityBeacon.java
++++ b/net/minecraft/tileentity/TileEntityBeacon.java
+@@ -49,7 +49,7 @@
+                 )
+                 .func_72314_b(d0, d0, d0);
+             axisalignedbb.field_72337_e = this.field_145850_b.func_72800_K();
+-            List list = this.field_145850_b.func_72872_a(EntityPlayer.class, axisalignedbb);
++            List<EntityPlayer> list = this.field_145850_b.func_72872_a(EntityPlayer.class, axisalignedbb);
+ 
+             for (EntityPlayer entityplayer : list) {
+                 entityplayer.func_70690_d(new PotionEffect(this.field_146013_m, 180, b0, true));
+@@ -104,7 +104,7 @@
+         }
+ 
+         if (!this.field_145850_b.field_72995_K && this.field_146012_l == 4 && i < this.field_146012_l) {
+-            for (EntityPlayer entityplayer : this.field_145850_b
++            for (EntityPlayer entityplayer : (Iterable<EntityPlayer>)this.field_145850_b
+                 .func_72872_a(
+                     EntityPlayer.class,
+                     AxisAlignedBB.func_72330_a(

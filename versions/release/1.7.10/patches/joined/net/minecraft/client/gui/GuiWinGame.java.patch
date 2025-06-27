@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/GuiWinGame.java
++++ b/net/minecraft/client/gui/GuiWinGame.java
+@@ -73,7 +73,7 @@
+ 
+                     while (s.contains(s1)) {
+                         int i = s.indexOf(s1);
+-                        Object object = s.substring(0, i);
++                        String object = s.substring(0, i);
+                         String s2 = s.substring(i + s1.length());
+                         s = object + EnumChatFormatting.WHITE + EnumChatFormatting.OBFUSCATED + "XXXXXXXX".substring(0, random.nextInt(4) + 3) + s2;
+                     }

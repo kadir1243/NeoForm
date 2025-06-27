@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/tileentity/TileEntitySignRenderer.java
++++ b/net/minecraft/client/renderer/tileentity/TileEntitySignRenderer.java
+@@ -11,7 +11,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class TileEntitySignRenderer extends TileEntitySpecialRenderer {
++public class TileEntitySignRenderer extends TileEntitySpecialRenderer<TileEntitySign> {
+     private static final ResourceLocation field_147513_b = new ResourceLocation("textures/entity/sign.png");
+     private final ModelSign field_147514_c = new ModelSign();
+ 

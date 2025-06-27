@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S2DPacketOpenWindow.java
++++ b/net/minecraft/network/play/server/S2DPacketOpenWindow.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S2DPacketOpenWindow extends Packet {
++public class S2DPacketOpenWindow extends Packet<INetHandlerPlayClient> {
+     private int field_148909_a;
+     private int field_148907_b;
+     private String field_148908_c;

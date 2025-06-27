@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderFallingBlock.java
++++ b/net/minecraft/client/renderer/entity/RenderFallingBlock.java
+@@ -15,7 +15,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderFallingBlock extends Render {
++public class RenderFallingBlock extends Render<EntityFallingBlock> {
+     private final RenderBlocks field_147920_a = new RenderBlocks();
+ 
+     public RenderFallingBlock() {

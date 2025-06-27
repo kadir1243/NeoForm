@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S33PacketUpdateSign.java
++++ b/net/minecraft/network/play/server/S33PacketUpdateSign.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S33PacketUpdateSign extends Packet {
++public class S33PacketUpdateSign extends Packet<INetHandlerPlayClient> {
+     private int field_149352_a;
+     private int field_149350_b;
+     private int field_149351_c;

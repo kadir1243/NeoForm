@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C0FPacketConfirmTransaction.java
++++ b/net/minecraft/network/play/client/C0FPacketConfirmTransaction.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class C0FPacketConfirmTransaction extends Packet {
++public class C0FPacketConfirmTransaction extends Packet<INetHandlerPlayServer> {
+     private int field_149536_a;
+     private short field_149534_b;
+     private boolean field_149535_c;

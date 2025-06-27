@@ -1,0 +1,11 @@
+--- a/net/minecraft/block/Block.java
++++ b/net/minecraft/block/Block.java
+@@ -948,7 +948,7 @@
+         );
+         field_149771_c.func_148756_a(175, "double_plant", new BlockDoublePlant());
+ 
+-        for (Block block10 : field_149771_c) {
++        for (Block block10 : (Iterable<Block>)field_149771_c) {
+             if (block10.field_149764_J == Material.field_151579_a) {
+                 block10.field_149783_u = false;
+             } else {

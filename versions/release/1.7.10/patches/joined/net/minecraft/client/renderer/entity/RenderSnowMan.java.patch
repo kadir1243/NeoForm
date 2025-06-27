@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderSnowMan.java
++++ b/net/minecraft/client/renderer/entity/RenderSnowMan.java
+@@ -13,7 +13,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderSnowMan extends RenderLiving {
++public class RenderSnowMan extends RenderLiving<EntitySnowman> {
+     private static final ResourceLocation field_110895_a = new ResourceLocation("textures/entity/snowman.png");
+     private ModelSnowMan field_77094_a = (ModelSnowMan)this.field_77045_g;
+ 

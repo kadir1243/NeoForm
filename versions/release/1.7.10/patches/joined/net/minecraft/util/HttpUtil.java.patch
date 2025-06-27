@@ -1,0 +1,20 @@
+--- a/net/minecraft/util/HttpUtil.java
++++ b/net/minecraft/util/HttpUtil.java
+@@ -27,7 +27,7 @@
+     private static final AtomicInteger field_151228_a = new AtomicInteger(0);
+     private static final Logger field_151227_b = LogManager.getLogger();
+ 
+-    public static String func_76179_a(Map p_76179_0_) {
++    public static String func_76179_a(Map<String, Object> p_76179_0_) {
+         StringBuilder stringbuilder = new StringBuilder();
+ 
+         for (Entry entry : p_76179_0_.entrySet()) {
+@@ -103,7 +103,7 @@
+         final File p_151223_0_,
+         final String p_151223_1_,
+         final HttpUtil.DownloadListener p_151223_2_,
+-        final Map p_151223_3_,
++        final Map<String, String> p_151223_3_,
+         final int p_151223_4_,
+         final IProgressUpdate p_151223_5_,
+         final Proxy p_151223_6_

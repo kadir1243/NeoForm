@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S2BPacketChangeGameState.java
++++ b/net/minecraft/network/play/server/S2BPacketChangeGameState.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S2BPacketChangeGameState extends Packet {
++public class S2BPacketChangeGameState extends Packet<INetHandlerPlayClient> {
+     public static final String[] field_149142_a = new String[]{"tile.bed.notValid", null, null, "gameMode.changed"};
+     private int field_149140_b;
+     private float field_149141_c;

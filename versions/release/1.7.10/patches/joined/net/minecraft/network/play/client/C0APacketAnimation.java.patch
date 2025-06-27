@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C0APacketAnimation.java
++++ b/net/minecraft/network/play/client/C0APacketAnimation.java
+@@ -8,7 +8,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class C0APacketAnimation extends Packet {
++public class C0APacketAnimation extends Packet<INetHandlerPlayServer> {
+     private int field_149424_a;
+     private int field_149423_b;
+ 

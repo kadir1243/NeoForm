@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/status/server/S00PacketServerInfo.java
++++ b/net/minecraft/network/status/server/S00PacketServerInfo.java
+@@ -13,7 +13,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S00PacketServerInfo extends Packet {
++public class S00PacketServerInfo extends Packet<INetHandlerStatusClient> {
+     private static final Gson field_149297_a = new GsonBuilder()
+         .registerTypeAdapter(
+             ServerStatusResponse.MinecraftProtocolVersionIdentifier.class, new ServerStatusResponse.MinecraftProtocolVersionIdentifier.Serializer()

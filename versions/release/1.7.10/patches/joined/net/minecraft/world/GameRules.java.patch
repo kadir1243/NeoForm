@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/GameRules.java
++++ b/net/minecraft/world/GameRules.java
+@@ -4,7 +4,7 @@
+ import net.minecraft.nbt.NBTTagCompound;
+ 
+ public class GameRules {
+-    private TreeMap field_82771_a = new TreeMap();
++    private TreeMap<String, GameRules.Value> field_82771_a = new TreeMap();
+ 
+     public GameRules() {
+         this.func_82769_a("doFireTick", "true");

@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderFireball.java
++++ b/net/minecraft/client/renderer/entity/RenderFireball.java
+@@ -11,7 +11,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderFireball extends Render {
++public class RenderFireball extends Render<EntityFireball> {
+     private float field_77002_a;
+ 
+     public RenderFireball(float p_i1254_1_) {

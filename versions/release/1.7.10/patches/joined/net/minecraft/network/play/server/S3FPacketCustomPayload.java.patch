@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S3FPacketCustomPayload.java
++++ b/net/minecraft/network/play/server/S3FPacketCustomPayload.java
+@@ -8,7 +8,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S3FPacketCustomPayload extends Packet {
++public class S3FPacketCustomPayload extends Packet<INetHandlerPlayClient> {
+     private String field_149172_a;
+     private byte[] field_149171_b;
+ 

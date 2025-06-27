@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/item/EntityFallingBlock.java
++++ b/net/minecraft/entity/item/EntityFallingBlock.java
+@@ -145,7 +145,7 @@
+         if (this.field_145809_g) {
+             int i = MathHelper.func_76123_f(p_70069_1_ - 1.0F);
+             if (i > 0) {
+-                ArrayList arraylist = new ArrayList(this.field_70170_p.func_72839_b(this, this.field_70121_D));
++                ArrayList<Entity> arraylist = new ArrayList(this.field_70170_p.func_72839_b(this, this.field_70121_D));
+                 boolean flag = this.field_145811_e == Blocks.field_150467_bQ;
+                 DamageSource damagesource = flag ? DamageSource.field_82728_o : DamageSource.field_82729_p;
+ 

@@ -1,0 +1,21 @@
+--- a/net/minecraft/network/NetworkManager.java
++++ b/net/minecraft/network/NetworkManager.java
+@@ -38,14 +38,14 @@
+ import org.apache.logging.log4j.Marker;
+ import org.apache.logging.log4j.MarkerManager;
+ 
+-public class NetworkManager extends SimpleChannelInboundHandler {
++public class NetworkManager extends SimpleChannelInboundHandler<Packet> {
+     private static final Logger field_150735_g = LogManager.getLogger();
+     public static final Marker field_150740_a = MarkerManager.getMarker("NETWORK");
+     public static final Marker field_150738_b = MarkerManager.getMarker("NETWORK_PACKETS", field_150740_a);
+     public static final Marker field_152461_c = MarkerManager.getMarker("NETWORK_STAT", field_150740_a);
+-    public static final AttributeKey field_150739_c = new AttributeKey("protocol");
+-    public static final AttributeKey field_150736_d = new AttributeKey("receivable_packets");
+-    public static final AttributeKey field_150737_e = new AttributeKey("sendable_packets");
++    public static final AttributeKey<EnumConnectionState> field_150739_c = new AttributeKey("protocol");
++    public static final AttributeKey<BiMap> field_150736_d = new AttributeKey("receivable_packets");
++    public static final AttributeKey<BiMap> field_150737_e = new AttributeKey("sendable_packets");
+     public static final NioEventLoopGroup field_150734_f = new NioEventLoopGroup(
+         0, new ThreadFactoryBuilder().setNameFormat("Netty Client IO #%d").setDaemon(true).build()
+     );

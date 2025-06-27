@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/MapItemRenderer.java
++++ b/net/minecraft/client/gui/MapItemRenderer.java
+@@ -17,7 +17,7 @@
+ public class MapItemRenderer {
+     private static final ResourceLocation field_148253_a = new ResourceLocation("textures/map/map_icons.png");
+     private final TextureManager field_148251_b;
+-    private final Map field_148252_c = Maps.newHashMap();
++    private final Map<String, MapItemRenderer.Instance> field_148252_c = Maps.newHashMap();
+ 
+     public MapItemRenderer(TextureManager p_i45009_1_) {
+         this.field_148251_b = p_i45009_1_;

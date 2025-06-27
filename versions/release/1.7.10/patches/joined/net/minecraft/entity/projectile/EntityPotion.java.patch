@@ -1,0 +1,15 @@
+--- a/net/minecraft/entity/projectile/EntityPotion.java
++++ b/net/minecraft/entity/projectile/EntityPotion.java
+@@ -73,10 +73,10 @@
+     @Override
+     protected void func_70184_a(MovingObjectPosition p_70184_1_) {
+         if (!this.field_70170_p.field_72995_K) {
+-            List list = Items.field_151068_bn.func_77832_l(this.field_70197_d);
++            List<PotionEffect> list = Items.field_151068_bn.func_77832_l(this.field_70197_d);
+             if (list != null && !list.isEmpty()) {
+                 AxisAlignedBB axisalignedbb = this.field_70121_D.func_72314_b(4.0, 2.0, 4.0);
+-                List list1 = this.field_70170_p.func_72872_a(EntityLivingBase.class, axisalignedbb);
++                List<EntityLivingBase> list1 = this.field_70170_p.func_72872_a(EntityLivingBase.class, axisalignedbb);
+                 if (list1 != null && !list1.isEmpty()) {
+                     for (EntityLivingBase entitylivingbase : list1) {
+                         double d0 = this.func_70068_e(entitylivingbase);

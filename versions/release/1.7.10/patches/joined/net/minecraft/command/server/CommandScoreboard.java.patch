@@ -1,0 +1,49 @@
+--- a/net/minecraft/command/server/CommandScoreboard.java
++++ b/net/minecraft/command/server/CommandScoreboard.java
+@@ -340,7 +340,7 @@
+             p_147186_1_.func_145747_a(chatcomponenttranslation);
+             p_147186_1_.func_145747_a(new ChatComponentText(func_71527_a(collection.toArray())));
+         } else {
+-            Collection collection1 = scoreboard.func_96525_g();
++            Collection<ScorePlayerTeam> collection1 = scoreboard.func_96525_g();
+             if (collection1.size() <= 0) {
+                 throw new CommandException("commands.scoreboard.teams.list.empty");
+             }
+@@ -433,7 +433,7 @@
+         Scoreboard scoreboard = this.func_147192_d();
+         ScorePlayerTeam scoreplayerteam = this.func_147183_a(p_147188_2_[p_147188_3_++]);
+         if (scoreplayerteam != null) {
+-            ArrayList arraylist = new ArrayList(scoreplayerteam.func_96670_d());
++            ArrayList<String> arraylist = new ArrayList(scoreplayerteam.func_96670_d());
+             if (arraylist.isEmpty()) {
+                 throw new CommandException("commands.scoreboard.teams.empty.alreadyEmpty", scoreplayerteam.func_96661_b());
+             } else {
+@@ -455,7 +455,7 @@
+ 
+     protected void func_147196_d(ICommandSender p_147196_1_) {
+         Scoreboard scoreboard = this.func_147192_d();
+-        Collection collection = scoreboard.func_96514_c();
++        Collection<ScoreObjective> collection = scoreboard.func_96514_c();
+         if (collection.size() <= 0) {
+             throw new CommandException("commands.scoreboard.objectives.list.empty");
+         } else {
+@@ -506,7 +506,7 @@
+         Scoreboard scoreboard = this.func_147192_d();
+         if (p_147195_2_.length > p_147195_3_) {
+             String s = func_96332_d(p_147195_1_, p_147195_2_[p_147195_3_++]);
+-            Map map = scoreboard.func_96510_d(s);
++            Map<ScoreObjective, Score> map = scoreboard.func_96510_d(s);
+             if (map.size() <= 0) {
+                 throw new CommandException("commands.scoreboard.players.list.player.empty", s);
+             }
+@@ -657,8 +657,8 @@
+         }
+     }
+ 
+-    protected List func_147184_a(boolean p_147184_1_) {
+-        Collection collection = this.func_147192_d().func_96514_c();
++    protected List<String> func_147184_a(boolean p_147184_1_) {
++        Collection<ScoreObjective> collection = this.func_147192_d().func_96514_c();
+         ArrayList arraylist = new ArrayList();
+ 
+         for (ScoreObjective scoreobjective : collection) {

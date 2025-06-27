@@ -1,0 +1,14 @@
+--- a/net/minecraft/entity/player/EntityPlayerMP.java
++++ b/net/minecraft/entity/player/EntityPlayerMP.java
+@@ -217,9 +217,9 @@
+         }
+ 
+         if (!this.field_71129_f.isEmpty()) {
+-            ArrayList arraylist = new ArrayList();
++            ArrayList<Chunk> arraylist = new ArrayList();
+             Iterator iterator1 = this.field_71129_f.iterator();
+-            ArrayList arraylist1 = new ArrayList();
++            ArrayList<TileEntity> arraylist1 = new ArrayList();
+ 
+             while (iterator1.hasNext() && arraylist.size() < S26PacketMapChunkBulk.func_149258_c()) {
+                 ChunkCoordIntPair chunkcoordintpair = (ChunkCoordIntPair)iterator1.next();

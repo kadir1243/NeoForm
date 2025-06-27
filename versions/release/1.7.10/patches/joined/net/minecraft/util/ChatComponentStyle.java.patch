@@ -1,0 +1,35 @@
+--- a/net/minecraft/util/ChatComponentStyle.java
++++ b/net/minecraft/util/ChatComponentStyle.java
+@@ -9,7 +9,7 @@
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+ public abstract class ChatComponentStyle implements IChatComponent {
+-    protected List field_150264_a = Lists.newArrayList();
++    protected List<IChatComponent> field_150264_a = Lists.newArrayList();
+     private ChatStyle field_150263_b;
+ 
+     @Override
+@@ -20,7 +20,7 @@
+     }
+ 
+     @Override
+-    public List func_150253_a() {
++    public List<IChatComponent> func_150253_a() {
+         return this.field_150264_a;
+     }
+ 
+@@ -84,12 +84,12 @@
+     }
+ 
+     public static Iterator func_150262_a(Iterable p_150262_0_) {
+-        Iterator iterator = Iterators.concat(Iterators.transform(p_150262_0_.iterator(), new Function() {
++        Iterator iterator = Iterators.concat(Iterators.transform(p_150262_0_.iterator(), new Function<IChatComponent, Iterator>() {
+             public Iterator apply(IChatComponent p_apply_1_) {
+                 return p_apply_1_.iterator();
+             }
+         }));
+-        return Iterators.transform(iterator, new Function() {
++        return Iterators.transform(iterator, new Function<IChatComponent, IChatComponent>() {
+             public IChatComponent apply(IChatComponent p_apply_1_) {
+                 IChatComponent ichatcomponent = p_apply_1_.func_150259_f();
+                 ichatcomponent.func_150255_a(ichatcomponent.func_150256_b().func_150206_m());

@@ -1,0 +1,11 @@
+--- a/net/minecraft/crash/CrashReportCategory.java
++++ b/net/minecraft/crash/CrashReportCategory.java
+@@ -11,7 +11,7 @@
+ public class CrashReportCategory {
+     private final CrashReport field_85078_a;
+     private final String field_85076_b;
+-    private final List field_85077_c = new ArrayList();
++    private final List<CrashReportCategory.Entry> field_85077_c = new ArrayList();
+     private StackTraceElement[] field_85075_d = new StackTraceElement[0];
+ 
+     public CrashReportCategory(CrashReport p_i1353_1_, String p_i1353_2_) {

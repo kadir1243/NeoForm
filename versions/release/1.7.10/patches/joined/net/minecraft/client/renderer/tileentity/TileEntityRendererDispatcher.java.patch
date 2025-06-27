@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher.java
++++ b/net/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher.java
+@@ -27,7 +27,7 @@
+ 
+ @OnlyIn(Dist.CLIENT)
+ public class TileEntityRendererDispatcher {
+-    private Map field_147559_m = new HashMap();
++    private Map<Class, TileEntitySpecialRenderer> field_147559_m = new HashMap();
+     public static TileEntityRendererDispatcher field_147556_a = new TileEntityRendererDispatcher();
+     private FontRenderer field_147557_n;
+     public static double field_147554_b;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/block/BlockChest.java
++++ b/net/minecraft/block/BlockChest.java
+@@ -436,7 +436,7 @@
+     }
+ 
+     private static boolean func_149953_o(World p_149953_0_, int p_149953_1_, int p_149953_2_, int p_149953_3_) {
+-        for (Entity entity : p_149953_0_.func_72872_a(
++        for (Entity entity : (Iterable<Entity>)p_149953_0_.func_72872_a(
+             EntityOcelot.class, AxisAlignedBB.func_72330_a(p_149953_1_, p_149953_2_ + 1, p_149953_3_, p_149953_1_ + 1, p_149953_2_ + 2, p_149953_3_ + 1)
+         )) {
+             EntityOcelot entityocelot = (EntityOcelot)entity;

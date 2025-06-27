@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/renderer/entity/RenderBlaze.java
++++ b/net/minecraft/client/renderer/entity/RenderBlaze.java
+@@ -8,7 +8,7 @@
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderBlaze extends RenderLiving {
++public class RenderBlaze extends RenderLiving<EntityBlaze> {
+     private static final ResourceLocation field_110837_a = new ResourceLocation("textures/entity/blaze.png");
+     private int field_77068_a = ((ModelBlaze)this.field_77045_g).func_78104_a();
+ 
+@@ -23,7 +23,7 @@
+             this.field_77045_g = new ModelBlaze();
+         }
+ 
+-        super.func_76986_a((EntityLiving)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
++        super.func_76986_a(p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+     }
+ 
+     protected ResourceLocation func_110775_a(EntityBlaze p_110775_1_) {

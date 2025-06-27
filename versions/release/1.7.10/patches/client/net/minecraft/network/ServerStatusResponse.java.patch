@@ -1,0 +1,29 @@
+--- a/net/minecraft/network/ServerStatusResponse.java
++++ b/net/minecraft/network/ServerStatusResponse.java
+@@ -68,7 +68,7 @@
+             return this.field_151305_b;
+         }
+ 
+-        public static class Serializer implements JsonDeserializer, JsonSerializer {
++        public static class Serializer implements JsonDeserializer<ServerStatusResponse.MinecraftProtocolVersionIdentifier>, JsonSerializer<ServerStatusResponse.MinecraftProtocolVersionIdentifier> {
+             public ServerStatusResponse.MinecraftProtocolVersionIdentifier deserialize(
+                 JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_
+             ) {
+@@ -115,7 +115,7 @@
+             this.field_151335_c = p_151330_1_;
+         }
+ 
+-        public static class Serializer implements JsonDeserializer, JsonSerializer {
++        public static class Serializer implements JsonDeserializer<ServerStatusResponse.PlayerCountData>, JsonSerializer<ServerStatusResponse.PlayerCountData> {
+             public ServerStatusResponse.PlayerCountData deserialize(
+                 JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_
+             ) {
+@@ -164,7 +164,7 @@
+         }
+     }
+ 
+-    public static class Serializer implements JsonDeserializer, JsonSerializer {
++    public static class Serializer implements JsonDeserializer<ServerStatusResponse>, JsonSerializer<ServerStatusResponse> {
+         public ServerStatusResponse deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_) {
+             JsonObject jsonobject = JsonUtils.func_151210_l(p_deserialize_1_, "status");
+             ServerStatusResponse serverstatusresponse = new ServerStatusResponse();

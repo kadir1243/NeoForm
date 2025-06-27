@@ -1,0 +1,20 @@
+--- a/net/minecraft/world/gen/structure/StructureNetherBridgePieces.java
++++ b/net/minecraft/world/gen/structure/StructureNetherBridgePieces.java
+@@ -919,7 +919,7 @@
+         protected void func_143012_a(NBTTagCompound p_143012_1_) {
+         }
+ 
+-        private int func_74960_a(List p_74960_1_) {
++        private int func_74960_a(List<StructureNetherBridgePieces.PieceWeight> p_74960_1_) {
+             boolean flag = false;
+             int i = 0;
+ 
+@@ -937,7 +937,7 @@
+ 
+         private StructureNetherBridgePieces.Piece func_74959_a(
+             StructureNetherBridgePieces.Start p_74959_1_,
+-            List p_74959_2_,
++            List<StructureNetherBridgePieces.PieceWeight> p_74959_2_,
+             List p_74959_3_,
+             Random p_74959_4_,
+             int p_74959_5_,

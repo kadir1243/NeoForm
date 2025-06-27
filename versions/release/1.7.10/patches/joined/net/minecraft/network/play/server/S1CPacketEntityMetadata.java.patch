@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S1CPacketEntityMetadata.java
++++ b/net/minecraft/network/play/server/S1CPacketEntityMetadata.java
+@@ -9,7 +9,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S1CPacketEntityMetadata extends Packet {
++public class S1CPacketEntityMetadata extends Packet<INetHandlerPlayClient> {
+     private int field_149379_a;
+     private List field_149378_b;
+ 

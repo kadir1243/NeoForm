@@ -1,0 +1,11 @@
+--- a/net/minecraft/server/management/PlayerManager.java
++++ b/net/minecraft/server/management/PlayerManager.java
+@@ -20,7 +20,7 @@
+ public class PlayerManager {
+     private static final Logger field_152627_a = LogManager.getLogger();
+     private final WorldServer field_72701_a;
+-    private final List field_72699_b = new ArrayList();
++    private final List<EntityPlayerMP> field_72699_b = new ArrayList();
+     private final LongHashMap field_72700_c = new LongHashMap();
+     private final List field_72697_d = new ArrayList();
+     private final List field_111193_e = new ArrayList();

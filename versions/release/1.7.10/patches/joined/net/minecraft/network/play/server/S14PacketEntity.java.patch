@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S14PacketEntity.java
++++ b/net/minecraft/network/play/server/S14PacketEntity.java
+@@ -9,7 +9,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S14PacketEntity extends Packet {
++public class S14PacketEntity extends Packet<INetHandlerPlayClient> {
+     protected int field_149074_a;
+     protected byte field_149072_b;
+     protected byte field_149073_c;

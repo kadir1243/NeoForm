@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/multiplayer/ChunkProviderClient.java
++++ b/net/minecraft/client/multiplayer/ChunkProviderClient.java
+@@ -21,7 +21,7 @@
+     private static final Logger field_147436_a = LogManager.getLogger();
+     private Chunk field_73238_a;
+     private LongHashMap field_73236_b = new LongHashMap();
+-    private List field_73237_c = new ArrayList();
++    private List<Chunk> field_73237_c = new ArrayList();
+     private World field_73235_d;
+ 
+     public ChunkProviderClient(World p_i1184_1_) {

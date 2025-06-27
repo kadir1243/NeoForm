@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/GuiNewChat.java
++++ b/net/minecraft/client/gui/GuiNewChat.java
+@@ -131,7 +131,7 @@
+         int i = MathHelper.func_76141_d(this.func_146228_f() / this.func_146244_h());
+         int j = 0;
+         ChatComponentText chatcomponenttext = new ChatComponentText("");
+-        ArrayList arraylist = Lists.newArrayList();
++        ArrayList<IChatComponent> arraylist = Lists.newArrayList();
+         ArrayList arraylist1 = Lists.newArrayList(p_146237_1_);
+ 
+         for (int k = 0; k < arraylist1.size(); k++) {

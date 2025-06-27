@@ -1,0 +1,22 @@
+--- a/net/minecraft/util/JsonSerializableSet.java
++++ b/net/minecraft/util/JsonSerializableSet.java
+@@ -7,8 +7,8 @@
+ import com.google.gson.JsonPrimitive;
+ import java.util.Set;
+ 
+-public class JsonSerializableSet extends ForwardingSet implements IJsonSerializable {
+-    private final Set field_151004_a = Sets.newHashSet();
++public class JsonSerializableSet extends ForwardingSet<String> implements IJsonSerializable {
++    private final Set<String> field_151004_a = Sets.newHashSet();
+ 
+     @Override
+     public void func_152753_a(JsonElement p_152753_1_) {
+@@ -31,7 +31,7 @@
+     }
+ 
+     @Override
+-    protected Set delegate() {
++    protected Set<String> delegate() {
+         return this.field_151004_a;
+     }
+ }

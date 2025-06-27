@@ -1,0 +1,11 @@
+--- a/net/minecraft/command/server/CommandBanIp.java
++++ b/net/minecraft/command/server/CommandBanIp.java
+@@ -69,7 +69,7 @@
+     protected void func_147210_a(ICommandSender p_147210_1_, String p_147210_2_, String p_147210_3_) {
+         IPBanEntry ipbanentry = new IPBanEntry(p_147210_2_, null, p_147210_1_.func_70005_c_(), null, p_147210_3_);
+         MinecraftServer.func_71276_C().func_71203_ab().func_72363_f().func_152687_a(ipbanentry);
+-        List list = MinecraftServer.func_71276_C().func_71203_ab().func_72382_j(p_147210_2_);
++        List<EntityPlayerMP> list = MinecraftServer.func_71276_C().func_71203_ab().func_72382_j(p_147210_2_);
+         String[] astring = new String[list.size()];
+         int i = 0;
+ 

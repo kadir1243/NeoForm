@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/NetworkSystem.java
++++ b/net/minecraft/network/NetworkSystem.java
+@@ -44,7 +44,7 @@
+     );
+     private final MinecraftServer field_151273_d;
+     public volatile boolean field_151277_a;
+-    private final List field_151274_e = Collections.synchronizedList(new ArrayList());
++    private final List<ChannelFuture> field_151274_e = Collections.synchronizedList(new ArrayList());
+     private final List field_151272_f = Collections.synchronizedList(new ArrayList());
+ 
+     public NetworkSystem(MinecraftServer p_i45292_1_) {

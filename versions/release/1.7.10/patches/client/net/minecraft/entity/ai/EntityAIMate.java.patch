@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/ai/EntityAIMate.java
++++ b/net/minecraft/entity/ai/EntityAIMate.java
+@@ -58,7 +58,7 @@
+ 
+     private EntityAnimal func_75389_f() {
+         float f = 8.0F;
+-        List list = this.field_75394_a.func_72872_a(this.field_75390_d.getClass(), this.field_75390_d.field_70121_D.func_72314_b(f, f, f));
++        List<EntityAnimal> list = this.field_75394_a.func_72872_a(this.field_75390_d.getClass(), this.field_75390_d.field_70121_D.func_72314_b(f, f, f));
+         double d0 = Double.MAX_VALUE;
+         EntityAnimal entityanimal = null;
+ 

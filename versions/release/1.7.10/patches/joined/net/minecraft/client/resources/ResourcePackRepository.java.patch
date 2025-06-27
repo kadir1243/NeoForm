@@ -1,0 +1,40 @@
+--- a/net/minecraft/client/resources/ResourcePackRepository.java
++++ b/net/minecraft/client/resources/ResourcePackRepository.java
+@@ -43,8 +43,8 @@
+     public final IMetadataSerializer field_110621_c;
+     private IResourcePack field_148532_f;
+     private boolean field_148533_g;
+-    private List field_110619_e = Lists.newArrayList();
+-    private List field_110617_f = Lists.newArrayList();
++    private List<ResourcePackRepository.Entry> field_110619_e = Lists.newArrayList();
++    private List<ResourcePackRepository.Entry> field_110617_f = Lists.newArrayList();
+ 
+     public ResourcePackRepository(File p_i45101_1_, File p_i45101_2_, IResourcePack p_i45101_3_, IMetadataSerializer p_i45101_4_, GameSettings p_i45101_5_) {
+         this.field_110618_d = p_i45101_1_;
+@@ -71,7 +71,7 @@
+         }
+     }
+ 
+-    private List func_110614_g() {
++    private List<File> func_110614_g() {
+         return this.field_110618_d.isDirectory() ? Arrays.asList(this.field_110618_d.listFiles(field_110622_a)) : Collections.emptyList();
+     }
+ 
+@@ -108,7 +108,7 @@
+         return ImmutableList.copyOf(this.field_110619_e);
+     }
+ 
+-    public List func_110613_c() {
++    public List<ResourcePackRepository.Entry> func_110613_c() {
+         return ImmutableList.copyOf(this.field_110617_f);
+     }
+ 
+@@ -135,7 +135,7 @@
+     }
+ 
+     private void func_148528_a(String p_148528_1_, File p_148528_2_) {
+-        HashMap hashmap = Maps.newHashMap();
++        HashMap<String, String> hashmap = Maps.newHashMap();
+         GuiScreenWorking guiscreenworking = new GuiScreenWorking();
+         hashmap.put("X-Minecraft-Username", Minecraft.func_71410_x().func_110432_I().func_111285_a());
+         hashmap.put("X-Minecraft-UUID", Minecraft.func_71410_x().func_110432_I().func_148255_b());

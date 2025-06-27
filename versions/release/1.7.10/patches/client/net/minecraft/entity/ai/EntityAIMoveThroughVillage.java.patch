@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/ai/EntityAIMoveThroughVillage.java
++++ b/net/minecraft/entity/ai/EntityAIMoveThroughVillage.java
+@@ -15,7 +15,7 @@
+     private PathEntity field_75419_c;
+     private VillageDoorInfo field_75416_d;
+     private boolean field_75417_e;
+-    private List field_75415_f = new ArrayList();
++    private List<VillageDoorInfo> field_75415_f = new ArrayList();
+ 
+     public EntityAIMoveThroughVillage(EntityCreature p_i1638_1_, double p_i1638_2_, boolean p_i1638_4_) {
+         this.field_75420_a = p_i1638_1_;

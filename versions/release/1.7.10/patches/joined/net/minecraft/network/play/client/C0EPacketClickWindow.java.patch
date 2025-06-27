@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C0EPacketClickWindow.java
++++ b/net/minecraft/network/play/client/C0EPacketClickWindow.java
+@@ -9,7 +9,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class C0EPacketClickWindow extends Packet {
++public class C0EPacketClickWindow extends Packet<INetHandlerPlayServer> {
+     private int field_149554_a;
+     private int field_149552_b;
+     private int field_149553_c;

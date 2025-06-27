@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C09PacketHeldItemChange.java
++++ b/net/minecraft/network/play/client/C09PacketHeldItemChange.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayServer;
+ 
+-public class C09PacketHeldItemChange extends Packet {
++public class C09PacketHeldItemChange extends Packet<INetHandlerPlayServer> {
+     private int field_149615_a;
+ 
+     public C09PacketHeldItemChange() {

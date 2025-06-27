@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/SharedMonsterAttributes.java
++++ b/net/minecraft/entity/SharedMonsterAttributes.java
+@@ -39,7 +39,7 @@
+         IAttribute iattribute = p_111261_0_.func_111123_a();
+         nbttagcompound.func_74778_a("Name", iattribute.func_111108_a());
+         nbttagcompound.func_74780_a("Base", p_111261_0_.func_111125_b());
+-        Collection collection = p_111261_0_.func_111122_c();
++        Collection<AttributeModifier> collection = p_111261_0_.func_111122_c();
+         if (collection != null && !collection.isEmpty()) {
+             NBTTagList nbttaglist = new NBTTagList();
+ 

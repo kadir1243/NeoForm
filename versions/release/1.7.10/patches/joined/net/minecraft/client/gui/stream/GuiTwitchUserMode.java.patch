@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/gui/stream/GuiTwitchUserMode.java
++++ b/net/minecraft/client/gui/stream/GuiTwitchUserMode.java
+@@ -25,7 +25,7 @@
+     private static final EnumChatFormatting field_152336_g = EnumChatFormatting.DARK_PURPLE;
+     private final ChatUserInfo field_152337_h;
+     private final IChatComponent field_152338_i;
+-    private final List field_152332_r = Lists.newArrayList();
++    private final List<IChatComponent> field_152332_r = Lists.newArrayList();
+     private final IStream field_152333_s;
+     private int field_152334_t;
+ 
+@@ -36,7 +36,7 @@
+         this.field_152332_r.addAll(func_152328_a(p_i1064_2_.modes, p_i1064_2_.subscriptions, p_i1064_1_));
+     }
+ 
+-    public static List func_152328_a(Set p_152328_0_, Set p_152328_1_, IStream p_152328_2_) {
++    public static List<IChatComponent> func_152328_a(Set<ChatUserMode> p_152328_0_, Set<ChatUserSubscription> p_152328_1_, IStream p_152328_2_) {
+         String s = p_152328_2_ == null ? null : p_152328_2_.func_152921_C();
+         boolean flag = p_152328_2_ != null && p_152328_2_.func_152927_B();
+         ArrayList arraylist = Lists.newArrayList();

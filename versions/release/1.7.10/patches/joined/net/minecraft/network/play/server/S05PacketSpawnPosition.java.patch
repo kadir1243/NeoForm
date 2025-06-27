@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S05PacketSpawnPosition.java
++++ b/net/minecraft/network/play/server/S05PacketSpawnPosition.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class S05PacketSpawnPosition extends Packet {
++public class S05PacketSpawnPosition extends Packet<INetHandlerPlayClient> {
+     private int field_149364_a;
+     private int field_149362_b;
+     private int field_149363_c;

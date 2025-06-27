@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S08PacketPlayerPosLook.java
++++ b/net/minecraft/network/play/server/S08PacketPlayerPosLook.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayClient;
+ 
+-public class S08PacketPlayerPosLook extends Packet {
++public class S08PacketPlayerPosLook extends Packet<INetHandlerPlayClient> {
+     private double field_148940_a;
+     private double field_148938_b;
+     private double field_148939_c;

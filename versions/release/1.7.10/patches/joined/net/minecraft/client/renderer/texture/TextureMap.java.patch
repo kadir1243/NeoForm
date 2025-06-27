@@ -1,0 +1,58 @@
+--- a/net/minecraft/client/renderer/texture/TextureMap.java
++++ b/net/minecraft/client/renderer/texture/TextureMap.java
+@@ -36,8 +36,8 @@
+     private static final Logger field_147635_d = LogManager.getLogger();
+     public static final ResourceLocation field_110575_b = new ResourceLocation("textures/atlas/blocks.png");
+     public static final ResourceLocation field_110576_c = new ResourceLocation("textures/atlas/items.png");
+-    private final List field_94258_i = Lists.newArrayList();
+-    private final Map field_110574_e = Maps.newHashMap();
++    private final List<TextureAtlasSprite> field_94258_i = Lists.newArrayList();
++    private final Map<String, TextureAtlasSprite> field_110574_e = Maps.newHashMap();
+     private final Map field_94252_e = Maps.newHashMap();
+     private final int field_94255_a;
+     private final String field_94254_c;
+@@ -98,7 +98,7 @@
+                 abufferedimage[0] = ImageIO.read(iresource.func_110527_b());
+                 TextureMetadataSection texturemetadatasection = (TextureMetadataSection)iresource.func_110526_a("texture");
+                 if (texturemetadatasection != null) {
+-                    List list = texturemetadatasection.func_148535_c();
++                    List<Integer> list = texturemetadatasection.func_148535_c();
+                     if (!list.isEmpty()) {
+                         int k = abufferedimage[0].getWidth();
+                         int l = abufferedimage[0].getHeight();
+@@ -177,7 +177,7 @@
+ 
+         field_147635_d.info("Created: {}x{} {}-atlas", stitcher.func_110935_a(), stitcher.func_110936_b(), this.field_94254_c);
+         TextureUtil.func_147946_a(this.func_110552_b(), this.field_147636_j, stitcher.func_110935_a(), stitcher.func_110936_b(), this.field_147637_k);
+-        HashMap hashmap = Maps.newHashMap(this.field_110574_e);
++        HashMap<String, TextureAtlasSprite> hashmap = Maps.newHashMap(this.field_110574_e);
+ 
+         for (TextureAtlasSprite textureatlassprite2 : stitcher.func_94309_g()) {
+             String s = textureatlassprite2.func_94215_i();
+@@ -225,7 +225,7 @@
+     private void func_110573_f() {
+         this.field_110574_e.clear();
+         if (this.field_94255_a == 0) {
+-            for (Block block : Block.field_149771_c) {
++            for (Block block : (Iterable<Block>)Block.field_149771_c) {
+                 if (block.func_149688_o() != Material.field_151579_a) {
+                     block.func_149651_a(this);
+                 }
+@@ -235,7 +235,7 @@
+             RenderManager.field_78727_a.func_94178_a(this);
+         }
+ 
+-        for (Item item : Item.field_150901_e) {
++        for (Item item : (Iterable<Item>)Item.field_150901_e) {
+             if (item != null && item.func_94901_k() == this.field_94255_a) {
+                 item.func_94581_a(this);
+             }
+@@ -264,7 +264,7 @@
+         if (p_94245_1_ == null) {
+             throw new IllegalArgumentException("Name cannot be null!");
+         } else if (p_94245_1_.indexOf(47) == -1 && p_94245_1_.indexOf(92) == -1) {
+-            Object object = (TextureAtlasSprite)this.field_110574_e.get(p_94245_1_);
++            TextureAtlasSprite object = (TextureAtlasSprite)this.field_110574_e.get(p_94245_1_);
+             if (object == null) {
+                 if (this.field_94255_a == 1) {
+                     if ("clock".equals(p_94245_1_)) {

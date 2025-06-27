@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/tileentity/TileEntityMobSpawnerRenderer.java
++++ b/net/minecraft/client/renderer/tileentity/TileEntityMobSpawnerRenderer.java
+@@ -9,7 +9,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class TileEntityMobSpawnerRenderer extends TileEntitySpecialRenderer {
++public class TileEntityMobSpawnerRenderer extends TileEntitySpecialRenderer<TileEntityMobSpawner> {
+     public void func_147500_a(TileEntityMobSpawner p_147500_1_, double p_147500_2_, double p_147500_4_, double p_147500_6_, float p_147500_8_) {
+         GL11.glPushMatrix();
+         GL11.glTranslatef((float)p_147500_2_ + 0.5F, (float)p_147500_4_, (float)p_147500_6_ + 0.5F);

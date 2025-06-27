@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C11PacketEnchantItem.java
++++ b/net/minecraft/network/play/client/C11PacketEnchantItem.java
+@@ -7,7 +7,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class C11PacketEnchantItem extends Packet {
++public class C11PacketEnchantItem extends Packet<INetHandlerPlayServer> {
+     private int field_149541_a;
+     private int field_149540_b;
+ 

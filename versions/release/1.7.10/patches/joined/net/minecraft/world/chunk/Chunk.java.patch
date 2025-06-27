@@ -1,0 +1,13 @@
+--- a/net/minecraft/world/chunk/Chunk.java
++++ b/net/minecraft/world/chunk/Chunk.java
+@@ -44,8 +44,8 @@
+     public final int field_76635_g;
+     public final int field_76647_h;
+     private boolean field_76650_s;
+-    public Map field_150816_i = new HashMap();
+-    public List[] field_76645_j;
++    public Map<ChunkPosition, TileEntity> field_150816_i = new HashMap();
++    public List<Entity>[] field_76645_j;
+     public boolean field_76646_k;
+     public boolean field_150814_l;
+     public boolean field_150815_m;

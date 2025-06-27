@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/GuiIngame.java
++++ b/net/minecraft/client/gui/GuiIngame.java
+@@ -446,7 +446,7 @@
+ 
+     private void func_96136_a(ScoreObjective p_96136_1_, int p_96136_2_, int p_96136_3_, FontRenderer p_96136_4_) {
+         Scoreboard scoreboard = p_96136_1_.func_96682_a();
+-        Collection collection = scoreboard.func_96534_i(p_96136_1_);
++        Collection<Score> collection = scoreboard.func_96534_i(p_96136_1_);
+         if (collection.size() <= 15) {
+             int i = p_96136_4_.func_78256_a(p_96136_1_.func_96678_d());
+ 

@@ -1,0 +1,20 @@
+--- a/net/minecraft/world/gen/ChunkProviderServer.java
++++ b/net/minecraft/world/gen/ChunkProviderServer.java
+@@ -34,7 +34,7 @@
+     private IChunkLoader field_73247_e;
+     public boolean field_73250_a = true;
+     private LongHashMap field_73244_f = new LongHashMap();
+-    private List field_73245_g = new ArrayList();
++    private List<Chunk> field_73245_g = new ArrayList();
+     private WorldServer field_73251_h;
+ 
+     public ChunkProviderServer(WorldServer p_i1520_1_, IChunkLoader p_i1520_2_, IChunkProvider p_i1520_3_) {
+@@ -49,7 +49,7 @@
+         return this.field_73244_f.func_76161_b(ChunkCoordIntPair.func_77272_a(p_73149_1_, p_73149_2_));
+     }
+ 
+-    public List func_152380_a() {
++    public List<Chunk> func_152380_a() {
+         return this.field_73245_g;
+     }
+ 

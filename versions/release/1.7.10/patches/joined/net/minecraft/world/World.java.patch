@@ -1,0 +1,45 @@
+--- a/net/minecraft/world/World.java
++++ b/net/minecraft/world/World.java
+@@ -59,7 +59,7 @@
+     public List field_147482_g = new ArrayList();
+     private List field_147484_a = new ArrayList();
+     private List field_147483_b = new ArrayList();
+-    public List field_73010_i = new ArrayList();
++    public List<EntityPlayer> field_73010_i = new ArrayList();
+     public List field_73007_j = new ArrayList();
+     private long field_73001_c = 16777215L;
+     public int field_73008_k;
+@@ -73,7 +73,7 @@
+     public EnumDifficulty field_73013_u;
+     public Random field_73012_v = new Random();
+     public final WorldProvider field_73011_w;
+-    protected List field_73021_x = new ArrayList();
++    protected List<IWorldAccess> field_73021_x = new ArrayList();
+     protected IChunkProvider field_73020_y;
+     protected final ISaveHandler field_73019_z;
+     protected WorldInfo field_72986_A;
+@@ -85,7 +85,7 @@
+     private final Calendar field_83016_L = Calendar.getInstance();
+     protected Scoreboard field_96442_D = new Scoreboard();
+     public boolean field_72995_K;
+-    protected Set field_72993_I = new HashSet();
++    protected Set<ChunkCoordIntPair> field_72993_I = new HashSet();
+     private int field_72990_M = this.field_73012_v.nextInt(12000);
+     protected boolean field_72985_G = true;
+     protected boolean field_72992_H = true;
+@@ -2272,12 +2272,12 @@
+         return null;
+     }
+ 
+-    public List func_72839_b(Entity p_72839_1_, AxisAlignedBB p_72839_2_) {
++    public List<Entity> func_72839_b(Entity p_72839_1_, AxisAlignedBB p_72839_2_) {
+         return this.func_94576_a(p_72839_1_, p_72839_2_, null);
+     }
+ 
+-    public List func_94576_a(Entity p_94576_1_, AxisAlignedBB p_94576_2_, IEntitySelector p_94576_3_) {
+-        ArrayList arraylist = new ArrayList();
++    public List<Entity> func_94576_a(Entity p_94576_1_, AxisAlignedBB p_94576_2_, IEntitySelector p_94576_3_) {
++        ArrayList<Entity> arraylist = new ArrayList();
+         int i = MathHelper.func_76128_c((p_94576_2_.field_72340_a - 2.0) / 16.0);
+         int j = MathHelper.func_76128_c((p_94576_2_.field_72336_d + 2.0) / 16.0);
+         int k = MathHelper.func_76128_c((p_94576_2_.field_72339_c - 2.0) / 16.0);

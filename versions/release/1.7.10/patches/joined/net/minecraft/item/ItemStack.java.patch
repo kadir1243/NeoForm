@@ -1,0 +1,34 @@
+--- a/net/minecraft/item/ItemStack.java
++++ b/net/minecraft/item/ItemStack.java
+@@ -420,9 +420,9 @@
+     }
+ 
+     @OnlyIn(Dist.CLIENT)
+-    public List func_82840_a(EntityPlayer p_82840_1_, boolean p_82840_2_) {
++    public List<String> func_82840_a(EntityPlayer p_82840_1_, boolean p_82840_2_) {
+         ArrayList arraylist = new ArrayList();
+-        Object object = this.func_82833_r();
++        String object = this.func_82833_r();
+         if (this.func_82837_s()) {
+             object = EnumChatFormatting.ITALIC + object + EnumChatFormatting.RESET;
+         }
+@@ -479,7 +479,7 @@
+             }
+         }
+ 
+-        Multimap multimap = this.func_111283_C();
++        Multimap<String, AttributeModifier> multimap = this.func_111283_C();
+         if (!multimap.isEmpty()) {
+             arraylist.add("");
+ 
+@@ -600,8 +600,8 @@
+         this.field_77990_d.func_74768_a("RepairCost", p_82841_1_);
+     }
+ 
+-    public Multimap func_111283_C() {
+-        Object object;
++    public Multimap<String, AttributeModifier> func_111283_C() {
++        Multimap<String, AttributeModifier> object;
+         if (this.func_77942_o() && this.field_77990_d.func_150297_b("AttributeModifiers", 9)) {
+             object = HashMultimap.create();
+             NBTTagList nbttaglist = this.field_77990_d.func_150295_c("AttributeModifiers", 10);

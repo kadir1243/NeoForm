@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/tileentity/TileEntitySkullRenderer.java
++++ b/net/minecraft/client/renderer/tileentity/TileEntitySkullRenderer.java
+@@ -14,7 +14,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class TileEntitySkullRenderer extends TileEntitySpecialRenderer {
++public class TileEntitySkullRenderer extends TileEntitySpecialRenderer<TileEntitySkull> {
+     private static final ResourceLocation field_147537_c = new ResourceLocation("textures/entity/skeleton/skeleton.png");
+     private static final ResourceLocation field_147534_d = new ResourceLocation("textures/entity/skeleton/wither_skeleton.png");
+     private static final ResourceLocation field_147535_e = new ResourceLocation("textures/entity/zombie/zombie.png");

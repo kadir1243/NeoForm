@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C10PacketCreativeInventoryAction.java
++++ b/net/minecraft/network/play/client/C10PacketCreativeInventoryAction.java
+@@ -8,7 +8,7 @@
+ import net.neoforged.api.distmarker.Dist;
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+-public class C10PacketCreativeInventoryAction extends Packet {
++public class C10PacketCreativeInventoryAction extends Packet<INetHandlerPlayServer> {
+     private int field_149629_a;
+     private ItemStack field_149628_b;
+ 

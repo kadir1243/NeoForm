@@ -1,0 +1,18 @@
+--- a/net/minecraft/inventory/Container.java
++++ b/net/minecraft/inventory/Container.java
+@@ -14,13 +14,13 @@
+ 
+ public abstract class Container {
+     public List field_75153_a = new ArrayList();
+-    public List field_75151_b = new ArrayList();
++    public List<Slot> field_75151_b = new ArrayList();
+     public int field_75152_c;
+     @OnlyIn(Dist.CLIENT)
+     private short field_75150_e;
+     private int field_94535_f = -1;
+     private int field_94536_g;
+-    private final Set field_94537_h = new HashSet();
++    private final Set<Slot> field_94537_h = new HashSet();
+     protected List field_75149_d = new ArrayList();
+     private Set field_75148_f = new HashSet();
+ 

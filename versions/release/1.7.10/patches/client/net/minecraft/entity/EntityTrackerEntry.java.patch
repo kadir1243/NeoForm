@@ -1,0 +1,20 @@
+--- a/net/minecraft/entity/EntityTrackerEntry.java
++++ b/net/minecraft/entity/EntityTrackerEntry.java
+@@ -80,7 +80,7 @@
+     private Entity field_85178_v;
+     private boolean field_73141_v;
+     public boolean field_73133_n;
+-    public Set field_73134_o = new HashSet();
++    public Set<EntityPlayerMP> field_73134_o = new HashSet();
+ 
+     public EntityTrackerEntry(Entity p_i1525_1_, int p_i1525_2_, int p_i1525_3_, boolean p_i1525_4_) {
+         this.field_73132_a = p_i1525_1_;
+@@ -107,7 +107,7 @@
+         return this.field_73132_a.func_145782_y();
+     }
+ 
+-    public void func_73122_a(List p_73122_1_) {
++    public void func_73122_a(List<EntityPlayer> p_73122_1_) {
+         this.field_73133_n = false;
+         if (!this.field_73144_s || this.field_73132_a.func_70092_e(this.field_73147_p, this.field_73146_q, this.field_73145_r) > 16.0) {
+             this.field_73147_p = this.field_73132_a.field_70165_t;

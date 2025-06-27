@@ -1,0 +1,22 @@
+--- a/net/minecraft/command/CommandHandler.java
++++ b/net/minecraft/command/CommandHandler.java
+@@ -15,8 +15,8 @@
+ 
+ public class CommandHandler implements ICommandManager {
+     private static final Logger field_147175_a = LogManager.getLogger();
+-    private final Map field_71562_a = new HashMap();
+-    private final Set field_71561_b = new HashSet();
++    private final Map<String, ICommand> field_71562_a = new HashMap();
++    private final Set<ICommand> field_71561_b = new HashSet();
+ 
+     @Override
+     public int func_71556_a(ICommandSender p_71556_1_, String p_71556_2_) {
+@@ -96,7 +96,7 @@
+     }
+ 
+     public ICommand func_71560_a(ICommand p_71560_1_) {
+-        List list = p_71560_1_.func_71514_a();
++        List<String> list = p_71560_1_.func_71514_a();
+         this.field_71562_a.put(p_71560_1_.func_71517_b(), p_71560_1_);
+         this.field_71561_b.add(p_71560_1_);
+         if (list != null) {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/login/client/C00PacketLoginStart.java
++++ b/net/minecraft/network/login/client/C00PacketLoginStart.java
+@@ -6,7 +6,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.login.INetHandlerLoginServer;
+ 
+-public class C00PacketLoginStart extends Packet {
++public class C00PacketLoginStart extends Packet<INetHandlerLoginServer> {
+     private GameProfile field_149305_a;
+ 
+     public C00PacketLoginStart() {

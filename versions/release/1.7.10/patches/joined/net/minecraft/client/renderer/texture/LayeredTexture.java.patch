@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/texture/LayeredTexture.java
++++ b/net/minecraft/client/renderer/texture/LayeredTexture.java
+@@ -16,7 +16,7 @@
+ @OnlyIn(Dist.CLIENT)
+ public class LayeredTexture extends AbstractTexture {
+     private static final Logger field_147638_c = LogManager.getLogger();
+-    public final List field_110567_b;
++    public final List<String> field_110567_b;
+ 
+     public LayeredTexture(String... p_i1274_1_) {
+         this.field_110567_b = Lists.newArrayList(p_i1274_1_);

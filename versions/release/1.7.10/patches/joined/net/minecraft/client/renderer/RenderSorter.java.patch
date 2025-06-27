@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/RenderSorter.java
++++ b/net/minecraft/client/renderer/RenderSorter.java
+@@ -6,7 +6,7 @@
+ import net.neoforged.api.distmarker.OnlyIn;
+ 
+ @OnlyIn(Dist.CLIENT)
+-public class RenderSorter implements Comparator {
++public class RenderSorter implements Comparator<WorldRenderer> {
+     private EntityLivingBase field_78945_a;
+ 
+     public RenderSorter(EntityLivingBase p_i1241_1_) {

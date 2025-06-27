@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/gui/inventory/GuiContainerCreative.java
++++ b/net/minecraft/client/gui/inventory/GuiContainerCreative.java
+@@ -244,7 +244,7 @@
+         GuiContainerCreative.ContainerCreative guicontainercreative$containercreative = (GuiContainerCreative.ContainerCreative)this.field_147002_h;
+         guicontainercreative$containercreative.field_148330_a.clear();
+ 
+-        for (Item item : Item.field_150901_e) {
++        for (Item item : (Iterable<Item>)Item.field_150901_e) {
+             if (item != null && item.func_77640_w() != null) {
+                 item.func_150895_a(item, null, guicontainercreative$containercreative.field_148330_a);
+             }
+@@ -476,7 +476,7 @@
+             List list = p_146285_1_.func_82840_a(this.field_146297_k.field_71439_g, this.field_146297_k.field_71474_y.field_82882_x);
+             CreativeTabs creativetabs = p_146285_1_.func_77973_b().func_77640_w();
+             if (creativetabs == null && p_146285_1_.func_77973_b() == Items.field_151134_bR) {
+-                Map map = EnchantmentHelper.func_82781_a(p_146285_1_);
++                Map<Integer, Integer> map = EnchantmentHelper.func_82781_a(p_146285_1_);
+                 if (map.size() == 1) {
+                     Enchantment enchantment = Enchantment.field_77331_b[map.keySet().iterator().next()];
+ 

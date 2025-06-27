@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/NetHandlerPlayServer.java
++++ b/net/minecraft/network/NetHandlerPlayServer.java
+@@ -826,7 +826,7 @@
+ 
+     @Override
+     public void func_147341_a(C14PacketTabComplete p_147341_1_) {
+-        ArrayList arraylist = Lists.newArrayList();
++        ArrayList<String> arraylist = Lists.newArrayList();
+ 
+         for (String s : this.field_147367_d.func_71248_a(this.field_147369_b, p_147341_1_.func_149419_c())) {
+             arraylist.add(s);

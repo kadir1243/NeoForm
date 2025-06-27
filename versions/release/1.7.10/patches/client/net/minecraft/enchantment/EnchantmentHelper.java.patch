@@ -1,0 +1,38 @@
+--- a/net/minecraft/enchantment/EnchantmentHelper.java
++++ b/net/minecraft/enchantment/EnchantmentHelper.java
+@@ -47,7 +47,7 @@
+         }
+     }
+ 
+-    public static Map func_82781_a(ItemStack p_82781_0_) {
++    public static Map<Integer, Integer> func_82781_a(ItemStack p_82781_0_) {
+         LinkedHashMap linkedhashmap = new LinkedHashMap();
+         NBTTagList nbttaglist = p_82781_0_.func_77973_b() == Items.field_151134_bR ? Items.field_151134_bR.func_92110_g(p_82781_0_) : p_82781_0_.func_77986_q();
+         if (nbttaglist != null) {
+@@ -61,7 +61,7 @@
+         return linkedhashmap;
+     }
+ 
+-    public static void func_82782_a(Map p_82782_0_, ItemStack p_82782_1_) {
++    public static void func_82782_a(Map<Integer, Integer> p_82782_0_, ItemStack p_82782_1_) {
+         NBTTagList nbttaglist = new NBTTagList();
+ 
+         for (int i : p_82782_0_.keySet()) {
+@@ -231,7 +231,7 @@
+     }
+ 
+     public static ItemStack func_77504_a(Random p_77504_0_, ItemStack p_77504_1_, int p_77504_2_) {
+-        List list = func_77513_b(p_77504_0_, p_77504_1_, p_77504_2_);
++        List<EnchantmentData> list = func_77513_b(p_77504_0_, p_77504_1_, p_77504_2_);
+         boolean flag = p_77504_1_.func_77973_b() == Items.field_151122_aG;
+         if (flag) {
+             p_77504_1_.func_150996_a(Items.field_151134_bR);
+@@ -265,7 +265,7 @@
+                 k = 1;
+             }
+ 
+-            ArrayList arraylist = null;
++            ArrayList<EnchantmentData> arraylist = null;
+             Map map = func_77505_b(k, p_77513_1_);
+             if (map != null && !map.isEmpty()) {
+                 EnchantmentData enchantmentdata = (EnchantmentData)WeightedRandom.func_76271_a(p_77513_0_, map.values());
