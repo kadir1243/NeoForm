@@ -1,0 +1,11 @@
+--- a/net/minecraft/potion/Potion.java
++++ b/net/minecraft/potion/Potion.java
+@@ -63,7 +63,7 @@
+     public static final Potion field_76407_F = null;
+     public static final Potion field_76408_G = null;
+     public final int field_76415_H;
+-    private final Map field_111188_I = Maps.newHashMap();
++    private final Map<IAttribute, AttributeModifier> field_111188_I = Maps.newHashMap();
+     private final boolean field_76418_K;
+     private final int field_76414_N;
+     private String field_76416_I = "";

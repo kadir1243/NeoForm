@@ -1,0 +1,78 @@
+--- a/net/minecraft/server/management/PlayerProfileCache.java
++++ b/net/minecraft/server/management/PlayerProfileCache.java
+@@ -41,9 +41,9 @@
+ 
+ public class PlayerProfileCache {
+     public static final SimpleDateFormat field_152659_a = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
+-    private final Map field_152661_c = Maps.newHashMap();
+-    private final Map field_152662_d = Maps.newHashMap();
+-    private final LinkedList field_152663_e = Lists.newLinkedList();
++    private final Map<String, PlayerProfileCache.ProfileEntry> field_152661_c = Maps.newHashMap();
++    private final Map<UUID, PlayerProfileCache.ProfileEntry> field_152662_d = Maps.newHashMap();
++    private final LinkedList<GameProfile> field_152663_e = Lists.newLinkedList();
+     private final MinecraftServer field_152664_f;
+     protected final Gson field_152660_b;
+     private final File field_152665_g;
+@@ -158,7 +158,7 @@
+     }
+ 
+     public String[] func_152654_a() {
+-        ArrayList arraylist = Lists.newArrayList(this.field_152661_c.keySet());
++        ArrayList<String> arraylist = Lists.newArrayList(this.field_152661_c.keySet());
+         return arraylist.toArray(new String[arraylist.size()]);
+     }
+ 
+@@ -181,7 +181,7 @@
+     }
+ 
+     public void func_152657_b() {
+-        Object object = null;
++        List<PlayerProfileCache.ProfileEntry> object = null;
+         BufferedReader bufferedreader = null;
+ 
+         label67: {
+@@ -204,7 +204,7 @@
+                 this.field_152663_e.clear();
+             }
+ 
+-            for (PlayerProfileCache.ProfileEntry playerprofilecache$profileentry : Lists.reverse((List)object)) {
++            for (PlayerProfileCache.ProfileEntry playerprofilecache$profileentry : Lists.reverse(object)) {
+                 if (playerprofilecache$profileentry != null) {
+                     this.func_152651_a(playerprofilecache$profileentry.func_152668_a(), playerprofilecache$profileentry.func_152670_b());
+                 }
+@@ -228,9 +228,9 @@
+         }
+     }
+ 
+-    private List func_152656_a(int p_152656_1_) {
+-        ArrayList arraylist = Lists.newArrayList();
+-        ArrayList arraylist1;
++    private List<PlayerProfileCache.ProfileEntry> func_152656_a(int p_152656_1_) {
++        ArrayList<PlayerProfileCache.ProfileEntry> arraylist = Lists.newArrayList();
++        ArrayList<GameProfile> arraylist1;
+         synchronized (this.field_152663_e) {
+             arraylist1 = Lists.newArrayList(Iterators.limit(this.field_152663_e.iterator(), p_152656_1_));
+         }
+@@ -263,11 +263,11 @@
+         }
+     }
+ 
+-    class Serializer implements JsonDeserializer, JsonSerializer {
++    class Serializer implements JsonDeserializer<PlayerProfileCache.ProfileEntry>, JsonSerializer<PlayerProfileCache.ProfileEntry> {
+         private Serializer() {
+         }
+ 
+-        public JsonElement func_152676_a(PlayerProfileCache.ProfileEntry p_152676_1_, Type p_152676_2_, JsonSerializationContext p_152676_3_) {
++        public JsonElement serialize(PlayerProfileCache.ProfileEntry p_152676_1_, Type p_152676_2_, JsonSerializationContext p_152676_3_) {
+             JsonObject jsonobject = new JsonObject();
+             jsonobject.addProperty("name", p_152676_1_.func_152668_a().getName());
+             UUID uuid = p_152676_1_.func_152668_a().getId();
+@@ -276,7 +276,7 @@
+             return jsonobject;
+         }
+ 
+-        public PlayerProfileCache.ProfileEntry func_152675_a(JsonElement p_152675_1_, Type p_152675_2_, JsonDeserializationContext p_152675_3_) {
++        public PlayerProfileCache.ProfileEntry deserialize(JsonElement p_152675_1_, Type p_152675_2_, JsonDeserializationContext p_152675_3_) {
+             if (p_152675_1_.isJsonObject()) {
+                 JsonObject jsonobject = p_152675_1_.getAsJsonObject();
+                 JsonElement jsonelement = jsonobject.get("name");

@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/login/server/S00PacketDisconnect.java
++++ b/net/minecraft/network/login/server/S00PacketDisconnect.java
+@@ -6,7 +6,7 @@
+ import net.minecraft.network.login.INetHandlerLoginClient;
+ import net.minecraft.util.IChatComponent;
+ 
+-public class S00PacketDisconnect extends Packet {
++public class S00PacketDisconnect extends Packet<INetHandlerLoginClient> {
+     private IChatComponent field_149605_a;
+ 
+     public S00PacketDisconnect() {

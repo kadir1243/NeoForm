@@ -1,0 +1,10 @@
+--- a/net/minecraft/client/resources/data/IMetadataSectionSerializer.java
++++ b/net/minecraft/client/resources/data/IMetadataSectionSerializer.java
+@@ -2,6 +2,6 @@
+ 
+ import com.google.gson.JsonDeserializer;
+ 
+-public interface IMetadataSectionSerializer extends JsonDeserializer {
++public interface IMetadataSectionSerializer<T> extends JsonDeserializer<T> {
+     String func_110483_a();
+ }

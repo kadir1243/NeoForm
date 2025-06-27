@@ -1,0 +1,13 @@
+--- a/net/minecraft/client/resources/SkinManager.java
++++ b/net/minecraft/client/resources/SkinManager.java
+@@ -37,8 +37,8 @@
+         this.field_152795_c = p_i1044_1_;
+         this.field_152796_d = p_i1044_2_;
+         this.field_152797_e = p_i1044_3_;
+-        this.field_152798_f = CacheBuilder.newBuilder().expireAfterAccess(15L, TimeUnit.SECONDS).build(new CacheLoader() {
+-            public Map func_152786_a(GameProfile p_152786_1_) {
++        this.field_152798_f = CacheBuilder.newBuilder().expireAfterAccess(15L, TimeUnit.SECONDS).build(new CacheLoader<GameProfile, Map>() {
++            public Map load(GameProfile p_152786_1_) {
+                 return Minecraft.func_71410_x().func_152347_ac().getTextures(p_152786_1_, false);
+             }
+         });

@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C0DPacketCloseWindow.java
++++ b/net/minecraft/network/play/client/C0DPacketCloseWindow.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayServer;
+ 
+-public class C0DPacketCloseWindow extends Packet {
++public class C0DPacketCloseWindow extends Packet<INetHandlerPlayServer> {
+     private int field_149556_a;
+ 
+     public void func_148833_a(INetHandlerPlayServer p_148833_1_) {

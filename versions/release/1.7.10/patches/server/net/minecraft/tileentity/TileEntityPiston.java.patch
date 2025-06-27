@@ -1,0 +1,11 @@
+--- a/net/minecraft/tileentity/TileEntityPiston.java
++++ b/net/minecraft/tileentity/TileEntityPiston.java
+@@ -17,7 +17,7 @@
+     private boolean field_145872_l;
+     private float field_145873_m;
+     private float field_145870_n;
+-    private List field_145871_o = new ArrayList();
++    private List<Entity> field_145871_o = new ArrayList();
+ 
+     public TileEntityPiston() {
+     }

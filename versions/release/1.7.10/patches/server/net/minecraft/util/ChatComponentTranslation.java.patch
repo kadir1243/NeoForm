@@ -1,0 +1,11 @@
+--- a/net/minecraft/util/ChatComponentTranslation.java
++++ b/net/minecraft/util/ChatComponentTranslation.java
+@@ -14,7 +14,7 @@
+     private final Object[] field_150277_e;
+     private final Object field_150274_f = new Object();
+     private long field_150275_g = -1L;
+-    List field_150278_b = Lists.newArrayList();
++    List<IChatComponent> field_150278_b = Lists.newArrayList();
+     public static final Pattern field_150279_c = Pattern.compile("%(?:(\\d+)\\$)?([A-Za-z%]|$)");
+ 
+     public ChatComponentTranslation(String p_i45160_1_, Object... p_i45160_2_) {

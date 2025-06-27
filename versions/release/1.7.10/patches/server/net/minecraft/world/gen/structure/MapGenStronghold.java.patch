@@ -1,0 +1,20 @@
+--- a/net/minecraft/world/gen/structure/MapGenStronghold.java
++++ b/net/minecraft/world/gen/structure/MapGenStronghold.java
+@@ -28,7 +28,7 @@
+         }
+     }
+ 
+-    public MapGenStronghold(Map p_i2068_1_) {
++    public MapGenStronghold(Map<String, String> p_i2068_1_) {
+         this();
+ 
+         for (Entry entry : p_i2068_1_.entrySet()) {
+@@ -86,7 +86,7 @@
+     }
+ 
+     @Override
+-    protected List func_75052_o_() {
++    protected List<ChunkPosition> func_75052_o_() {
+         ArrayList arraylist = new ArrayList();
+ 
+         for (ChunkCoordIntPair chunkcoordintpair : this.field_75057_g) {

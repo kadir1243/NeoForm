@@ -1,0 +1,29 @@
+--- a/net/minecraft/client/gui/GuiScreenResourcePacks.java
++++ b/net/minecraft/client/gui/GuiScreenResourcePacks.java
+@@ -21,7 +21,7 @@
+     private static final Logger field_146968_a = LogManager.getLogger();
+     private GuiScreen field_146965_f;
+     private List field_146966_g;
+-    private List field_146969_h;
++    private List<ResourcePackListEntry> field_146969_h;
+     private GuiResourcePackAvailable field_146970_i;
+     private GuiResourcePackSelected field_146967_r;
+ 
+@@ -37,7 +37,7 @@
+         this.field_146969_h = new ArrayList();
+         ResourcePackRepository resourcepackrepository = this.field_146297_k.func_110438_M();
+         resourcepackrepository.func_110611_a();
+-        ArrayList arraylist = Lists.newArrayList(resourcepackrepository.func_110609_b());
++        ArrayList<ResourcePackRepository.Entry> arraylist = Lists.newArrayList(resourcepackrepository.func_110609_b());
+         arraylist.removeAll(resourcepackrepository.func_110613_c());
+ 
+         for (ResourcePackRepository.Entry resourcepackrepository$entry : arraylist) {
+@@ -114,7 +114,7 @@
+                     Sys.openURL("file://" + s);
+                 }
+             } else if (p_146284_1_.field_146127_k == 1) {
+-                ArrayList arraylist = Lists.newArrayList();
++                ArrayList<ResourcePackRepository.Entry> arraylist = Lists.newArrayList();
+ 
+                 for (ResourcePackListEntry resourcepacklistentry : this.field_146969_h) {
+                     if (resourcepacklistentry instanceof ResourcePackListEntryFound) {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/profiler/PlayerUsageSnooper.java
++++ b/net/minecraft/profiler/PlayerUsageSnooper.java
+@@ -76,7 +76,7 @@
+ 
+     private void func_76467_g() {
+         RuntimeMXBean runtimemxbean = ManagementFactory.getRuntimeMXBean();
+-        List list = runtimemxbean.getInputArguments();
++        List<String> list = runtimemxbean.getInputArguments();
+         int i = 0;
+ 
+         for (String s : list) {

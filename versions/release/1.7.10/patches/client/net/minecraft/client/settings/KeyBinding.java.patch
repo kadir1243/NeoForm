@@ -1,0 +1,13 @@
+--- a/net/minecraft/client/settings/KeyBinding.java
++++ b/net/minecraft/client/settings/KeyBinding.java
+@@ -7,8 +7,8 @@
+ import net.minecraft.client.resources.I18n;
+ import net.minecraft.util.IntHashMap;
+ 
+-public class KeyBinding implements Comparable {
+-    private static final List field_74516_a = new ArrayList();
++public class KeyBinding implements Comparable<KeyBinding> {
++    private static final List<KeyBinding> field_74516_a = new ArrayList();
+     private static final IntHashMap field_74514_b = new IntHashMap();
+     private static final Set field_151473_c = new HashSet();
+     private final String field_74515_c;

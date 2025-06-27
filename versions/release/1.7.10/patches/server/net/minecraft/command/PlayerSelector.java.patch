@@ -1,0 +1,24 @@
+--- a/net/minecraft/command/PlayerSelector.java
++++ b/net/minecraft/command/PlayerSelector.java
+@@ -106,10 +106,10 @@
+ 
+             World world = flag ? p_82380_0_.func_130014_f_() : null;
+             if (s.equals("p") || s.equals("a")) {
+-                List list1 = MinecraftServer.func_71276_C().func_71203_ab().func_82449_a(chunkcoordinates, i, j, i1, j1, k, l, map1, s1, s2, world);
++                List<EntityPlayerMP> list1 = MinecraftServer.func_71276_C().func_71203_ab().func_82449_a(chunkcoordinates, i, j, i1, j1, k, l, map1, s1, s2, world);
+                 return list1.isEmpty() ? new EntityPlayerMP[0] : list1.toArray(new EntityPlayerMP[list1.size()]);
+             } else if (s.equals("r")) {
+-                List list = MinecraftServer.func_71276_C().func_71203_ab().func_82449_a(chunkcoordinates, i, j, 0, j1, k, l, map1, s1, s2, world);
++                List<EntityPlayerMP> list = MinecraftServer.func_71276_C().func_71203_ab().func_82449_a(chunkcoordinates, i, j, 0, j1, k, l, map1, s1, s2, world);
+                 Collections.shuffle(list);
+                 list = list.subList(0, Math.min(i1, list.size()));
+                 return list.isEmpty() ? new EntityPlayerMP[0] : list.toArray(new EntityPlayerMP[list.size()]);
+@@ -121,7 +121,7 @@
+         }
+     }
+ 
+-    public static Map func_96560_a(Map p_96560_0_) {
++    public static Map<String, Integer> func_96560_a(Map<String, String> p_96560_0_) {
+         HashMap hashmap = new HashMap();
+ 
+         for (String s : p_96560_0_.keySet()) {

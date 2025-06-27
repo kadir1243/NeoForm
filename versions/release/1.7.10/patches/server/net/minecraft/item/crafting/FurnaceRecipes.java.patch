@@ -1,0 +1,22 @@
+--- a/net/minecraft/item/crafting/FurnaceRecipes.java
++++ b/net/minecraft/item/crafting/FurnaceRecipes.java
+@@ -12,8 +12,8 @@
+ 
+ public class FurnaceRecipes {
+     private static final FurnaceRecipes field_77606_a = new FurnaceRecipes();
+-    private Map field_77604_b = new HashMap();
+-    private Map field_77605_c = new HashMap();
++    private Map<ItemStack, ItemStack> field_77604_b = new HashMap();
++    private Map<ItemStack, Float> field_77605_c = new HashMap();
+ 
+     public static FurnaceRecipes func_77602_a() {
+         return field_77606_a;
+@@ -81,7 +81,7 @@
+             && (p_151397_2_.func_77960_j() == 32767 || p_151397_2_.func_77960_j() == p_151397_1_.func_77960_j());
+     }
+ 
+-    public Map func_77599_b() {
++    public Map<ItemStack, ItemStack> func_77599_b() {
+         return this.field_77604_b;
+     }
+ 

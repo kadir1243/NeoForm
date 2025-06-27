@@ -1,0 +1,20 @@
+--- a/net/minecraft/block/BlockSkull.java
++++ b/net/minecraft/block/BlockSkull.java
+@@ -158,7 +158,7 @@
+                         entitywither.field_70761_aq = 90.0F;
+                         entitywither.func_82206_m();
+                         if (!p_149965_1_.field_72995_K) {
+-                            for (EntityPlayer entityplayer : p_149965_1_.func_72872_a(
++                            for (EntityPlayer entityplayer : (Iterable<EntityPlayer>)p_149965_1_.func_72872_a(
+                                 EntityPlayer.class, entitywither.field_70121_D.func_72314_b(50.0, 50.0, 50.0)
+                             )) {
+                                 entityplayer.func_71029_a(AchievementList.field_150963_I);
+@@ -214,7 +214,7 @@
+                         entitywither1.func_70012_b(p_149965_2_ + j + 1.5, p_149965_3_ - 1.45, p_149965_4_ + 0.5, 0.0F, 0.0F);
+                         entitywither1.func_82206_m();
+                         if (!p_149965_1_.field_72995_K) {
+-                            for (EntityPlayer entityplayer1 : p_149965_1_.func_72872_a(
++                            for (EntityPlayer entityplayer1 : (Iterable<EntityPlayer>)p_149965_1_.func_72872_a(
+                                 EntityPlayer.class, entitywither1.field_70121_D.func_72314_b(50.0, 50.0, 50.0)
+                             )) {
+                                 entityplayer1.func_71029_a(AchievementList.field_150963_I);

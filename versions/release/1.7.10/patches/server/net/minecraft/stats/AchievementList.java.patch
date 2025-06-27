@@ -1,0 +1,11 @@
+--- a/net/minecraft/stats/AchievementList.java
++++ b/net/minecraft/stats/AchievementList.java
+@@ -12,7 +12,7 @@
+     public static int field_76008_b;
+     public static int field_76009_c;
+     public static int field_76006_d;
+-    public static List field_76007_e = new ArrayList();
++    public static List<Achievement> field_76007_e = new ArrayList();
+     public static Achievement field_76004_f = new Achievement("achievement.openInventory", "openInventory", 0, 0, Items.field_151122_aG, null)
+         .func_75966_h()
+         .func_75971_g();

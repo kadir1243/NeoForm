@@ -1,0 +1,29 @@
+--- a/net/minecraft/client/renderer/entity/RendererLivingEntity.java
++++ b/net/minecraft/client/renderer/entity/RendererLivingEntity.java
+@@ -19,7 +19,7 @@
+ import org.apache.logging.log4j.Logger;
+ import org.lwjgl.opengl.GL11;
+ 
+-public abstract class RendererLivingEntity extends Render {
++public abstract class RendererLivingEntity<T extends EntityLivingBase> extends Render<T> {
+     private static final Logger field_147923_a = LogManager.getLogger();
+     private static final ResourceLocation field_110814_a = new ResourceLocation("textures/misc/enchanted_item_glint.png");
+     protected ModelBase field_77045_g;
+@@ -48,7 +48,7 @@
+         return p_77034_1_ + p_77034_3_ * f;
+     }
+ 
+-    public void func_76986_a(EntityLivingBase p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
++    public void func_76986_a(T p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
+         GL11.glPushMatrix();
+         GL11.glDisable(2884);
+         this.field_77045_g.field_78095_p = this.func_77040_d(p_76986_1_, p_76986_9_);
+@@ -221,7 +221,7 @@
+     }
+ 
+     protected void func_77036_a(
+-        EntityLivingBase p_77036_1_, float p_77036_2_, float p_77036_3_, float p_77036_4_, float p_77036_5_, float p_77036_6_, float p_77036_7_
++        T p_77036_1_, float p_77036_2_, float p_77036_3_, float p_77036_4_, float p_77036_5_, float p_77036_6_, float p_77036_7_
+     ) {
+         this.func_110777_b(p_77036_1_);
+         if (!p_77036_1_.func_82150_aj()) {

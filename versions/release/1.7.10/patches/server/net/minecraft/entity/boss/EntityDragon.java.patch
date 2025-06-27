@@ -1,0 +1,20 @@
+--- a/net/minecraft/entity/boss/EntityDragon.java
++++ b/net/minecraft/entity/boss/EntityDragon.java
+@@ -339,7 +339,7 @@
+ 
+         if (this.field_70146_Z.nextInt(10) == 0) {
+             float f = 32.0F;
+-            List list = this.field_70170_p.func_72872_a(EntityEnderCrystal.class, this.field_70121_D.func_72314_b(f, f, f));
++            List<EntityEnderCrystal> list = this.field_70170_p.func_72872_a(EntityEnderCrystal.class, this.field_70121_D.func_72314_b(f, f, f));
+             EntityEnderCrystal entityendercrystal = null;
+             double d0 = Double.MAX_VALUE;
+ 
+@@ -355,7 +355,7 @@
+         }
+     }
+ 
+-    private void func_70970_a(List p_70970_1_) {
++    private void func_70970_a(List<Entity> p_70970_1_) {
+         double d0 = (this.field_70987_i.field_70121_D.field_72340_a + this.field_70987_i.field_70121_D.field_72336_d) / 2.0;
+         double d1 = (this.field_70987_i.field_70121_D.field_72339_c + this.field_70987_i.field_70121_D.field_72334_f) / 2.0;
+ 

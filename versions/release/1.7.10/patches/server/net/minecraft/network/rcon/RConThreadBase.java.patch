@@ -1,0 +1,13 @@
+--- a/net/minecraft/network/rcon/RConThreadBase.java
++++ b/net/minecraft/network/rcon/RConThreadBase.java
+@@ -14,8 +14,8 @@
+     protected final String field_164003_c;
+     protected Thread field_72618_c;
+     protected int field_72615_d = 5;
+-    protected List field_72616_e = new ArrayList();
+-    protected List field_72614_f = new ArrayList();
++    protected List<DatagramSocket> field_72616_e = new ArrayList();
++    protected List<ServerSocket> field_72614_f = new ArrayList();
+ 
+     protected RConThreadBase(IServer p_i45300_1_, String p_i45300_2_) {
+         this.field_72617_b = p_i45300_1_;

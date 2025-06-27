@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/FontRenderer.java
++++ b/net/minecraft/client/gui/FontRenderer.java
+@@ -541,7 +541,7 @@
+         this.field_78294_m = p_78275_1_;
+     }
+ 
+-    public List func_78271_c(String p_78271_1_, int p_78271_2_) {
++    public List<String> func_78271_c(String p_78271_1_, int p_78271_2_) {
+         return Arrays.asList(this.func_78280_d(p_78271_1_, p_78271_2_).split("\n"));
+     }
+ 

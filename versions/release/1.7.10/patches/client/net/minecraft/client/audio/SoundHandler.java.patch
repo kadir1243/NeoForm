@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/audio/SoundHandler.java
++++ b/net/minecraft/client/audio/SoundHandler.java
+@@ -61,7 +61,7 @@
+             try {
+                 for (IResource iresource : p_110549_1_.func_135056_b(new ResourceLocation(s, "sounds.json"))) {
+                     try {
+-                        Map map = field_147699_c.fromJson(new InputStreamReader(iresource.func_110527_b()), field_147696_d);
++                        Map<String, SoundList> map = field_147699_c.fromJson(new InputStreamReader(iresource.func_110527_b()), field_147696_d);
+ 
+                         for (Entry entry : map.entrySet()) {
+                             this.func_147693_a(new ResourceLocation(s, (String)entry.getKey()), (SoundList)entry.getValue());
+@@ -189,7 +189,7 @@
+     public SoundEventAccessorComposite func_147686_a(SoundCategory... p_147686_1_) {
+         ArrayList arraylist = Lists.newArrayList();
+ 
+-        for (ResourceLocation resourcelocation : this.field_147697_e.func_148742_b()) {
++        for (ResourceLocation resourcelocation : (Iterable<ResourceLocation>)this.field_147697_e.func_148742_b()) {
+             SoundEventAccessorComposite soundeventaccessorcomposite = (SoundEventAccessorComposite)this.field_147697_e.func_82594_a(resourcelocation);
+             if (ArrayUtils.contains(p_147686_1_, soundeventaccessorcomposite.func_148728_d())) {
+                 arraylist.add(soundeventaccessorcomposite);

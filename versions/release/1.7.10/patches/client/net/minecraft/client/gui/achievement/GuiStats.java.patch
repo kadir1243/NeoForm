@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/gui/achievement/GuiStats.java
++++ b/net/minecraft/client/gui/achievement/GuiStats.java
+@@ -372,7 +372,7 @@
+                 }
+             }
+ 
+-            this.field_148216_n = new Comparator() {
++            this.field_148216_n = new Comparator<StatCrafting>() {
+                 public int compare(StatCrafting p_compare_1_, StatCrafting p_compare_2_) {
+                     int j = Item.func_150891_b(p_compare_1_.func_150959_a());
+                     int k = Item.func_150891_b(p_compare_2_.func_150959_a());
+@@ -528,7 +528,7 @@
+                 }
+             }
+ 
+-            this.field_148216_n = new Comparator() {
++            this.field_148216_n = new Comparator<StatCrafting>() {
+                 public int compare(StatCrafting p_compare_1_, StatCrafting p_compare_2_) {
+                     int j = Item.func_150891_b(p_compare_1_.func_150959_a());
+                     int k = Item.func_150891_b(p_compare_2_.func_150959_a());

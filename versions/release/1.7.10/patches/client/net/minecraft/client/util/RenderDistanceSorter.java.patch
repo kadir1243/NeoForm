@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/util/RenderDistanceSorter.java
++++ b/net/minecraft/client/util/RenderDistanceSorter.java
+@@ -4,7 +4,7 @@
+ import java.util.Comparator;
+ import net.minecraft.client.renderer.RenderList;
+ 
+-public class RenderDistanceSorter implements Comparator {
++public class RenderDistanceSorter implements Comparator<RenderList> {
+     int field_152632_a;
+     int field_152633_b;
+ 

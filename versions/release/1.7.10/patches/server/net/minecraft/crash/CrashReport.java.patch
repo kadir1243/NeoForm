@@ -1,0 +1,29 @@
+--- a/net/minecraft/crash/CrashReport.java
++++ b/net/minecraft/crash/CrashReport.java
+@@ -24,7 +24,7 @@
+     private final String field_71513_a;
+     private final Throwable field_71511_b;
+     private final CrashReportCategory field_85061_c = new CrashReportCategory(this, "System Details");
+-    private final List field_71512_c = new ArrayList();
++    private final List<CrashReportCategory> field_71512_c = new ArrayList();
+     private File field_71510_d;
+     private boolean field_85059_f = true;
+     private StackTraceElement[] field_85060_g = new StackTraceElement[0];
+@@ -71,7 +71,7 @@
+         this.field_85061_c.func_71500_a("JVM Flags", new Callable() {
+             public String call() {
+                 RuntimeMXBean runtimemxbean = ManagementFactory.getRuntimeMXBean();
+-                List list = runtimemxbean.getInputArguments();
++                List<String> list = runtimemxbean.getInputArguments();
+                 int i = 0;
+                 StringBuilder stringbuilder = new StringBuilder();
+ 
+@@ -142,7 +142,7 @@
+     public String func_71498_d() {
+         StringWriter stringwriter = null;
+         PrintWriter printwriter = null;
+-        Object object = this.field_71511_b;
++        Throwable object = this.field_71511_b;
+         if (object.getMessage() == null) {
+             if (object instanceof NullPointerException) {
+                 object = new NullPointerException(this.field_71513_a);

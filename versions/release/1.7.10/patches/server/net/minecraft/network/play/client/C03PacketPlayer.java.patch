@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/client/C03PacketPlayer.java
++++ b/net/minecraft/network/play/client/C03PacketPlayer.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayServer;
+ 
+-public class C03PacketPlayer extends Packet {
++public class C03PacketPlayer extends Packet<INetHandlerPlayServer> {
+     protected double field_149479_a;
+     protected double field_149477_b;
+     protected double field_149478_c;

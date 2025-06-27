@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderMagmaCube.java
++++ b/net/minecraft/client/renderer/entity/RenderMagmaCube.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.util.ResourceLocation;
+ import org.lwjgl.opengl.GL11;
+ 
+-public class RenderMagmaCube extends RenderLiving {
++public class RenderMagmaCube extends RenderLiving<EntityMagmaCube> {
+     private static final ResourceLocation field_110873_a = new ResourceLocation("textures/entity/slime/magmacube.png");
+ 
+     public RenderMagmaCube() {

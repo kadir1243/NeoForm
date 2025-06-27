@@ -1,0 +1,20 @@
+--- a/net/minecraft/server/management/UserListOps.java
++++ b/net/minecraft/server/management/UserListOps.java
+@@ -19,7 +19,7 @@
+         String[] astring = new String[this.func_152688_e().size()];
+         int i = 0;
+ 
+-        for (UserListOpsEntry userlistopsentry : this.func_152688_e().values()) {
++        for (UserListOpsEntry userlistopsentry : (Iterable<UserListOpsEntry>) (Iterable) this.func_152688_e().values()) {
+             astring[i++] = ((GameProfile)userlistopsentry.func_152640_f()).getName();
+         }
+ 
+@@ -31,7 +31,7 @@
+     }
+ 
+     public GameProfile func_152700_a(String p_152700_1_) {
+-        for (UserListOpsEntry userlistopsentry : this.func_152688_e().values()) {
++        for (UserListOpsEntry userlistopsentry : (Iterable<UserListOpsEntry>) (Iterable) this.func_152688_e().values()) {
+             if (p_152700_1_.equalsIgnoreCase(((GameProfile)userlistopsentry.func_152640_f()).getName())) {
+                 return (GameProfile)userlistopsentry.func_152640_f();
+             }

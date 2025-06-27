@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/NettyEncryptingDecoder.java
++++ b/net/minecraft/network/NettyEncryptingDecoder.java
+@@ -7,7 +7,7 @@
+ import javax.crypto.Cipher;
+ import javax.crypto.ShortBufferException;
+ 
+-public class NettyEncryptingDecoder extends MessageToMessageDecoder {
++public class NettyEncryptingDecoder extends MessageToMessageDecoder<ByteBuf> {
+     private final NettyEncryptionTranslator field_150509_a;
+ 
+     public NettyEncryptingDecoder(Cipher p_i45141_1_) {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/entity/RenderHorse.java
++++ b/net/minecraft/client/renderer/entity/RenderHorse.java
+@@ -9,7 +9,7 @@
+ import net.minecraft.util.ResourceLocation;
+ import org.lwjgl.opengl.GL11;
+ 
+-public class RenderHorse extends RenderLiving {
++public class RenderHorse extends RenderLiving<EntityHorse> {
+     private static final Map field_110852_a = Maps.newHashMap();
+     private static final ResourceLocation field_110850_f = new ResourceLocation("textures/entity/horse/horse_white.png");
+     private static final ResourceLocation field_110851_g = new ResourceLocation("textures/entity/horse/mule.png");

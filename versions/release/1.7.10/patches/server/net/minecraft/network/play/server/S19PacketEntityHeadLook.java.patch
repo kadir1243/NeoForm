@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S19PacketEntityHeadLook.java
++++ b/net/minecraft/network/play/server/S19PacketEntityHeadLook.java
+@@ -6,7 +6,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.play.INetHandlerPlayClient;
+ 
+-public class S19PacketEntityHeadLook extends Packet {
++public class S19PacketEntityHeadLook extends Packet<INetHandlerPlayClient> {
+     private int field_149384_a;
+     private byte field_149383_b;
+ 

@@ -1,0 +1,26 @@
+--- a/net/minecraft/profiler/Profiler.java
++++ b/net/minecraft/profiler/Profiler.java
+@@ -10,11 +10,11 @@
+ 
+ public class Profiler {
+     private static final Logger field_151234_b = LogManager.getLogger();
+-    private final List field_76325_b = new ArrayList();
+-    private final List field_76326_c = new ArrayList();
++    private final List<String> field_76325_b = new ArrayList();
++    private final List<Long> field_76326_c = new ArrayList();
+     public boolean field_76327_a;
+     private String field_76323_d = "";
+-    private final Map field_76324_e = new HashMap();
++    private final Map<String, Long> field_76324_e = new HashMap();
+ 
+     public void func_76317_a() {
+         this.field_76324_e.clear();
+@@ -116,7 +116,7 @@
+         return this.field_76325_b.size() == 0 ? "[UNKNOWN]" : (String)this.field_76325_b.get(this.field_76325_b.size() - 1);
+     }
+ 
+-    public static final class Result implements Comparable {
++    public static final class Result implements Comparable<Result> {
+         public double field_76332_a;
+         public double field_76330_b;
+         public String field_76331_c;

@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/chunk/storage/AnvilChunkLoader.java
++++ b/net/minecraft/world/chunk/storage/AnvilChunkLoader.java
+@@ -234,7 +234,7 @@
+         }
+ 
+         p_75820_3_.func_74782_a("TileEntities", nbttaglist3);
+-        List list = p_75820_2_.func_72920_a(p_75820_1_, false);
++        List<NextTickListEntry> list = p_75820_2_.func_72920_a(p_75820_1_, false);
+         if (list != null) {
+             long j = p_75820_2_.func_82737_E();
+             NBTTagList nbttaglist1 = new NBTTagList();

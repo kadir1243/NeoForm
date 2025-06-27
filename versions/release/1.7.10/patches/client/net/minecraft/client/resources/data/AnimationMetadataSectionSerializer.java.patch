@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/resources/data/AnimationMetadataSectionSerializer.java
++++ b/net/minecraft/client/resources/data/AnimationMetadataSectionSerializer.java
+@@ -14,7 +14,7 @@
+ import net.minecraft.util.JsonUtils;
+ import org.apache.commons.lang3.Validate;
+ 
+-public class AnimationMetadataSectionSerializer extends BaseMetadataSectionSerializer implements JsonSerializer {
++public class AnimationMetadataSectionSerializer extends BaseMetadataSectionSerializer<AnimationMetadataSection> implements JsonSerializer<AnimationMetadataSection> {
+     public AnimationMetadataSection deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_) {
+         ArrayList arraylist = Lists.newArrayList();
+         JsonObject jsonobject = JsonUtils.func_151210_l(p_deserialize_1_, "metadata section");

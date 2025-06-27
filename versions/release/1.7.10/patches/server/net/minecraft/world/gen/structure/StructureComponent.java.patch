@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/gen/structure/StructureComponent.java
++++ b/net/minecraft/world/gen/structure/StructureComponent.java
+@@ -66,7 +66,7 @@
+         return this.field_74886_g;
+     }
+ 
+-    public static StructureComponent func_74883_a(List p_74883_0_, StructureBoundingBox p_74883_1_) {
++    public static StructureComponent func_74883_a(List<StructureComponent> p_74883_0_, StructureBoundingBox p_74883_1_) {
+         for (StructureComponent structurecomponent : p_74883_0_) {
+             if (structurecomponent.func_74874_b() != null && structurecomponent.func_74874_b().func_78884_a(p_74883_1_)) {
+                 return structurecomponent;

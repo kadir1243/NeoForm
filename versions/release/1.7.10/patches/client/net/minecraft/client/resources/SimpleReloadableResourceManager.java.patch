@@ -1,0 +1,43 @@
+--- a/net/minecraft/client/resources/SimpleReloadableResourceManager.java
++++ b/net/minecraft/client/resources/SimpleReloadableResourceManager.java
+@@ -20,8 +20,8 @@
+     private static final Logger field_147967_a = LogManager.getLogger();
+     private static final Joiner field_130074_a = Joiner.on(", ");
+     private final Map field_110548_a = Maps.newHashMap();
+-    private final List field_110546_b = Lists.newArrayList();
+-    private final Set field_135057_d = Sets.newLinkedHashSet();
++    private final List<IResourceManagerReloadListener> field_110546_b = Lists.newArrayList();
++    private final Set<String> field_135057_d = Sets.newLinkedHashSet();
+     private final IMetadataSerializer field_110547_c;
+ 
+     public SimpleReloadableResourceManager(IMetadataSerializer p_i1299_1_) {
+@@ -42,7 +42,7 @@
+     }
+ 
+     @Override
+-    public Set func_135055_a() {
++    public Set<String> func_135055_a() {
+         return this.field_135057_d;
+     }
+ 
+@@ -57,7 +57,7 @@
+     }
+ 
+     @Override
+-    public List func_135056_b(ResourceLocation p_135056_1_) throws IOException {
++    public List<IResource> func_135056_b(ResourceLocation p_135056_1_) throws IOException {
+         IResourceManager iresourcemanager = (IResourceManager)this.field_110548_a.get(p_135056_1_.func_110624_b());
+         if (iresourcemanager != null) {
+             return iresourcemanager.func_135056_b(p_135056_1_);
+@@ -72,9 +72,9 @@
+     }
+ 
+     @Override
+-    public void func_110541_a(List p_110541_1_) {
++    public void func_110541_a(List<IResourcePack> p_110541_1_) {
+         this.func_110543_a();
+-        field_147967_a.info("Reloading ResourceManager: " + field_130074_a.join(Iterables.transform(p_110541_1_, new Function() {
++        field_147967_a.info("Reloading ResourceManager: " + field_130074_a.join(Iterables.transform(p_110541_1_, new Function<IResourcePack, String>() {
+             public String apply(IResourcePack p_apply_1_) {
+                 return p_apply_1_.func_130077_b();
+             }

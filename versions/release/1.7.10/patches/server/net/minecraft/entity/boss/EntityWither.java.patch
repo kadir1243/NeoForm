@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/boss/EntityWither.java
++++ b/net/minecraft/entity/boss/EntityWither.java
+@@ -444,7 +444,7 @@
+     protected void func_70628_a(boolean p_70628_1_, int p_70628_2_) {
+         this.func_145779_a(Items.field_151156_bN, 1);
+         if (!this.field_70170_p.field_72995_K) {
+-            for (EntityPlayer entityplayer : this.field_70170_p.func_72872_a(EntityPlayer.class, this.field_70121_D.func_72314_b(50.0, 100.0, 50.0))) {
++            for (EntityPlayer entityplayer : (Iterable<EntityPlayer>)this.field_70170_p.func_72872_a(EntityPlayer.class, this.field_70121_D.func_72314_b(50.0, 100.0, 50.0))) {
+                 entityplayer.func_71029_a(AchievementList.field_150964_J);
+             }
+         }

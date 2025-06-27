@@ -1,0 +1,8 @@
+--- a/net/minecraft/client/resources/data/BaseMetadataSectionSerializer.java
++++ b/net/minecraft/client/resources/data/BaseMetadataSectionSerializer.java
+@@ -1,4 +1,4 @@
+ package net.minecraft.client.resources.data;
+ 
+-public abstract class BaseMetadataSectionSerializer implements IMetadataSectionSerializer {
++public abstract class BaseMetadataSectionSerializer<T> implements IMetadataSectionSerializer<T> {
+ }

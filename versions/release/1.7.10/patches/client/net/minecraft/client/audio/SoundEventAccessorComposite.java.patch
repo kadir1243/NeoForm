@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/audio/SoundEventAccessorComposite.java
++++ b/net/minecraft/client/audio/SoundEventAccessorComposite.java
+@@ -6,7 +6,7 @@
+ import net.minecraft.util.ResourceLocation;
+ 
+ public class SoundEventAccessorComposite implements ISoundEventAccessor {
+-    private final List field_148736_a = Lists.newArrayList();
++    private final List<ISoundEventAccessor> field_148736_a = Lists.newArrayList();
+     private final Random field_148734_b = new Random();
+     private final ResourceLocation field_148735_c;
+     private final SoundCategory field_148732_d;

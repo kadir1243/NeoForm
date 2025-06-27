@@ -1,0 +1,29 @@
+--- a/net/minecraft/entity/EntityLeashKnot.java
++++ b/net/minecraft/entity/EntityLeashKnot.java
+@@ -60,7 +60,7 @@
+         boolean flag = false;
+         if (itemstack != null && itemstack.func_77973_b() == Items.field_151058_ca && !this.field_70170_p.field_72995_K) {
+             double d0 = 7.0;
+-            List list = this.field_70170_p
++            List<EntityLiving> list = this.field_70170_p
+                 .func_72872_a(
+                     EntityLiving.class,
+                     AxisAlignedBB.func_72330_a(
+@@ -86,7 +86,7 @@
+             this.func_70106_y();
+             if (p_130002_1_.field_71075_bZ.field_75098_d) {
+                 double d1 = 7.0;
+-                List list1 = this.field_70170_p
++                List<EntityLiving> list1 = this.field_70170_p
+                     .func_72872_a(
+                         EntityLiving.class,
+                         AxisAlignedBB.func_72330_a(
+@@ -124,7 +124,7 @@
+     }
+ 
+     public static EntityLeashKnot func_110130_b(World p_110130_0_, int p_110130_1_, int p_110130_2_, int p_110130_3_) {
+-        List list = p_110130_0_.func_72872_a(
++        List<EntityLeashKnot> list = p_110130_0_.func_72872_a(
+             EntityLeashKnot.class,
+             AxisAlignedBB.func_72330_a(p_110130_1_ - 1.0, p_110130_2_ - 1.0, p_110130_3_ - 1.0, p_110130_1_ + 1.0, p_110130_2_ + 1.0, p_110130_3_ + 1.0)
+         );

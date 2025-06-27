@@ -1,0 +1,40 @@
+--- a/net/minecraft/server/management/PreYggdrasilConverter.java
++++ b/net/minecraft/server/management/PreYggdrasilConverter.java
+@@ -39,7 +39,7 @@
+     public static final File field_152731_d = new File("white-list.txt");
+ 
+     static List func_152721_a(File p_152721_0_, Map p_152721_1_) throws IOException {
+-        List list = Files.readLines(p_152721_0_, Charsets.UTF_8);
++        List<String> list = Files.readLines(p_152721_0_, Charsets.UTF_8);
+ 
+         for (String s : list) {
+             s = s.trim();
+@@ -53,8 +53,8 @@
+     }
+ 
+     private static void func_152717_a(MinecraftServer p_152717_0_, Collection p_152717_1_, ProfileLookupCallback p_152717_2_) {
+-        String[] astring = Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate() {
+-            public boolean func_152733_a(String p_152733_1_) {
++        String[] astring = Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate<String>() {
++            public boolean apply(String p_152733_1_) {
+                 return !StringUtils.func_151246_b(p_152733_1_);
+             }
+         }), String.class);
+@@ -139,7 +139,7 @@
+             }
+ 
+             try {
+-                HashMap hashmap = Maps.newHashMap();
++                HashMap<String, String[]> hashmap = Maps.newHashMap();
+                 func_152721_a(field_152728_a, hashmap);
+ 
+                 for (String s : hashmap.keySet()) {
+@@ -294,7 +294,7 @@
+         final File file3 = new File(file1.getParentFile(), "unknownplayers");
+         if (file1.exists() && file1.isDirectory()) {
+             File[] afile = file1.listFiles();
+-            ArrayList arraylist = Lists.newArrayList();
++            ArrayList<String> arraylist = Lists.newArrayList();
+ 
+             for (File file4 : afile) {
+                 String s = file4.getName();

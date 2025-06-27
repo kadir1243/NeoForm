@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/gui/stream/GuiIngestServers.java
++++ b/net/minecraft/client/gui/stream/GuiIngestServers.java
+@@ -99,7 +99,7 @@
+             int p_148126_1_, int p_148126_2_, int p_148126_3_, int p_148126_4_, Tessellator p_148126_5_, int p_148126_6_, int p_148126_7_
+         ) {
+             IngestServer ingestserver = GuiIngestServers.this.field_146297_k.func_152346_Z().func_152925_v()[p_148126_1_];
+-            Object object = ingestserver.serverUrl.replaceAll("\\{stream_key\\}", "");
++            String object = ingestserver.serverUrl.replaceAll("\\{stream_key\\}", "");
+             String s = (int)ingestserver.bitrateKbps + " kbps";
+             String s1 = null;
+             IngestServerTester ingestservertester = GuiIngestServers.this.field_146297_k.func_152346_Z().func_152932_y();

@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/GLAllocation.java
++++ b/net/minecraft/client/renderer/GLAllocation.java
+@@ -12,7 +12,7 @@
+ import org.lwjgl.opengl.GL11;
+ 
+ public class GLAllocation {
+-    private static final Map field_74531_a = new HashMap();
++    private static final Map<Integer, Integer> field_74531_a = new HashMap();
+     private static final List field_74530_b = new ArrayList();
+ 
+     public static synchronized int func_74526_a(int p_74526_0_) {

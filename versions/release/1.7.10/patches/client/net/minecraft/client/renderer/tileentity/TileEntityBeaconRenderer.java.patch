@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/tileentity/TileEntityBeaconRenderer.java
++++ b/net/minecraft/client/renderer/tileentity/TileEntityBeaconRenderer.java
+@@ -7,7 +7,7 @@
+ import net.minecraft.util.ResourceLocation;
+ import org.lwjgl.opengl.GL11;
+ 
+-public class TileEntityBeaconRenderer extends TileEntitySpecialRenderer {
++public class TileEntityBeaconRenderer extends TileEntitySpecialRenderer<TileEntityBeacon> {
+     private static final ResourceLocation field_147523_b = new ResourceLocation("textures/entity/beacon_beam.png");
+ 
+     public void func_147500_a(TileEntityBeacon p_147500_1_, double p_147500_2_, double p_147500_4_, double p_147500_6_, float p_147500_8_) {

@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/gen/structure/StructureStrongholdPieces.java
++++ b/net/minecraft/world/gen/structure/StructureStrongholdPieces.java
+@@ -35,7 +35,7 @@
+             }
+         }
+     };
+-    private static List field_75206_c;
++    private static List<StructureStrongholdPieces.PieceWeight> field_75206_c;
+     private static Class field_75203_d;
+     static int field_75207_a;
+     private static final StructureStrongholdPieces.Stones field_75204_e = new StructureStrongholdPieces.Stones();

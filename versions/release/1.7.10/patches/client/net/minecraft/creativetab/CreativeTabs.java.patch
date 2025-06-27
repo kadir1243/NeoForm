@@ -1,0 +1,11 @@
+--- a/net/minecraft/creativetab/CreativeTabs.java
++++ b/net/minecraft/creativetab/CreativeTabs.java
+@@ -198,7 +198,7 @@
+     }
+ 
+     public void func_78018_a(List p_78018_1_) {
+-        for (Item item : Item.field_150901_e) {
++        for (Item item : (Iterable<Item>)Item.field_150901_e) {
+             if (item != null && item.func_77640_w() == this) {
+                 item.func_150895_a(item, this, p_78018_1_);
+             }

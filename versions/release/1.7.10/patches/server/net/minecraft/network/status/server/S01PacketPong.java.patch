@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/status/server/S01PacketPong.java
++++ b/net/minecraft/network/status/server/S01PacketPong.java
+@@ -5,7 +5,7 @@
+ import net.minecraft.network.PacketBuffer;
+ import net.minecraft.network.status.INetHandlerStatusClient;
+ 
+-public class S01PacketPong extends Packet {
++public class S01PacketPong extends Packet<INetHandlerStatusClient> {
+     private long field_149293_a;
+ 
+     public S01PacketPong() {

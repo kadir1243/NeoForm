@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/resources/data/PackMetadataSectionSerializer.java
++++ b/net/minecraft/client/resources/data/PackMetadataSectionSerializer.java
+@@ -9,7 +9,7 @@
+ import net.minecraft.util.IChatComponent;
+ import net.minecraft.util.JsonUtils;
+ 
+-public class PackMetadataSectionSerializer extends BaseMetadataSectionSerializer implements JsonSerializer {
++public class PackMetadataSectionSerializer extends BaseMetadataSectionSerializer<PackMetadataSection> implements JsonSerializer<PackMetadataSection> {
+     public PackMetadataSection deserialize(JsonElement p_deserialize_1_, Type p_deserialize_2_, JsonDeserializationContext p_deserialize_3_) {
+         JsonObject jsonobject = p_deserialize_1_.getAsJsonObject();
+         IChatComponent ichatcomponent = p_deserialize_3_.deserialize(jsonobject.get("description"), IChatComponent.class);

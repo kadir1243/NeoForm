@@ -1,0 +1,11 @@
+--- a/net/minecraft/network/play/server/S3BPacketScoreboardObjective.java
++++ b/net/minecraft/network/play/server/S3BPacketScoreboardObjective.java
+@@ -6,7 +6,7 @@
+ import net.minecraft.network.play.INetHandlerPlayClient;
+ import net.minecraft.scoreboard.ScoreObjective;
+ 
+-public class S3BPacketScoreboardObjective extends Packet {
++public class S3BPacketScoreboardObjective extends Packet<INetHandlerPlayClient> {
+     private String field_149343_a;
+     private String field_149341_b;
+     private int field_149342_c;

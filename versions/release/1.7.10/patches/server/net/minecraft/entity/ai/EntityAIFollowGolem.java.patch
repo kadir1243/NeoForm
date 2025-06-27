@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/ai/EntityAIFollowGolem.java
++++ b/net/minecraft/entity/ai/EntityAIFollowGolem.java
+@@ -22,7 +22,7 @@
+         } else if (!this.field_75294_a.field_70170_p.func_72935_r()) {
+             return false;
+         } else {
+-            List list = this.field_75294_a.field_70170_p.func_72872_a(EntityIronGolem.class, this.field_75294_a.field_70121_D.func_72314_b(6.0, 2.0, 6.0));
++            List<EntityIronGolem> list = this.field_75294_a.field_70170_p.func_72872_a(EntityIronGolem.class, this.field_75294_a.field_70121_D.func_72314_b(6.0, 2.0, 6.0));
+             if (list.isEmpty()) {
+                 return false;
+             } else {

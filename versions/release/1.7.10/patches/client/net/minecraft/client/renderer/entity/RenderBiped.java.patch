@@ -1,0 +1,29 @@
+--- a/net/minecraft/client/renderer/entity/RenderBiped.java
++++ b/net/minecraft/client/renderer/entity/RenderBiped.java
+@@ -19,7 +19,7 @@
+ import net.minecraft.util.StringUtils;
+ import org.lwjgl.opengl.GL11;
+ 
+-public class RenderBiped extends RenderLiving {
++public class RenderBiped<T extends EntityLiving> extends RenderLiving<T> {
+     protected ModelBiped field_77071_a;
+     protected float field_77070_b;
+     protected ModelBiped field_82423_g;
+@@ -120,7 +120,7 @@
+     }
+ 
+     @Override
+-    public void func_76986_a(EntityLiving p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
++    public void func_76986_a(T p_76986_1_, double p_76986_2_, double p_76986_4_, double p_76986_6_, float p_76986_8_, float p_76986_9_) {
+         GL11.glColor3f(1.0F, 1.0F, 1.0F);
+         ItemStack itemstack = p_76986_1_.func_70694_bm();
+         this.func_82420_a(p_76986_1_, itemstack);
+@@ -135,7 +135,7 @@
+         this.field_82423_g.field_78120_m = this.field_82425_h.field_78120_m = this.field_77071_a.field_78120_m = 0;
+     }
+ 
+-    protected ResourceLocation func_110775_a(EntityLiving p_110775_1_) {
++    protected ResourceLocation func_110775_a(T p_110775_1_) {
+         return null;
+     }
+ 

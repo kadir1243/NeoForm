@@ -1,0 +1,31 @@
+--- a/net/minecraft/village/Village.java
++++ b/net/minecraft/village/Village.java
+@@ -19,7 +19,7 @@
+ 
+ public class Village {
+     private World field_75586_a;
+-    private final List field_75584_b = new ArrayList();
++    private final List<VillageDoorInfo> field_75584_b = new ArrayList();
+     private final ChunkCoordinates field_75585_c = new ChunkCoordinates(0, 0, 0);
+     private final ChunkCoordinates field_75582_d = new ChunkCoordinates(0, 0, 0);
+     private int field_75583_e;
+@@ -27,8 +27,8 @@
+     private int field_75581_g;
+     private int field_75588_h;
+     private int field_82694_i;
+-    private TreeMap field_82693_j = new TreeMap();
+-    private List field_75589_i = new ArrayList();
++    private TreeMap<String, Integer> field_82693_j = new TreeMap();
++    private List<Village.VillageAgressor> field_75589_i = new ArrayList();
+     private int field_75587_j;
+ 
+     public Village() {
+@@ -166,7 +166,7 @@
+         return this.field_75582_d.func_71569_e(p_75570_1_, p_75570_2_, p_75570_3_) < this.field_75583_e * this.field_75583_e;
+     }
+ 
+-    public List func_75558_f() {
++    public List<VillageDoorInfo> func_75558_f() {
+         return this.field_75584_b;
+     }
+ 

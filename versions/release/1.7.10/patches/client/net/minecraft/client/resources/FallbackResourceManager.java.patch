@@ -1,0 +1,29 @@
+--- a/net/minecraft/client/resources/FallbackResourceManager.java
++++ b/net/minecraft/client/resources/FallbackResourceManager.java
+@@ -11,7 +11,7 @@
+ import net.minecraft.util.ResourceLocation;
+ 
+ public class FallbackResourceManager implements IResourceManager {
+-    protected final List field_110540_a = new ArrayList();
++    protected final List<IResourcePack> field_110540_a = new ArrayList();
+     private final IMetadataSerializer field_110539_b;
+ 
+     public FallbackResourceManager(IMetadataSerializer p_i1289_1_) {
+@@ -23,7 +23,7 @@
+     }
+ 
+     @Override
+-    public Set func_135055_a() {
++    public Set<String> func_135055_a() {
+         return null;
+     }
+ 
+@@ -52,7 +52,7 @@
+     }
+ 
+     @Override
+-    public List func_135056_b(ResourceLocation p_135056_1_) throws IOException {
++    public List<IResource> func_135056_b(ResourceLocation p_135056_1_) throws IOException {
+         ArrayList arraylist = Lists.newArrayList();
+         ResourceLocation resourcelocation = func_110537_b(p_135056_1_);
+ 

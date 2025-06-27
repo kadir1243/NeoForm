@@ -1,0 +1,50 @@
+--- a/net/minecraft/server/management/UserList.java
++++ b/net/minecraft/server/management/UserList.java
+@@ -32,7 +32,7 @@
+     protected static final Logger field_152693_a = LogManager.getLogger();
+     protected final Gson field_152694_b;
+     private final File field_152695_c;
+-    private final Map field_152696_d = Maps.newHashMap();
++    private final Map<String, UserListEntry> field_152696_d = Maps.newHashMap();
+     private boolean field_152697_e = true;
+     private static final ParameterizedType field_152698_f = new ParameterizedType() {
+         @Override
+@@ -129,7 +129,7 @@
+         return new UserListEntry((Object)null, p_152682_1_);
+     }
+ 
+-    protected Map func_152688_e() {
++    protected Map<String, UserListEntry> func_152688_e() {
+         return this.field_152696_d;
+     }
+ 
+@@ -147,7 +147,7 @@
+     }
+ 
+     public void func_152679_g() throws IOException {
+-        Object object = null;
++        Collection<UserListEntry> object = null;
+         BufferedReader bufferedreader = null;
+ 
+         try {
+@@ -168,17 +168,17 @@
+         }
+     }
+ 
+-    class Serializer implements JsonDeserializer, JsonSerializer {
++    class Serializer implements JsonDeserializer<UserListEntry>, JsonSerializer<UserListEntry> {
+         private Serializer() {
+         }
+ 
+-        public JsonElement func_152751_a(UserListEntry p_152751_1_, Type p_152751_2_, JsonSerializationContext p_152751_3_) {
++        public JsonElement serialize(UserListEntry p_152751_1_, Type p_152751_2_, JsonSerializationContext p_152751_3_) {
+             JsonObject jsonobject = new JsonObject();
+             p_152751_1_.func_152641_a(jsonobject);
+             return jsonobject;
+         }
+ 
+-        public UserListEntry func_152750_a(JsonElement p_152750_1_, Type p_152750_2_, JsonDeserializationContext p_152750_3_) {
++        public UserListEntry deserialize(JsonElement p_152750_1_, Type p_152750_2_, JsonDeserializationContext p_152750_3_) {
+             if (p_152750_1_.isJsonObject()) {
+                 JsonObject jsonobject = p_152750_1_.getAsJsonObject();
+                 return UserList.this.func_152682_a(jsonobject);

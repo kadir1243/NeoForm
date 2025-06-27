@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/gen/ChunkProviderGenerate.java
++++ b/net/minecraft/world/gen/ChunkProviderGenerate.java
+@@ -201,8 +201,6 @@
+             .func_76304_a(this.field_147427_d, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 8.555150000000001, 4.277575000000001, 8.555150000000001);
+         this.field_147428_e = this.field_147431_j.func_76304_a(this.field_147428_e, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 684.412, 684.412, 684.412);
+         this.field_147425_f = this.field_147432_k.func_76304_a(this.field_147425_f, p_147423_1_, p_147423_2_, p_147423_3_, 5, 33, 5, 684.412, 684.412, 684.412);
+-        int flag1 = false;
+-        int flag = false;
+         int i = 0;
+         int j = 0;
+         double d4 = 8.5;

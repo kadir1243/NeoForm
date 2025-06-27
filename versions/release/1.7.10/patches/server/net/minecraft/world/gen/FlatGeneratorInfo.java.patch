@@ -1,0 +1,36 @@
+--- a/net/minecraft/world/gen/FlatGeneratorInfo.java
++++ b/net/minecraft/world/gen/FlatGeneratorInfo.java
+@@ -11,8 +11,8 @@
+ import net.minecraft.world.biome.BiomeGenBase;
+ 
+ public class FlatGeneratorInfo {
+-    private final List field_82655_a = new ArrayList();
+-    private final Map field_82653_b = new HashMap();
++    private final List<FlatLayerInfo> field_82655_a = new ArrayList();
++    private final Map<String, Map<String, String>> field_82653_b = new HashMap();
+     private int field_82654_c;
+ 
+     public int func_82648_a() {
+@@ -23,11 +23,11 @@
+         this.field_82654_c = p_82647_1_;
+     }
+ 
+-    public Map func_82644_b() {
++    public Map<String, Map<String, String>> func_82644_b() {
+         return this.field_82653_b;
+     }
+ 
+-    public List func_82650_c() {
++    public List<FlatLayerInfo> func_82650_c() {
+         return this.field_82655_a;
+     }
+ 
+@@ -66,7 +66,7 @@
+                 }
+ 
+                 stringbuilder.append(((String)entry.getKey()).toLowerCase());
+-                Map map = (Map)entry.getValue();
++                Map<String, String> map = (Map)entry.getValue();
+                 if (!map.isEmpty()) {
+                     stringbuilder.append("(");
+                     int j = 0;

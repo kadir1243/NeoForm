@@ -1,0 +1,20 @@
+--- a/net/minecraft/client/renderer/entity/RenderEnderman.java
++++ b/net/minecraft/client/renderer/entity/RenderEnderman.java
+@@ -10,7 +10,7 @@
+ import net.minecraft.util.ResourceLocation;
+ import org.lwjgl.opengl.GL11;
+ 
+-public class RenderEnderman extends RenderLiving {
++public class RenderEnderman extends RenderLiving<EntityEnderman> {
+     private static final ResourceLocation field_110840_a = new ResourceLocation("textures/entity/enderman/enderman_eyes.png");
+     private static final ResourceLocation field_110839_f = new ResourceLocation("textures/entity/enderman/enderman.png");
+     private ModelEnderman field_77078_a;
+@@ -31,7 +31,7 @@
+             p_76986_6_ += this.field_77077_b.nextGaussian() * d0;
+         }
+ 
+-        super.func_76986_a((EntityLiving)p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
++        super.func_76986_a(p_76986_1_, p_76986_2_, p_76986_4_, p_76986_6_, p_76986_8_, p_76986_9_);
+     }
+ 
+     protected ResourceLocation func_110775_a(EntityEnderman p_110775_1_) {

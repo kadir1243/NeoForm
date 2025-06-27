@@ -1,0 +1,15 @@
+--- a/net/minecraft/client/shader/ShaderGroup.java
++++ b/net/minecraft/client/shader/ShaderGroup.java
+@@ -26,9 +26,9 @@
+     private final Framebuffer field_148035_a;
+     private final IResourceManager field_148033_b;
+     private final String field_148034_c;
+-    private final List field_148031_d = Lists.newArrayList();
+-    private final Map field_148032_e = Maps.newHashMap();
+-    private final List field_148029_f = Lists.newArrayList();
++    private final List<Shader> field_148031_d = Lists.newArrayList();
++    private final Map<String, Framebuffer> field_148032_e = Maps.newHashMap();
++    private final List<Framebuffer> field_148029_f = Lists.newArrayList();
+     private Matrix4f field_148030_g;
+     private int field_148038_h;
+     private int field_148039_i;

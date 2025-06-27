@@ -1,0 +1,11 @@
+--- a/net/minecraft/scoreboard/ScoreDummyCriteria.java
++++ b/net/minecraft/scoreboard/ScoreDummyCriteria.java
+@@ -16,7 +16,7 @@
+     }
+ 
+     @Override
+-    public int func_96635_a(List p_96635_1_) {
++    public int func_96635_a(List<net.minecraft.entity.player.EntityPlayer> p_96635_1_) {
+         return 0;
+     }
+ 

@@ -1,0 +1,20 @@
+--- a/net/minecraft/util/WeightedRandom.java
++++ b/net/minecraft/util/WeightedRandom.java
+@@ -4,7 +4,7 @@
+ import java.util.Random;
+ 
+ public class WeightedRandom {
+-    public static int func_76272_a(Collection p_76272_0_) {
++    public static int func_76272_a(Collection<WeightedRandom.Item> p_76272_0_) {
+         int i = 0;
+ 
+         for (WeightedRandom.Item weightedrandom$item : p_76272_0_) {
+@@ -14,7 +14,7 @@
+         return i;
+     }
+ 
+-    public static WeightedRandom.Item func_76273_a(Random p_76273_0_, Collection p_76273_1_, int p_76273_2_) {
++    public static WeightedRandom.Item func_76273_a(Random p_76273_0_, Collection<WeightedRandom.Item> p_76273_1_, int p_76273_2_) {
+         if (p_76273_2_ <= 0) {
+             throw new IllegalArgumentException();
+         } else {
