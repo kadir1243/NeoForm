@@ -1,0 +1,16 @@
+--- a/net/minecraft/client/renderer/Tessellator.java
++++ b/net/minecraft/client/renderer/Tessellator.java
+@@ -123,11 +123,11 @@
+         );
+         byte b0 = 32;
+ 
+-        for (byte b1 = 0; b1 < this.field_147569_p; b1 += b0) {
++        for (int b1 = 0; b1 < this.field_147569_p; b1 += b0) {
+             priorityqueue.add(Integer.valueOf(b1));
+         }
+ 
+-        for (byte b2 = 0; !priorityqueue.isEmpty(); b2 += b0) {
++        for (int b2 = 0; !priorityqueue.isEmpty(); b2 += b0) {
+             int i = (Integer)priorityqueue.remove();
+ 
+             for (int j = 0; j < b0; j++) {

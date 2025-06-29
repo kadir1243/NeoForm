@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/RenderGlobal.java
++++ b/net/minecraft/client/renderer/RenderGlobal.java
+@@ -290,7 +290,7 @@
+             this.field_72764_o = j1;
+             this.field_72765_l = new WorldRenderer[this.field_72766_m * this.field_72763_n * this.field_72764_o];
+             this.field_72768_k = new WorldRenderer[this.field_72766_m * this.field_72763_n * this.field_72764_o];
+-            byte b0 = 0;
++            int b0 = 0;
+             int j = 0;
+             this.field_72780_y = 0;
+             this.field_72779_z = 0;
