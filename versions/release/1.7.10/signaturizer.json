@@ -96,6 +96,36 @@
     ]
   },
   {
+    "className": "net/minecraft/block/Block",
+    "fields": [
+      {
+        "name": "field_149771_c",
+        "descriptor": "Lnet/minecraft/util/RegistryNamespaced;",
+        "signature": "Lnet/minecraft/util/RegistryNamespaced<Lnet/minecraft/block/Block;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockDispenser",
+    "fields": [
+      {
+        "name": "field_149943_a",
+        "descriptor": "Lnet/minecraft/util/IRegistry;",
+        "signature": "Lnet/minecraft/util/IRegistry<Lnet/minecraft/item/Item;Lnet/minecraft/dispenser/IBehaviorDispenseItem;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/Item",
+    "fields": [
+      {
+        "name": "field_150901_e",
+        "descriptor": "Lnet/minecraft/util/RegistryNamespaced;",
+        "signature": "Lnet/minecraft/util/RegistryNamespaced<Lnet/minecraft/item/Item;>;"
+      }
+    ]
+  },
+  {
     "className": "net/minecraft/client/gui/FontRenderer",
     "methods": [
       {
@@ -3019,5 +3049,222 @@
   {
     "className": "net/minecraft/network/play/server/S31PacketWindowProperty",
     "signature": "Lnet/minecraft/network/Packet<Lnet/minecraft/network/play/INetHandlerPlayClient;>;"
+  },
+  {
+    "className": "net/minecraft/client/network/OldServerPinger$2$1",
+    "signature": "Lio/netty/channel/SimpleChannelInboundHandler<Lio/netty/buffer/ByteBuf;>;"
+  },
+  {
+    "className": "net/minecraft/util/IObjectIntIterable",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/lang/Iterable<TT;>;"
+  },
+  {
+    "className": "net/minecraft/util/IRegistry",
+    "signature": "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;",
+    "methods": [
+      {
+        "name": "func_82594_a",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "signature": "(TK;)TV;"
+      },
+      {
+        "name": "func_82595_a",
+        "descriptor": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+        "signature": "(TK;TV;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/RegistryDefaulted",
+    "signature": "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Lnet/minecraft/util/RegistrySimple<TK;TV;>;",
+    "methods": [
+      {
+        "name": "func_82594_a",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "signature": "(TK;)TV;"
+      },
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Object;)V",
+        "signature": "(TV;)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_82597_b",
+        "descriptor": "Ljava/lang/Object;",
+        "signature": "TV;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/RegistryNamespacedDefaultedByKey",
+    "signature": "<V:Ljava/lang/Object;>Lnet/minecraft/util/RegistryNamespaced<TV;>;",
+    "methods": [
+      {
+        "name": "func_148756_a",
+        "descriptor": "(ILjava/lang/String;Ljava/lang/Object;)V",
+        "signature": "(ILjava/lang/String;TV;)V"
+      },
+      {
+        "name": "func_82594_a",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;",
+        "signature": "(Ljava/lang/String;)TV;"
+      },
+      {
+        "name": "func_148754_a",
+        "descriptor": "(I)Ljava/lang/Object;",
+        "signature": "(I)TV;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_148761_e",
+        "descriptor": "Ljava/lang/Object;",
+        "signature": "TV;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/RegistryNamespaced",
+    "signature": "<T:Ljava/lang/Object;>Lnet/minecraft/util/RegistrySimple<Ljava/lang/String;TT;>;Lnet/minecraft/util/IObjectIntIterable<TT;>;",
+    "fields": [
+      {
+        "name": "field_148759_a",
+        "descriptor": "Lnet/minecraft/util/ObjectIntIdentityMap;",
+        "signature": "Lnet/minecraft/util/ObjectIntIdentityMap<TT;>;"
+      },
+      {
+        "name": "field_148758_b",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<TT;Ljava/lang/String;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_148756_a",
+        "descriptor": "(ILjava/lang/String;Ljava/lang/Object;)V",
+        "signature": "(ILjava/lang/String;TT;)V"
+      },
+      {
+        "name": "func_148740_a",
+        "descriptor": "()Ljava/util/Map;",
+        "signature": "()Ljava/util/Map<Ljava/lang/String;TT;>;"
+      },
+      {
+        "name": "func_82594_a",
+        "descriptor": "(Ljava/lang/String;)Ljava/lang/Object;",
+        "signature": "(Ljava/lang/String;)TT;"
+      },
+      {
+        "name": "func_148750_c",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/String;",
+        "signature": "(TT;)Ljava/lang/String;"
+      },
+      {
+        "name": "func_148757_b",
+        "descriptor": "(Ljava/lang/Object;)I",
+        "signature": "(TT;)I"
+      },
+      {
+        "name": "func_148754_a",
+        "descriptor": "(I)Ljava/lang/Object;",
+        "signature": "(I)TT;"
+      },
+      {
+        "name": "iterator",
+        "descriptor": "()Ljava/util/Iterator;",
+        "signature": "()Ljava/util/Iterator<TT;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/audio/SoundRegistry",
+    "signature": "Lnet/minecraft/util/RegistrySimple<Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/audio/SoundEventAccessorComposite;>;",
+    "methods": [
+      {
+        "name": "func_148740_a",
+        "descriptor": "()Ljava/util/Map;",
+        "signature": "()Ljava/util/Map<Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/audio/SoundEventAccessorComposite;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_148764_a",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/audio/SoundEventAccessorComposite;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/RegistrySimple",
+    "signature": "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Ljava/lang/Object;Lnet/minecraft/util/IRegistry<TK;TV;>;",
+    "fields": [
+      {
+        "name": "field_82596_a",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<TK;TV;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_82594_a",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "signature": "(TK;)TV;"
+      },
+      {
+        "name": "func_82595_a",
+        "descriptor": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+        "signature": "(TK;TV;)V"
+      },
+      {
+        "name": "func_148740_a",
+        "descriptor": "()Ljava/util/Map;",
+        "signature": "()Ljava/util/Map<TK;TV;>;"
+      },
+      {
+        "name": "func_148742_b",
+        "descriptor": "()Ljava/util/Set;",
+        "signature": "()Ljava/util/Set<TK;>;"
+      },
+      {
+        "name": "func_148741_d",
+        "descriptor": "(Ljava/lang/Object;)Z",
+        "signature": "(TK;)Z"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/ObjectIntIdentityMap",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;Lnet/minecraft/util/IObjectIntIterable<TT;>;",
+    "fields": [
+      {
+        "name": "field_148749_a",
+        "descriptor": "Ljava/util/IdentityHashMap;",
+        "signature": "Ljava/util/IdentityHashMap<TT;Ljava/lang/Integer;>;"
+      },
+      {
+        "name": "field_148748_b",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<TT;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_148746_a",
+        "descriptor": "(Ljava/lang/Object;I)V",
+        "signature": "(TT;I)V"
+      },
+      {
+        "name": "func_148747_b",
+        "descriptor": "(Ljava/lang/Object;)I",
+        "signature": "(TT;)I"
+      },
+      {
+        "name": "iterator",
+        "descriptor": "()Ljava/util/Iterator;",
+        "signature": "()Ljava/util/Iterator<TT;>;"
+      }
+    ]
   }
 ]

@@ -27,24 +27,6 @@
  
          for (TextureAtlasSprite textureatlassprite2 : stitcher.func_94309_g()) {
              String s = textureatlassprite2.func_94215_i();
-@@ -225,7 +225,7 @@
-     private void func_110573_f() {
-         this.field_110574_e.clear();
-         if (this.field_94255_a == 0) {
--            for (Block block : Block.field_149771_c) {
-+            for (Block block : (Iterable<Block>)Block.field_149771_c) {
-                 if (block.func_149688_o() != Material.field_151579_a) {
-                     block.func_149651_a(this);
-                 }
-@@ -235,7 +235,7 @@
-             RenderManager.field_78727_a.func_94178_a(this);
-         }
- 
--        for (Item item : Item.field_150901_e) {
-+        for (Item item : (Iterable<Item>)Item.field_150901_e) {
-             if (item != null && item.func_94901_k() == this.field_94255_a) {
-                 item.func_94581_a(this);
-             }
 @@ -264,7 +264,7 @@
          if (p_94245_1_ == null) {
              throw new IllegalArgumentException("Name cannot be null!");

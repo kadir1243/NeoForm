@@ -9,12 +9,3 @@
  
                          for (Entry entry : map.entrySet()) {
                              this.func_147693_a(new ResourceLocation(s, (String)entry.getKey()), (SoundList)entry.getValue());
-@@ -192,7 +192,7 @@
-     public SoundEventAccessorComposite func_147686_a(SoundCategory... p_147686_1_) {
-         ArrayList arraylist = Lists.newArrayList();
- 
--        for (ResourceLocation resourcelocation : this.field_147697_e.func_148742_b()) {
-+        for (ResourceLocation resourcelocation : (Iterable<ResourceLocation>)this.field_147697_e.func_148742_b()) {
-             SoundEventAccessorComposite soundeventaccessorcomposite = (SoundEventAccessorComposite)this.field_147697_e.func_82594_a(resourcelocation);
-             if (ArrayUtils.contains(p_147686_1_, soundeventaccessorcomposite.func_148728_d())) {
-                 arraylist.add(soundeventaccessorcomposite);

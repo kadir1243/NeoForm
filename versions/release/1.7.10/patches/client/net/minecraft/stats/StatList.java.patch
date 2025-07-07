@@ -9,30 +9,3 @@
  
          for (IRecipe irecipe : CraftingManager.func_77594_a().func_77592_b()) {
              if (irecipe.func_77571_b() != null) {
-@@ -110,7 +110,7 @@
-     }
- 
-     private static void func_151181_c() {
--        for (Block block : Block.field_149771_c) {
-+        for (Block block : (Iterable<Block>)Block.field_149771_c) {
-             if (Item.func_150898_a(block) != null) {
-                 int i = Block.func_149682_b(block);
-                 if (block.func_149652_G()) {
-@@ -129,7 +129,7 @@
-     }
- 
-     private static void func_75925_c() {
--        for (Item item : Item.field_150901_e) {
-+        for (Item item : (Iterable<Item>)Item.field_150901_e) {
-             if (item != null) {
-                 int i = Item.func_150891_b(item);
-                 field_75929_E[i] = new StatCrafting(
-@@ -146,7 +146,7 @@
-     }
- 
-     private static void func_151179_e() {
--        for (Item item : Item.field_150901_e) {
-+        for (Item item : (Iterable<Item>)Item.field_150901_e) {
-             if (item != null) {
-                 int i = Item.func_150891_b(item);
-                 if (item.func_77645_m()) {
