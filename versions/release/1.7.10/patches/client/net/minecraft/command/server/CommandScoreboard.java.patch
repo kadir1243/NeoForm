@@ -13,8 +13,8 @@
          Scoreboard scoreboard = this.func_147192_d();
          ScorePlayerTeam scoreplayerteam = this.func_147183_a(p_147188_2_[p_147188_3_++]);
          if (scoreplayerteam != null) {
--            ArrayList arraylist = new ArrayList(scoreplayerteam.func_96670_d());
-+            ArrayList<String> arraylist = new ArrayList(scoreplayerteam.func_96670_d());
+-            ArrayList arraylist = new ArrayList<>(scoreplayerteam.func_96670_d());
++            ArrayList<String> arraylist = new ArrayList<>(scoreplayerteam.func_96670_d());
              if (arraylist.isEmpty()) {
                  throw new CommandException("commands.scoreboard.teams.empty.alreadyEmpty", scoreplayerteam.func_96661_b());
              } else {

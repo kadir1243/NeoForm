@@ -1,17 +1,5 @@
 --- a/net/minecraft/client/Minecraft.java
 +++ b/net/minecraft/client/Minecraft.java
-@@ -173,9 +173,9 @@
-     private static final ResourceLocation field_110444_H = new ResourceLocation("textures/gui/title/mojang.png");
-     public static final boolean field_142025_a = Util.func_110647_a() == Util.EnumOS.OSX;
-     public static byte[] field_71444_a = new byte[10485760];
--    private static final List field_110445_I = Lists.newArrayList(new DisplayMode(2560, 1600), new DisplayMode(2880, 1800));
-+    private static final List<DisplayMode> field_110445_I = Lists.newArrayList(new DisplayMode(2560, 1600), new DisplayMode(2880, 1800));
-     private final File field_130070_K;
--    private final Multimap field_152356_J;
-+    private final Multimap<String, String> field_152356_J;
-     private ServerData field_71422_O;
-     private TextureManager field_71446_o;
-     private static Minecraft field_71432_P;
 @@ -557,7 +557,7 @@
      }
  
@@ -21,75 +9,6 @@
          Collections.addAll(hashset, Display.getAvailableDisplayModes());
          DisplayMode displaymode = Display.getDesktopDisplayMode();
          if (!hashset.contains(displaymode) && Util.func_110647_a() == Util.EnumOS.OSX) {
-@@ -1866,22 +1866,22 @@
-     }
- 
-     public CrashReport func_71396_d(CrashReport p_71396_1_) {
--        p_71396_1_.func_85056_g().func_71500_a("Launched Version", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("Launched Version", new Callable<String>() {
-             public String call() {
-                 return Minecraft.this.field_110447_Z;
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("LWJGL", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("LWJGL", new Callable<String>() {
-             public String call() {
-                 return Sys.getVersion();
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("OpenGL", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("OpenGL", new Callable<String>() {
-             public String call() {
-                 return GL11.glGetString(7937) + " GL version " + GL11.glGetString(7938) + ", " + GL11.glGetString(7936);
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("GL Caps", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("GL Caps", new Callable<String>() {
-             public String call() {
-                 return OpenGlHelper.func_153172_c();
-             }
-@@ -1889,7 +1889,7 @@
-         p_71396_1_.func_85056_g()
-             .func_71500_a(
-                 "Is Modded",
--                new Callable() {
-+                new Callable<String>() {
-                     public String call() {
-                         String s = ClientBrandRetriever.getClientModName();
-                         if (!s.equals("vanilla")) {
-@@ -1902,27 +1902,27 @@
-                     }
-                 }
-             );
--        p_71396_1_.func_85056_g().func_71500_a("Type", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("Type", new Callable<String>() {
-             public String call() {
-                 return "Client (map_client.txt)";
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("Resource Packs", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("Resource Packs", new Callable<String>() {
-             public String call() {
-                 return Minecraft.this.field_71474_y.field_151453_l.toString();
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("Current Language", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("Current Language", new Callable<String>() {
-             public String call() {
-                 return Minecraft.this.field_135017_as.func_135041_c().toString();
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("Profiler Position", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("Profiler Position", new Callable<String>() {
-             public String call() {
-                 return Minecraft.this.field_71424_I.field_76327_a ? Minecraft.this.field_71424_I.func_76322_c() : "N/A (disabled)";
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("Vec3 Pool Size", new Callable() {
-+        p_71396_1_.func_85056_g().func_71500_a("Vec3 Pool Size", new Callable<String>() {
-             public String call() {
-                 byte b0 = 0;
-                 int i = 56 * b0;
 @@ -1933,8 +1933,8 @@
                  return b0 + " (" + i + " bytes; " + j + " MB) allocated, " + b1 + " (" + k + " bytes; " + l + " MB) used";
              }

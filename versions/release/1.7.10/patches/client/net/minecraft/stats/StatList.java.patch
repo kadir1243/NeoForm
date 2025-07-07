@@ -1,20 +1,5 @@
 --- a/net/minecraft/stats/StatList.java
 +++ b/net/minecraft/stats/StatList.java
-@@ -18,10 +18,10 @@
- 
- public class StatList {
-     protected static Map field_75942_a = new HashMap();
--    public static List field_75940_b = new ArrayList();
--    public static List field_75941_c = new ArrayList();
--    public static List field_75938_d = new ArrayList();
--    public static List field_75939_e = new ArrayList();
-+    public static List<StatBase> field_75940_b = new ArrayList();
-+    public static List<StatBase> field_75941_c = new ArrayList();
-+    public static List<StatCrafting> field_75938_d = new ArrayList();
-+    public static List<StatCrafting> field_75939_e = new ArrayList();
-     public static StatBase field_75947_j = new StatBasic("stat.leaveGame", new ChatComponentTranslation("stat.leaveGame")).func_75966_h().func_75971_g();
-     public static StatBase field_75948_k = new StatBasic("stat.playOneMinute", new ChatComponentTranslation("stat.playOneMinute"), StatBase.field_75981_i)
-         .func_75966_h()
 @@ -84,7 +84,7 @@
      }
  

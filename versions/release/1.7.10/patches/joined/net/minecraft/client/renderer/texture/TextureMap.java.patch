@@ -1,16 +1,5 @@
 --- a/net/minecraft/client/renderer/texture/TextureMap.java
 +++ b/net/minecraft/client/renderer/texture/TextureMap.java
-@@ -36,8 +36,8 @@
-     private static final Logger field_147635_d = LogManager.getLogger();
-     public static final ResourceLocation field_110575_b = new ResourceLocation("textures/atlas/blocks.png");
-     public static final ResourceLocation field_110576_c = new ResourceLocation("textures/atlas/items.png");
--    private final List field_94258_i = Lists.newArrayList();
--    private final Map field_110574_e = Maps.newHashMap();
-+    private final List<TextureAtlasSprite> field_94258_i = Lists.newArrayList();
-+    private final Map<String, TextureAtlasSprite> field_110574_e = Maps.newHashMap();
-     private final Map field_94252_e = Maps.newHashMap();
-     private final int field_94255_a;
-     private final String field_94254_c;
 @@ -70,7 +70,7 @@
  
          int[][] aint1 = new int[this.field_147636_j + 1][];
@@ -60,8 +49,8 @@
          if (p_94245_1_ == null) {
              throw new IllegalArgumentException("Name cannot be null!");
          } else if (p_94245_1_.indexOf(47) == -1 && p_94245_1_.indexOf(92) == -1) {
--            Object object = (TextureAtlasSprite)this.field_110574_e.get(p_94245_1_);
-+            TextureAtlasSprite object = (TextureAtlasSprite)this.field_110574_e.get(p_94245_1_);
+-            Object object = this.field_110574_e.get(p_94245_1_);
++            TextureAtlasSprite object = this.field_110574_e.get(p_94245_1_);
              if (object == null) {
                  if (this.field_94255_a == 1) {
                      if ("clock".equals(p_94245_1_)) {

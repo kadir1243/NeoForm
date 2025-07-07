@@ -1,12 +1,6 @@
 --- a/net/minecraft/server/MinecraftServer.java
 +++ b/net/minecraft/server/MinecraftServer.java
-@@ -639,12 +639,12 @@
-         return p_71230_1_;
-     }
- 
--    public List func_71248_a(ICommandSender p_71248_1_, String p_71248_2_) {
-+    public List<String> func_71248_a(ICommandSender p_71248_1_, String p_71248_2_) {
-         ArrayList arraylist = new ArrayList();
+@@ -643,7 +643,7 @@
          if (p_71248_2_.startsWith("/")) {
              p_71248_2_ = p_71248_2_.substring(1);
              boolean flag = !p_71248_2_.contains(" ");

@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/passive/EntityHorse.java
++++ b/net/minecraft/entity/passive/EntityHorse.java
+@@ -431,7 +431,7 @@
+         double d0 = Double.MAX_VALUE;
+         Entity entity = null;
+ 
+-        for (Entity entity1 : this.field_70170_p
++        for (Entity entity1 : (Iterable<Entity>)this.field_70170_p
+             .func_94576_a(p_110250_1_, p_110250_1_.field_70121_D.func_72321_a(p_110250_2_, p_110250_2_, p_110250_2_), field_110276_bu)) {
+             double d1 = entity1.func_70092_e(p_110250_1_.field_70165_t, p_110250_1_.field_70163_u, p_110250_1_.field_70161_v);
+             if (d1 < d0) {

@@ -1,17 +1,5 @@
 --- a/net/minecraft/client/renderer/texture/TextureManager.java
 +++ b/net/minecraft/client/renderer/texture/TextureManager.java
-@@ -21,9 +21,9 @@
- @OnlyIn(Dist.CLIENT)
- public class TextureManager implements ITickable, IResourceManagerReloadListener {
-     private static final Logger field_147646_a = LogManager.getLogger();
--    private final Map field_110585_a = Maps.newHashMap();
-+    private final Map<ResourceLocation, ITextureObject> field_110585_a = Maps.newHashMap();
-     private final Map field_130089_b = Maps.newHashMap();
--    private final List field_110583_b = Lists.newArrayList();
-+    private final List<ITickable> field_110583_b = Lists.newArrayList();
-     private final Map field_110584_c = Maps.newHashMap();
-     private IResourceManager field_110582_d;
- 
 @@ -63,7 +63,7 @@
          }
      }

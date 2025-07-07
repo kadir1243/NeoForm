@@ -1,14 +1,5 @@
 --- a/net/minecraft/crash/CrashReport.java
 +++ b/net/minecraft/crash/CrashReport.java
-@@ -26,7 +26,7 @@
-     private final String field_71513_a;
-     private final Throwable field_71511_b;
-     private final CrashReportCategory field_85061_c = new CrashReportCategory(this, "System Details");
--    private final List field_71512_c = new ArrayList();
-+    private final List<CrashReportCategory> field_71512_c = new ArrayList();
-     private File field_71510_d;
-     private boolean field_85059_f = true;
-     private StackTraceElement[] field_85060_g = new StackTraceElement[0];
 @@ -73,7 +73,7 @@
          this.field_85061_c.func_71500_a("JVM Flags", new Callable() {
              public String call() {

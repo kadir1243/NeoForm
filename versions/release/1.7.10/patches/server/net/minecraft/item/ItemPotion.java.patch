@@ -1,14 +1,5 @@
 --- a/net/minecraft/item/ItemPotion.java
 +++ b/net/minecraft/item/ItemPotion.java
-@@ -27,7 +27,7 @@
-         this.func_77637_a(CreativeTabs.field_78038_k);
-     }
- 
--    public List func_77832_l(ItemStack p_77832_1_) {
-+    public List<PotionEffect> func_77832_l(ItemStack p_77832_1_) {
-         if (p_77832_1_.func_77942_o() && p_77832_1_.func_77978_p().func_150297_b("CustomPotionEffects", 9)) {
-             ArrayList arraylist = new ArrayList();
-             NBTTagList nbttaglist = p_77832_1_.func_77978_p().func_150295_c("CustomPotionEffects", 10);
 @@ -69,7 +69,7 @@
          }
  

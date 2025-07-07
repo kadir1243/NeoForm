@@ -1,16 +1,7 @@
 --- a/net/minecraft/client/gui/GuiScreenResourcePacks.java
 +++ b/net/minecraft/client/gui/GuiScreenResourcePacks.java
-@@ -24,7 +24,7 @@
-     private static final Logger field_146968_a = LogManager.getLogger();
-     private GuiScreen field_146965_f;
-     private List field_146966_g;
--    private List field_146969_h;
-+    private List<ResourcePackListEntry> field_146969_h;
-     private GuiResourcePackAvailable field_146970_i;
-     private GuiResourcePackSelected field_146967_r;
- 
 @@ -40,7 +40,7 @@
-         this.field_146969_h = new ArrayList();
+         this.field_146969_h = new ArrayList<>();
          ResourcePackRepository resourcepackrepository = this.field_146297_k.func_110438_M();
          resourcepackrepository.func_110611_a();
 -        ArrayList arraylist = Lists.newArrayList(resourcepackrepository.func_110609_b());

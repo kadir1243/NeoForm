@@ -1,103 +1,29 @@
 --- a/net/minecraft/scoreboard/Scoreboard.java
 +++ b/net/minecraft/scoreboard/Scoreboard.java
-@@ -8,11 +8,11 @@
- import java.util.Map;
- 
- public class Scoreboard {
--    private final Map field_96545_a = new HashMap();
--    private final Map field_96543_b = new HashMap();
--    private final Map field_96544_c = new HashMap();
-+    private final Map<String, ScoreObjective> field_96545_a = new HashMap();
-+    private final Map<IScoreObjectiveCriteria, List<ScoreObjective>> field_96543_b = new HashMap();
-+    private final Map<String, Map<ScoreObjective, Score>> field_96544_c = new HashMap();
-     private final ScoreObjective[] field_96541_d = new ScoreObjective[3];
--    private final Map field_96542_e = new HashMap();
-+    private final Map<String, ScorePlayerTeam> field_96542_e = new HashMap();
-     private final Map field_96540_f = new HashMap();
- 
-     public ScoreObjective func_96518_b(String p_96518_1_) {
 @@ -25,7 +25,7 @@
              throw new IllegalArgumentException("An objective with the name '" + p_96535_1_ + "' already exists!");
          } else {
              scoreobjective = new ScoreObjective(this, p_96535_1_, p_96535_2_);
--            Object object = (List)this.field_96543_b.get(p_96535_2_);
-+            List<ScoreObjective> object = (List)this.field_96543_b.get(p_96535_2_);
+-            Object object = this.field_96543_b.get(p_96535_2_);
++            List<ScoreObjective> object = this.field_96543_b.get(p_96535_2_);
              if (object == null) {
                  object = new ArrayList();
-                 this.field_96543_b.put(p_96535_2_, object);
-@@ -38,13 +38,13 @@
-         }
-     }
- 
--    public Collection func_96520_a(IScoreObjectiveCriteria p_96520_1_) {
--        Collection collection = (Collection)this.field_96543_b.get(p_96520_1_);
-+    public Collection<ScoreObjective> func_96520_a(IScoreObjectiveCriteria p_96520_1_) {
-+        Collection<ScoreObjective> collection = (Collection)this.field_96543_b.get(p_96520_1_);
-         return collection == null ? new ArrayList() : new ArrayList(collection);
+                 this.field_96543_b.put(p_96535_2_, (List<ScoreObjective>)object);
+@@ -44,7 +44,7 @@
      }
  
      public Score func_96529_a(String p_96529_1_, ScoreObjective p_96529_2_) {
--        Object object = (Map)this.field_96544_c.get(p_96529_1_);
-+        Map<ScoreObjective, Score> object = (Map)this.field_96544_c.get(p_96529_1_);
+-        Object object = this.field_96544_c.get(p_96529_1_);
++        Map<ScoreObjective, Score> object = this.field_96544_c.get(p_96529_1_);
          if (object == null) {
              object = new HashMap();
-             this.field_96544_c.put(p_96529_1_, object);
-@@ -59,7 +59,7 @@
-         return score;
+             this.field_96544_c.put(p_96529_1_, (Map<ScoreObjective, Score>)object);
+@@ -89,7 +89,7 @@
      }
  
--    public Collection func_96534_i(ScoreObjective p_96534_1_) {
-+    public Collection<Score> func_96534_i(ScoreObjective p_96534_1_) {
-         ArrayList arraylist = new ArrayList();
- 
-         for (Map map : this.field_96544_c.values()) {
-@@ -73,11 +73,11 @@
-         return arraylist;
-     }
- 
--    public Collection func_96514_c() {
-+    public Collection<ScoreObjective> func_96514_c() {
-         return this.field_96545_a.values();
-     }
- 
--    public Collection func_96526_d() {
-+    public Collection<String> func_96526_d() {
-         return this.field_96544_c.keySet();
-     }
- 
-@@ -88,8 +88,8 @@
-         }
-     }
- 
--    public Collection func_96528_e() {
+     public Collection<Score> func_96528_e() {
 -        Collection collection = this.field_96544_c.values();
-+    public Collection<Score> func_96528_e() {
 +        Collection<Map<ScoreObjective, Score>> collection = this.field_96544_c.values();
          ArrayList arraylist = new ArrayList();
  
          for (Map map : collection) {
-@@ -99,8 +99,8 @@
-         return arraylist;
-     }
- 
--    public Map func_96510_d(String p_96510_1_) {
--        Object object = (Map)this.field_96544_c.get(p_96510_1_);
-+    public Map<ScoreObjective, Score> func_96510_d(String p_96510_1_) {
-+        Map<ScoreObjective, Score> object = (Map)this.field_96544_c.get(p_96510_1_);
-         if (object == null) {
-             object = new HashMap();
-         }
-@@ -197,11 +197,11 @@
-         }
-     }
- 
--    public Collection func_96531_f() {
-+    public Collection<String> func_96531_f() {
-         return this.field_96542_e.keySet();
-     }
- 
--    public Collection func_96525_g() {
-+    public Collection<ScorePlayerTeam> func_96525_g() {
-         return this.field_96542_e.values();
-     }
- 

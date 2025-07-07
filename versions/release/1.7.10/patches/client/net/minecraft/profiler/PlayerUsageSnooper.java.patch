@@ -1,16 +1,5 @@
 --- a/net/minecraft/profiler/PlayerUsageSnooper.java
 +++ b/net/minecraft/profiler/PlayerUsageSnooper.java
-@@ -16,8 +16,8 @@
- import net.minecraft.util.HttpUtil;
- 
- public class PlayerUsageSnooper {
--    private final Map field_152773_a = Maps.newHashMap();
--    private final Map field_152774_b = Maps.newHashMap();
-+    private final Map<String, Object> field_152773_a = Maps.newHashMap();
-+    private final Map<String, Object> field_152774_b = Maps.newHashMap();
-     private final String field_76480_b = UUID.randomUUID().toString();
-     private final URL field_76481_c;
-     private final IPlayerUsage field_76478_d;
 @@ -78,7 +78,7 @@
  
      private void func_76467_g() {
@@ -20,12 +9,3 @@
          int i = 0;
  
          for (String s : list) {
-@@ -110,7 +110,7 @@
-         }
-     }
- 
--    public Map func_76465_c() {
-+    public Map<String, String> func_76465_c() {
-         LinkedHashMap linkedhashmap = new LinkedHashMap();
-         synchronized (this.field_76476_f) {
-             this.func_76471_b();

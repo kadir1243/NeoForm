@@ -9,7 +9,7 @@
              if (item != null && item.func_77640_w() != null) {
                  item.func_150895_a(item, null, guicontainercreative$containercreative.field_148330_a);
              }
-@@ -473,7 +473,7 @@
+@@ -471,7 +471,7 @@
              List list = p_146285_1_.func_82840_a(this.field_146297_k.field_71439_g, this.field_146297_k.field_71474_y.field_82882_x);
              CreativeTabs creativetabs = p_146285_1_.func_77973_b().func_77640_w();
              if (creativetabs == null && p_146285_1_.func_77973_b() == Items.field_151134_bR) {

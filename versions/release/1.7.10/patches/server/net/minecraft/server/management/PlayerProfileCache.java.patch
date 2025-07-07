@@ -1,18 +1,5 @@
 --- a/net/minecraft/server/management/PlayerProfileCache.java
 +++ b/net/minecraft/server/management/PlayerProfileCache.java
-@@ -41,9 +41,9 @@
- 
- public class PlayerProfileCache {
-     public static final SimpleDateFormat field_152659_a = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
--    private final Map field_152661_c = Maps.newHashMap();
--    private final Map field_152662_d = Maps.newHashMap();
--    private final LinkedList field_152663_e = Lists.newLinkedList();
-+    private final Map<String, PlayerProfileCache.ProfileEntry> field_152661_c = Maps.newHashMap();
-+    private final Map<UUID, PlayerProfileCache.ProfileEntry> field_152662_d = Maps.newHashMap();
-+    private final LinkedList<GameProfile> field_152663_e = Lists.newLinkedList();
-     private final MinecraftServer field_152664_f;
-     protected final Gson field_152660_b;
-     private final File field_152665_g;
 @@ -158,7 +158,7 @@
      }
  

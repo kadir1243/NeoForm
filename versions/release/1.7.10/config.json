@@ -7,7 +7,7 @@
     "fernflower": {
         "version": "org.vineflower:vineflower:1.11.1",
         "java_version": 21,
-        "args": ["--decompile-inner", "--remove-bridge", "--decompile-generics", "--ascii-strings", "--remove-synthetic", "--include-classpath", "--variable-renaming=jad", "--ignore-invalid-bytecode", "--bytecode-source-mapping", "--dump-code-lines", "--indent-string=    ", "--log-level=TRACE", "-cfg", "{libraries}", "{input}", "{output}"],
+        "args": ["--ascii-strings", "--include-classpath", "--variable-renaming=jad", "--bytecode-source-mapping", "--dump-code-lines", "--indent-string=    ", "--log-level=TRACE", "-cfg", "{libraries}", "{input}", "{output}"],
         "jvmargs": ["-Xmx4G"]
     },
     "merge": {
@@ -16,7 +16,7 @@
         "jvmargs": []
     },
     "rename": {
-        "version": "net.neoforged:AutoRenamingTool:2.0.8-Patched-3:all",
+        "version": "net.neoforged:AutoRenamingTool:2.0.8-Patched-6:all",
         "args": ["--input", "{input}", "--output", "{output}", "--map", "{mappings}", "--cfg", "{libraries}", "--inject-signatures", "{signaturizer}", "--inner-class-fix", "{exceptor}", "--ann-fix", "--ids-fix", "--src-fix", "--record-fix", "--unfinal-params"],
         "repo": "https://mymavenrepo.com/repo/y9bmQiqluv2BrIIsqiol/"
     },

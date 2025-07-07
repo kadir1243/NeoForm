@@ -1,0 +1,11 @@
+--- a/net/minecraft/entity/EntityHanging.java
++++ b/net/minecraft/entity/EntityHanging.java
+@@ -154,7 +154,7 @@
+                 }
+             }
+ 
+-            for (Entity entity : this.field_70170_p.func_72839_b(this, this.field_70121_D)) {
++            for (Entity entity : (Iterable<Entity>)this.field_70170_p.func_72839_b(this, this.field_70121_D)) {
+                 if (entity instanceof EntityHanging) {
+                     return false;
+                 }

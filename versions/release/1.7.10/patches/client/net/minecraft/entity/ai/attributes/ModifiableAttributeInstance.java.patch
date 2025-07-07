@@ -1,20 +1,5 @@
 --- a/net/minecraft/entity/ai/attributes/ModifiableAttributeInstance.java
 +++ b/net/minecraft/entity/ai/attributes/ModifiableAttributeInstance.java
-@@ -46,12 +46,12 @@
-         }
-     }
- 
--    public Collection func_111130_a(int p_111130_1_) {
-+    public Collection<AttributeModifier> func_111130_a(int p_111130_1_) {
-         return (Collection)this.field_111137_c.get(p_111130_1_);
-     }
- 
-     @Override
--    public Collection func_111122_c() {
-+    public Collection<AttributeModifier> func_111122_c() {
-         HashSet hashset = new HashSet();
- 
-         for (int i = 0; i < 3; i++) {
 @@ -71,7 +71,7 @@
          if (this.func_111127_a(p_111121_1_.func_111167_a()) != null) {
              throw new IllegalArgumentException("Modifier is already applied on this attribute!");

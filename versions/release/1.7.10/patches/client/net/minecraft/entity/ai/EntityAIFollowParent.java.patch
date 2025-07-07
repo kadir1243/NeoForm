@@ -5,7 +5,7 @@
              return false;
          } else {
 -            List list = this.field_75348_a
-+            List<EntityAnimal> list = this.field_75348_a
++            List<? extends EntityAnimal> list = this.field_75348_a
                  .field_70170_p
                  .func_72872_a(this.field_75348_a.getClass(), this.field_75348_a.field_70121_D.func_72314_b(8.0, 4.0, 8.0));
              EntityAnimal entityanimal = null;

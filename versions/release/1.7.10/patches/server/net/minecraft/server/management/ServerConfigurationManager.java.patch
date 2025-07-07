@@ -1,14 +1,5 @@
 --- a/net/minecraft/server/management/ServerConfigurationManager.java
 +++ b/net/minecraft/server/management/ServerConfigurationManager.java
-@@ -66,7 +66,7 @@
-     private static final Logger field_148546_d = LogManager.getLogger();
-     private static final SimpleDateFormat field_72403_e = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
-     private final MinecraftServer field_72400_f;
--    public final List field_72404_b = new ArrayList();
-+    public final List<EntityPlayerMP> field_72404_b = new ArrayList();
-     private final UserListBans field_72401_g = new UserListBans(field_152613_a);
-     private final BanList field_72413_h = new BanList(field_152614_b);
-     private final UserListOps field_72414_i = new UserListOps(field_152615_c);
 @@ -292,7 +292,7 @@
  
      public EntityPlayerMP func_148545_a(GameProfile p_148545_1_) {
@@ -17,16 +8,7 @@
 +        ArrayList<EntityPlayerMP> arraylist = Lists.newArrayList();
  
          for (int i = 0; i < this.field_72404_b.size(); i++) {
-             EntityPlayerMP entityplayermp = (EntityPlayerMP)this.field_72404_b.get(i);
-@@ -577,7 +577,7 @@
-         return null;
-     }
- 
--    public List func_82449_a(
-+    public List<EntityPlayerMP> func_82449_a(
-         ChunkCoordinates p_82449_1_,
-         int p_82449_2_,
-         int p_82449_3_,
+             EntityPlayerMP entityplayermp = this.field_72404_b.get(i);
 @@ -593,7 +593,7 @@
          if (this.field_72404_b.isEmpty()) {
              return Collections.emptyList();
@@ -36,21 +18,3 @@
              boolean flag = p_82449_4_ < 0;
              boolean flag1 = p_82449_9_ != null && p_82449_9_.startsWith("!");
              boolean flag2 = p_82449_10_ != null && p_82449_10_.startsWith("!");
-@@ -655,7 +655,7 @@
-         }
-     }
- 
--    private boolean func_96457_a(EntityPlayer p_96457_1_, Map p_96457_2_) {
-+    private boolean func_96457_a(EntityPlayer p_96457_1_, Map<String, Integer> p_96457_2_) {
-         if (p_96457_2_ != null && p_96457_2_.size() != 0) {
-             for (Entry entry : p_96457_2_.entrySet()) {
-                 String s = (String)entry.getKey();
-@@ -779,7 +779,7 @@
-         this.field_72409_l = p_72371_1_;
-     }
- 
--    public List func_72382_j(String p_72382_1_) {
-+    public List<EntityPlayerMP> func_72382_j(String p_72382_1_) {
-         ArrayList arraylist = new ArrayList();
- 
-         for (EntityPlayerMP entityplayermp : this.field_72404_b) {

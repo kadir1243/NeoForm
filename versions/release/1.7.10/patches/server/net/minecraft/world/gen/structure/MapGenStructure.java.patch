@@ -1,14 +1,5 @@
 --- a/net/minecraft/world/gen/structure/MapGenStructure.java
 +++ b/net/minecraft/world/gen/structure/MapGenStructure.java
-@@ -18,7 +18,7 @@
- 
- public abstract class MapGenStructure extends MapGenBase {
-     private MapGenStructureData field_143029_e;
--    protected Map field_75053_d = new HashMap();
-+    protected Map<Long, StructureStart> field_75053_d = new HashMap();
- 
-     public abstract String func_143025_a();
- 
 @@ -137,7 +137,7 @@
          if (chunkposition != null) {
              return chunkposition;
@@ -17,13 +8,4 @@
 +            List<ChunkPosition> list = this.func_75052_o_();
              if (list != null) {
                  ChunkPosition chunkposition2 = null;
- 
-@@ -159,7 +159,7 @@
-         }
-     }
- 
--    protected List func_75052_o_() {
-+    protected List<ChunkPosition> func_75052_o_() {
-         return null;
-     }
  

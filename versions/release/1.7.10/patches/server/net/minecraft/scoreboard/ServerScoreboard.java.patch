@@ -1,14 +1,5 @@
 --- a/net/minecraft/scoreboard/ServerScoreboard.java
 +++ b/net/minecraft/scoreboard/ServerScoreboard.java
-@@ -138,7 +138,7 @@
-         }
-     }
- 
--    public List func_96550_d(ScoreObjective p_96550_1_) {
-+    public List<Packet> func_96550_d(ScoreObjective p_96550_1_) {
-         ArrayList arraylist = new ArrayList();
-         arraylist.add(new S3BPacketScoreboardObjective(p_96550_1_, 0));
- 
 @@ -156,7 +156,7 @@
      }
  
@@ -18,15 +9,6 @@
  
          for (EntityPlayerMP entityplayermp : this.field_96555_a.func_71203_ab().field_72404_b) {
              for (Packet packet : list) {
-@@ -167,7 +167,7 @@
-         this.field_96553_b.add(p_96549_1_);
-     }
- 
--    public List func_96548_f(ScoreObjective p_96548_1_) {
-+    public List<Packet> func_96548_f(ScoreObjective p_96548_1_) {
-         ArrayList arraylist = new ArrayList();
-         arraylist.add(new S3BPacketScoreboardObjective(p_96548_1_, 1));
- 
 @@ -181,7 +181,7 @@
      }
  
