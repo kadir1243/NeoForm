@@ -1,20 +1,11 @@
 --- a/net/minecraft/server/management/UserListWhitelist.java
 +++ b/net/minecraft/server/management/UserListWhitelist.java
-@@ -26,7 +26,7 @@
-         String[] astring = new String[this.func_152688_e().size()];
-         int i = 0;
- 
--        for (UserListWhitelistEntry userlistwhitelistentry : this.func_152688_e().values()) {
-+        for (UserListWhitelistEntry userlistwhitelistentry : (Iterable<UserListWhitelistEntry>) (Iterable) this.func_152688_e().values()) {
-             astring[i++] = ((GameProfile)userlistwhitelistentry.func_152640_f()).getName();
-         }
- 
-@@ -38,7 +38,7 @@
+@@ -33,7 +33,7 @@
+         return astring;
      }
  
-     public GameProfile func_152706_a(String p_152706_1_) {
--        for (UserListWhitelistEntry userlistwhitelistentry : this.func_152688_e().values()) {
-+        for (UserListWhitelistEntry userlistwhitelistentry : (Iterable<UserListWhitelistEntry>) (Iterable) this.func_152688_e().values()) {
-             if (p_152706_1_.equalsIgnoreCase(((GameProfile)userlistwhitelistentry.func_152640_f()).getName())) {
-                 return (GameProfile)userlistwhitelistentry.func_152640_f();
-             }
+-    protected String func_152704_b(GameProfile p_152704_1_) {
++    protected String func_152681_a(GameProfile p_152704_1_) {
+         return p_152704_1_.getId().toString();
+     }
+ 

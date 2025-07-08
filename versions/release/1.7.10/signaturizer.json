@@ -1803,6 +1803,33 @@
     ]
   },
   {
+    "className": "net/minecraft/entity/ai/attributes/ServersideAttributeMap",
+    "fields": [
+      {
+        "name": "field_111162_d",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/entity/ai/attributes/IAttributeInstance;>;"
+      },
+      {
+        "name": "field_111163_c",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/entity/ai/attributes/IAttributeInstance;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_111161_b",
+        "descriptor": "()Ljava/util/Set;",
+        "signature": "()Ljava/util/Set<Lnet/minecraft/entity/ai/attributes/IAttributeInstance;>;"
+      },
+      {
+        "name": "func_111160_c",
+        "descriptor": "()Ljava/util/Collection;",
+        "signature": "()Ljava/util/Collection<Lnet/minecraft/entity/ai/attributes/IAttributeInstance;>;"
+      }
+    ]
+  },
+  {
     "className": "net/minecraft/entity/EntityTracker",
     "fields": [
       {
@@ -3264,6 +3291,222 @@
         "name": "iterator",
         "descriptor": "()Ljava/util/Iterator;",
         "signature": "()Ljava/util/Iterator<TT;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserList",
+    "signature": "<U:Ljava/lang/Object;T:Lnet/minecraft/server/management/UserListEntry<TU;>;>Ljava/lang/Object;",
+    "fields": [
+      {
+        "name": "field_152696_d",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;TT;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_152688_e",
+        "descriptor": "()Ljava/util/Map;",
+        "signature": "()Ljava/util/Map<Ljava/lang/String;TT;>;"
+      },
+      {
+        "name": "func_152687_a",
+        "descriptor": "(Lnet/minecraft/server/management/UserListEntry;)V",
+        "signature": "(TT;)V"
+      },
+      {
+        "name": "func_152683_b",
+        "descriptor": "(Ljava/lang/Object;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(TU;)TT;"
+      },
+      {
+        "name": "func_152684_c",
+        "descriptor": "(Ljava/lang/Object;)V",
+        "signature": "(TU;)V"
+      },
+      {
+        "name": "func_152681_a",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/String;",
+        "signature": "(TU;)Ljava/lang/String;"
+      },
+      {
+        "name": "func_152692_d",
+        "descriptor": "(Ljava/lang/Object;)Z",
+        "signature": "(TU;)Z"
+      },
+      {
+        "name": "func_152682_a",
+        "descriptor": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry<TU;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserList$Serializer",
+    "signature": "Ljava/lang/Object;Lcom/google/gson/JsonDeserializer<Lnet/minecraft/server/management/UserListEntry<TU;>;>;Lcom/google/gson/JsonSerializer<Lnet/minecraft/server/management/UserListEntry<TU;>;>;",
+    "methods": [
+      {
+        "name": "func_152751_a",
+        "descriptor": "(Lnet/minecraft/server/management/UserListEntry;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;",
+        "signature": "(Lnet/minecraft/server/management/UserListEntry<TU;>;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;"
+      },
+      {
+        "name": "func_152750_a",
+        "descriptor": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/server/management/UserListEntry<TU;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserListWhitelist",
+    "signature": "Lnet/minecraft/server/management/UserList<Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/management/UserListWhitelistEntry;>;",
+    "methods": [
+      {
+        "name": "func_152682_a",
+        "descriptor": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry<Lcom/mojang/authlib/GameProfile;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserListOps",
+    "signature": "Lnet/minecraft/server/management/UserList<Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/management/UserListOpsEntry;>;",
+    "methods": [
+      {
+        "name": "func_152682_a",
+        "descriptor": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry<Lcom/mojang/authlib/GameProfile;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserListBans",
+    "signature": "Lnet/minecraft/server/management/UserList<Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/management/UserListBansEntry;>;",
+    "methods": [
+      {
+        "name": "func_152682_a",
+        "descriptor": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry<Lcom/mojang/authlib/GameProfile;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserListBansEntry",
+    "signature": "Lnet/minecraft/server/management/BanEntry<Lcom/mojang/authlib/GameProfile;>;"
+  },
+  {
+    "className": "net/minecraft/server/management/IPBanEntry",
+    "signature": "Lnet/minecraft/server/management/BanEntry<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/management/BanEntry",
+    "signature": "<T:Ljava/lang/Object;>Lnet/minecraft/server/management/UserListEntry<TT;>;",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Object;Ljava/util/Date;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)V",
+        "signature": "(TT;Ljava/util/Date;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)V"
+      },
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Object;Lcom/google/gson/JsonObject;)V",
+        "signature": "(TT;Lcom/google/gson/JsonObject;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/UserListOpsEntry",
+    "signature": "Lnet/minecraft/server/management/UserListEntry<Lcom/mojang/authlib/GameProfile;>;"
+  },
+  {
+    "className": "net/minecraft/server/management/UserListWhitelistEntry",
+    "signature": "Lnet/minecraft/server/management/UserListEntry<Lcom/mojang/authlib/GameProfile;>;"
+  },
+  {
+    "className": "net/minecraft/server/management/UserListEntry",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Object;)V",
+        "signature": "(TT;)V"
+      },
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Object;Lcom/google/gson/JsonObject;)V",
+        "signature": "(TT;Lcom/google/gson/JsonObject;)V"
+      },
+      {
+        "name": "func_152640_f",
+        "descriptor": "()Ljava/lang/Object;",
+        "signature": "()TT;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_152642_a",
+        "descriptor": "Ljava/lang/Object;",
+        "signature": "TT;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/BanList",
+    "signature": "Lnet/minecraft/server/management/UserList<Ljava/lang/String;Lnet/minecraft/server/management/IPBanEntry;>;",
+    "methods": [
+      {
+        "name": "func_152682_a",
+        "descriptor": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry;",
+        "signature": "(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/LowerStringMap",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Map<Ljava/lang/String;TT;>;",
+    "fields": [
+      {
+        "name": "field_76117_a",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;TT;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "get",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "signature": "(Ljava/lang/Object;)TT;"
+      },
+      {
+        "name": "put",
+        "descriptor": "(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;",
+        "signature": "(Ljava/lang/String;TT;)TT;"
+      },
+      {
+        "name": "remove",
+        "descriptor": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "signature": "(Ljava/lang/Object;)TT;"
+      },
+      {
+        "name": "putAll",
+        "descriptor": "(Ljava/util/Map;)V",
+        "signature": "(Ljava/util/Map<+Ljava/lang/String;+TT;>;)V"
+      },
+      {
+        "name": "keySet",
+        "descriptor": "()Ljava/util/Set;",
+        "signature": "()Ljava/util/Set<Ljava/lang/String;>;"
+      },
+      {
+        "name": "entrySet",
+        "descriptor": "()Ljava/util/Set;",
+        "signature": "()Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;TT;>;>;"
+      },
+      {
+        "name": "values",
+        "descriptor": "()Ljava/util/Collection;",
+        "signature": "()Ljava/util/Collection<TT;>;"
       }
     ]
   }

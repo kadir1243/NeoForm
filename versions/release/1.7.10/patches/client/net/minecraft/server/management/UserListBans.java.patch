@@ -1,20 +1,11 @@
 --- a/net/minecraft/server/management/UserListBans.java
 +++ b/net/minecraft/server/management/UserListBans.java
-@@ -23,7 +23,7 @@
-         String[] astring = new String[this.func_152688_e().size()];
-         int i = 0;
- 
--        for (UserListBansEntry userlistbansentry : this.func_152688_e().values()) {
-+        for (UserListBansEntry userlistbansentry : (Iterable<UserListBansEntry>) (Iterable)this.func_152688_e().values()) {
-             astring[i++] = ((GameProfile)userlistbansentry.func_152640_f()).getName();
-         }
- 
-@@ -35,7 +35,7 @@
+@@ -30,7 +30,7 @@
+         return astring;
      }
  
-     public GameProfile func_152703_a(String p_152703_1_) {
--        for (UserListBansEntry userlistbansentry : this.func_152688_e().values()) {
-+        for (UserListBansEntry userlistbansentry : (Iterable<UserListBansEntry>)((Iterable)this.func_152688_e().values())) {
-             if (p_152703_1_.equalsIgnoreCase(((GameProfile)userlistbansentry.func_152640_f()).getName())) {
-                 return (GameProfile)userlistbansentry.func_152640_f();
-             }
+-    protected String func_152701_b(GameProfile p_152701_1_) {
++    protected String func_152681_a(GameProfile p_152701_1_) {
+         return p_152701_1_.getId().toString();
+     }
+ 
