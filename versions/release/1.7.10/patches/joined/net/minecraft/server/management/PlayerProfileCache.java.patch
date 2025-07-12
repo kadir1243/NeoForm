@@ -1,18 +1,5 @@
 --- a/net/minecraft/server/management/PlayerProfileCache.java
 +++ b/net/minecraft/server/management/PlayerProfileCache.java
-@@ -41,9 +41,9 @@
- 
- public class PlayerProfileCache {
-     public static final SimpleDateFormat field_152659_a = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
--    private final Map field_152661_c = Maps.newHashMap();
--    private final Map field_152662_d = Maps.newHashMap();
--    private final LinkedList field_152663_e = Lists.newLinkedList();
-+    private final Map<String, PlayerProfileCache.ProfileEntry> field_152661_c = Maps.newHashMap();
-+    private final Map<UUID, PlayerProfileCache.ProfileEntry> field_152662_d = Maps.newHashMap();
-+    private final LinkedList<GameProfile> field_152663_e = Lists.newLinkedList();
-     private final MinecraftServer field_152664_f;
-     protected final Gson field_152660_b;
-     private final File field_152665_g;
 @@ -158,7 +158,7 @@
      }
  
@@ -40,25 +27,16 @@
                  if (playerprofilecache$profileentry != null) {
                      this.func_152651_a(playerprofilecache$profileentry.func_152668_a(), playerprofilecache$profileentry.func_152670_b());
                  }
-@@ -228,9 +228,9 @@
-         }
-     }
+@@ -230,7 +230,7 @@
  
--    private List func_152656_a(int p_152656_1_) {
--        ArrayList arraylist = Lists.newArrayList();
+     private List<PlayerProfileCache.ProfileEntry> func_152656_a(int p_152656_1_) {
+         ArrayList arraylist = Lists.newArrayList();
 -        ArrayList arraylist1;
-+    private List<PlayerProfileCache.ProfileEntry> func_152656_a(int p_152656_1_) {
-+        ArrayList<PlayerProfileCache.ProfileEntry> arraylist = Lists.newArrayList();
 +        ArrayList<GameProfile> arraylist1;
          synchronized (this.field_152663_e) {
              arraylist1 = Lists.newArrayList(Iterators.limit(this.field_152663_e.iterator(), p_152656_1_));
          }
-@@ -263,11 +263,11 @@
-         }
-     }
- 
--    class Serializer implements JsonDeserializer, JsonSerializer {
-+    class Serializer implements JsonDeserializer<PlayerProfileCache.ProfileEntry>, JsonSerializer<PlayerProfileCache.ProfileEntry> {
+@@ -267,7 +267,7 @@
          private Serializer() {
          }
  

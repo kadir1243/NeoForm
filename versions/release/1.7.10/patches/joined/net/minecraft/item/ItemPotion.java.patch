@@ -1,23 +1,5 @@
 --- a/net/minecraft/item/ItemPotion.java
 +++ b/net/minecraft/item/ItemPotion.java
-@@ -28,7 +28,7 @@
- 
- public class ItemPotion extends Item {
-     private HashMap field_77836_a = new HashMap();
--    private static final Map field_77835_b = new LinkedHashMap();
-+    private static final Map<List, Integer> field_77835_b = new LinkedHashMap();
-     @OnlyIn(Dist.CLIENT)
-     private IIcon field_94591_c;
-     @OnlyIn(Dist.CLIENT)
-@@ -68,7 +68,7 @@
-         }
-     }
- 
--    public List func_77834_f(int p_77834_1_) {
-+    public List<PotionEffect> func_77834_f(int p_77834_1_) {
-         List list = (List)this.field_77836_a.get(p_77834_1_);
-         if (list == null) {
-             list = PotionHelper.func_77917_b(p_77834_1_, false);
 @@ -85,7 +85,7 @@
          }
  

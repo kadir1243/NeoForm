@@ -1,6 +1,6 @@
 --- a/net/minecraft/client/Minecraft.java
 +++ b/net/minecraft/client/Minecraft.java
-@@ -554,7 +554,7 @@
+@@ -555,7 +555,7 @@
      }
  
      private void func_110441_Q() throws LWJGLException {
@@ -9,7 +9,7 @@
          Collections.addAll(hashset, Display.getAvailableDisplayModes());
          DisplayMode displaymode = Display.getDesktopDisplayMode();
          if (!hashset.contains(displaymode) && Util.func_110647_a() == Util.EnumOS.OSX) {
-@@ -1930,8 +1930,8 @@
+@@ -1931,8 +1931,8 @@
                  return b0 + " (" + i + " bytes; " + j + " MB) allocated, " + b1 + " (" + k + " bytes; " + l + " MB) used";
              }
          });
