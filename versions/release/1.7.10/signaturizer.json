@@ -66,12 +66,17 @@
       {
         "name": "func_76272_a",
         "descriptor": "(Ljava/util/Collection;)I",
-        "signature": "(Ljava/util/Collection<Lnet/minecraft/util/WeightedRandom$Item;>;)I"
+        "signature": "(Ljava/util/Collection<+Lnet/minecraft/util/WeightedRandom$Item;>;)I"
       },
       {
         "name": "func_76273_a",
         "descriptor": "(Ljava/util/Random;Ljava/util/Collection;I)Lnet/minecraft/util/WeightedRandom$Item;",
-        "signature": "(Ljava/util/Random;Ljava/util/Collection<Lnet/minecraft/util/WeightedRandom$Item;>;I)Lnet/minecraft/util/WeightedRandom$Item;"
+        "signature": "(Ljava/util/Random;Ljava/util/Collection<+Lnet/minecraft/util/WeightedRandom$Item;>;I)Lnet/minecraft/util/WeightedRandom$Item;"
+      },
+      {
+        "name": "func_76271_a",
+        "descriptor": "(Ljava/util/Random;Ljava/util/Collection;)Lnet/minecraft/util/WeightedRandom$Item;",
+        "signature": "(Ljava/util/Random;Ljava/util/Collection<+Lnet/minecraft/util/WeightedRandom$Item;>;)Lnet/minecraft/util/WeightedRandom$Item;"
       }
     ]
   },
@@ -394,6 +399,13 @@
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/world/gen/structure/MapGenStructure;>;"
       }
+    ],
+    "methods": [
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
     ]
   },
   {
@@ -423,6 +435,11 @@
         "name": "field_73245_g",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/world/chunk/Chunk;>;"
+      },
+      {
+        "name": "field_73248_b",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Ljava/lang/Long;>;"
       }
     ],
     "methods": [
@@ -430,6 +447,11 @@
         "name": "func_152380_a",
         "descriptor": "()Ljava/util/List;",
         "signature": "()Ljava/util/List<Lnet/minecraft/world/chunk/Chunk;>;"
+      },
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
       }
     ]
   },
@@ -1796,6 +1818,43 @@
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/world/chunk/Chunk;>;"
       }
+    ],
+    "methods": [
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/ChunkProviderEnd",
+    "methods": [
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/ChunkProviderGenerate",
+    "methods": [
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/ChunkProviderHell",
+    "methods": [
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
     ]
   },
   {
@@ -1854,6 +1913,11 @@
         "name": "func_76179_a",
         "descriptor": "(Ljava/util/Map;)Ljava/lang/String;",
         "signature": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;)Ljava/lang/String;"
+      },
+      {
+        "name": "func_151226_a",
+        "descriptor": "(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;",
+        "signature": "(Ljava/net/URL;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;Z)Ljava/lang/String;"
       },
       {
         "name": "func_151223_a",
@@ -2678,12 +2742,44 @@
     ]
   },
   {
+    "className": "net/minecraft/world/chunk/IChunkProvider",
+    "methods": [
+      {
+        "name": "func_73155_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/MapGenNetherBridge",
+    "methods": [
+      {
+        "name": "func_75059_a",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_75060_e",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ]
+  },
+  {
     "className": "net/minecraft/world/gen/structure/MapGenScatteredFeature",
     "methods": [
       {
         "name": "<init>",
         "descriptor": "(Ljava/util/Map;)V",
         "signature": "(Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;)V"
+      },
+      {
+        "name": "func_82667_a",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
       }
     ],
     "fields": [
@@ -2691,6 +2787,11 @@
         "name": "field_75061_e",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;"
+      },
+      {
+        "name": "field_82668_f",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
       }
     ]
   },
@@ -3492,6 +3593,36 @@
     ]
   },
   {
+    "className": "net/minecraft/client/model/ModelBase",
+    "fields": [
+      {
+        "name": "field_78092_r",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/model/ModelRenderer;>;"
+      },
+      {
+        "name": "field_78094_a",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/client/model/TextureOffset;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/model/ModelRenderer",
+    "fields": [
+      {
+        "name": "field_78804_l",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/model/ModelBox;>;"
+      },
+      {
+        "name": "field_78805_m",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/model/ModelRenderer;>;"
+      }
+    ]
+  },
+  {
     "className": "net/minecraft/network/play/server/S20PacketEntityProperties",
     "signature": "Lnet/minecraft/network/Packet<Lnet/minecraft/network/play/INetHandlerPlayClient;>;",
     "methods": [
@@ -3937,6 +4068,87 @@
     ]
   },
   {
+    "className": "net/minecraft/util/IntHashMap$Entry",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;",
+    "fields": [
+      {
+        "name": "field_76033_b",
+        "descriptor": "Ljava/lang/Object;",
+        "signature": "TT;"
+      },
+      {
+        "name": "field_76034_c",
+        "descriptor": "Lnet/minecraft/util/IntHashMap$Entry;",
+        "signature": "Lnet/minecraft/util/IntHashMap$Entry<TT;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(IILjava/lang/Object;Lnet/minecraft/util/IntHashMap$Entry;)V",
+        "signature": "(IITT;Lnet/minecraft/util/IntHashMap$Entry<TT;>;)V"
+      },
+      {
+        "name": "func_76030_b",
+        "descriptor": "()Ljava/lang/Object;",
+        "signature": "()TT;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/IntHashMap",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;",
+    "fields": [
+      {
+        "name": "field_76055_a",
+        "descriptor": "[Lnet/minecraft/util/IntHashMap$Entry;",
+        "signature": "[Lnet/minecraft/util/IntHashMap$Entry<TT;>;"
+      },
+      {
+        "name": "field_76050_f",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Ljava/lang/Integer;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_76041_a",
+        "descriptor": "(I)Ljava/lang/Object;",
+        "signature": "(I)TT;"
+      },
+      {
+        "name": "func_76045_c",
+        "descriptor": "(I)Lnet/minecraft/util/IntHashMap$Entry;",
+        "signature": "(I)Lnet/minecraft/util/IntHashMap$Entry<TT;>;"
+      },
+      {
+        "name": "func_76038_a",
+        "descriptor": "(ILjava/lang/Object;)V",
+        "signature": "(ITT;)V"
+      },
+      {
+        "name": "func_76048_a",
+        "descriptor": "([Lnet/minecraft/util/IntHashMap$Entry;)V",
+        "signature": "([Lnet/minecraft/util/IntHashMap$Entry<TT;>;)V"
+      },
+      {
+        "name": "func_76049_d",
+        "descriptor": "(I)Ljava/lang/Object;",
+        "signature": "(I)TT;"
+      },
+      {
+        "name": "func_76036_e",
+        "descriptor": "(I)Lnet/minecraft/util/IntHashMap$Entry;",
+        "signature": "(I)Lnet/minecraft/util/IntHashMap$Entry<TT;>;"
+      },
+      {
+        "name": "func_76040_a",
+        "descriptor": "(IILjava/lang/Object;I)V",
+        "signature": "(IITT;I)V"
+      }
+    ]
+  },
+  {
     "className": "net/minecraft/server/management/LowerStringMap",
     "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Map<Ljava/lang/String;TT;>;",
     "fields": [
@@ -3981,6 +4193,43 @@
         "name": "values",
         "descriptor": "()Ljava/util/Collection;",
         "signature": "()Ljava/util/Collection<TT;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/biome/BiomeGenBase",
+    "methods": [
+      {
+        "name": "func_76747_a",
+        "descriptor": "(Lnet/minecraft/entity/EnumCreatureType;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/EnumCreatureType;)Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_76761_J",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      },
+      {
+        "name": "field_76762_K",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      },
+      {
+        "name": "field_76755_L",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      },
+      {
+        "name": "field_82914_M",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;>;"
+      },
+      {
+        "name": "field_150597_n",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/world/biome/BiomeGenBase;>;"
       }
     ]
   }

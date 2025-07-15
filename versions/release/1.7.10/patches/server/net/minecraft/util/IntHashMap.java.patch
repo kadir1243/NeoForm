@@ -1,0 +1,20 @@
+--- a/net/minecraft/util/IntHashMap.java
++++ b/net/minecraft/util/IntHashMap.java
+@@ -29,7 +29,7 @@
+     public T func_76041_a(int p_76041_1_) {
+         int i = func_76044_g(p_76041_1_);
+ 
+-        for (IntHashMap.Entry inthashmap$entry = this.field_76055_a[func_76043_a(i, this.field_76055_a.length)];
++        for (IntHashMap.Entry<T> inthashmap$entry = this.field_76055_a[func_76043_a(i, this.field_76055_a.length)];
+             inthashmap$entry != null;
+             inthashmap$entry = inthashmap$entry.field_76034_c
+         ) {
+@@ -114,7 +114,7 @@
+ 
+     public T func_76049_d(int p_76049_1_) {
+         this.field_76050_f.remove(p_76049_1_);
+-        IntHashMap.Entry inthashmap$entry = this.func_76036_e(p_76049_1_);
++        IntHashMap.Entry<T> inthashmap$entry = this.func_76036_e(p_76049_1_);
+         return inthashmap$entry == null ? null : inthashmap$entry.field_76033_b;
+     }
+ 
