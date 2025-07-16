@@ -709,8 +709,9 @@ subprojects {
                     libraries config.libraries
                 }
             } else {
+                boolean hasMCInject = inputs.properties.mcinject != null
                 def steps_def = [
-                    joined: [
+                     joined: [
                         [type: 'downloadManifest'],
                         [type: 'downloadJson'],
                         [type: 'downloadClient'],
@@ -721,7 +722,7 @@ subprojects {
                         [type: 'listLibraries'],
                         [type: 'rename', libraries: '{listLibrariesOutput}', input: '{mergeOutput}'],
                         [type: 'mcinject', input: '{renameOutput}'],
-                        [type: 'decompile', libraries: '{listLibrariesOutput}', input: '{mcinjectOutput}'],
+                        [type: 'decompile', libraries: '{listLibrariesOutput}', input: hasMCInject ? '{mcinjectOutput}' : '{renameOutput}'],
                         [type: 'inject', input: '{decompileOutput}'],
                         [type: 'patch', input: '{injectOutput}']
                     ],
@@ -733,7 +734,7 @@ subprojects {
                         [type: 'listLibraries'],
                         [type: 'rename', libraries: '{listLibrariesOutput}', input: '{stripOutput}'],
                         [type: 'mcinject', input: '{renameOutput}'],
-                        [type: 'decompile', libraries: '{listLibrariesOutput}', input: '{mcinjectOutput}'],
+                        [type: 'decompile', libraries: '{listLibrariesOutput}', input: hasMCInject ? '{mcinjectOutput}' : '{renameOutput}'],
                         [type: 'inject', input: '{decompileOutput}'],
                         [type: 'patch', input: '{injectOutput}']
                     ],
@@ -745,11 +746,20 @@ subprojects {
                         [type: 'listLibraries'],
                         [type: 'rename', libraries: '{listLibrariesOutput}', input: '{stripOutput}'],
                         [type: 'mcinject', input: '{renameOutput}'],
-                        [type: 'decompile', libraries: '{listLibrariesOutput}', input: '{mcinjectOutput}'],
+                        [type: 'decompile', libraries: '{listLibrariesOutput}', input: hasMCInject ? '{mcinjectOutput}' : '{renameOutput}'],
                         [type: 'inject', input: '{decompileOutput}'],
                         [type: 'patch', input: '{injectOutput}']
                     ]
                 ]
+
+                if (!hasMCInject) {
+                    steps_def.values().forEach {
+                        it.removeIf {
+                            (it.get("type") == "mcinject") // remove mcinject from config
+                        }
+                    }
+                }
+
                 json {
                     spec 1
                     version inputs.properties.version
@@ -771,7 +781,9 @@ subprojects {
                     steps steps_def
                     functions {
                         decompile config.fernflower
-                        mcinject config.mcinjector
+                        if (hasMCInject) {
+                            mcinject config.mcinjector
+                        }
                         merge config.merge
                         rename config.rename
                     }
