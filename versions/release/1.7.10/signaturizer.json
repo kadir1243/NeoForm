@@ -114,6 +114,11 @@
         "name": "func_149743_a",
         "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
         "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      },
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
       }
     ]
   },
@@ -4230,6 +4235,356 @@
         "name": "field_150597_n",
         "descriptor": "Ljava/util/Set;",
         "signature": "Ljava/util/Set<Lnet/minecraft/world/biome/BiomeGenBase;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockSlab",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockSand",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockOldLog",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockLilyPad",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockCarpet",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockTallGrass",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockEndPortalFrame",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockStoneSlab",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockWood",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockColored",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockDirt",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockSilverfish",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockCauldron",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockQuartz",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockFence",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockPistonExtension",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockDoublePlant",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockFlower",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockNewLeaf",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockStoneBrick",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockStairs",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockSandStone",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockBrewingStand",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockOldLeaf",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockPane",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockPistonBase",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockStainedGlass",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockSapling",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockWall",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockNewLog",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockWoodSlab",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockStainedGlassPane",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockEndPortal",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockHopper",
+    "methods": [
+      {
+        "name": "func_149743_a",
+        "descriptor": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V",
+        "signature": "(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List<Lnet/minecraft/util/AxisAlignedBB;>;Lnet/minecraft/entity/Entity;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockAnvil",
+    "methods": [
+      {
+        "name": "func_149666_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
       }
     ]
   }
