@@ -1,9 +1,5 @@
 {
     "java_target": 8,
-    "mcinjector" : {
-        "version" : "de.oceanlabs.mcp:mcinjector:3.8.0:fatjar",
-        "args": ["--in", "{input}", "--out", "{output}", "--log", "{log}", "--exc", "{exceptions}", "--ctr", "{constructors}"]
-    },
     "fernflower": {
         "version": "org.vineflower:vineflower:1.11.1",
         "java_version": 21,
@@ -16,8 +12,8 @@
         "jvmargs": []
     },
     "rename": {
-        "version": "net.neoforged:AutoRenamingTool:2.0.8-Patched-6:all",
-        "args": ["--input", "{input}", "--output", "{output}", "--map", "{mappings}", "--cfg", "{libraries}", "--inject-signatures", "{signaturizer}", "--inner-class-fix", "{exceptor}", "--ann-fix", "--ids-fix", "--src-fix", "--record-fix", "--unfinal-params"],
+        "version": "net.neoforged:AutoRenamingTool:2.0.8-Patched-8:all",
+        "args": ["--input", "{input}", "--output", "{output}", "--map", "{mappings}", "--cfg", "{libraries}", "--inject-signatures", "{signaturizer}", "--inner-class-fix", "{exceptor}", "--inject-exceptions", "{exceptions}", "--ann-fix", "--ids-fix", "--src-fix", "--record-fix", "--unfinal-params"],
         "repo": "https://mymavenrepo.com/repo/y9bmQiqluv2BrIIsqiol/"
     },
     "libraries": {

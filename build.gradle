@@ -329,6 +329,7 @@ subprojects {
             mappings = makeObfToIntermediate.dest
             libraries = child.libraries.dest
             exceptor = project.file('exceptor.json')
+            exceptions = project.file('exceptions.txt')
             signaturizer = project.file('signaturizer.json')
             dest = file(PATH_CACHED_VERSION + s + '.mapped.jar')
             log = file(PATH_CACHED_VERSION + s + '.mapped.log')
