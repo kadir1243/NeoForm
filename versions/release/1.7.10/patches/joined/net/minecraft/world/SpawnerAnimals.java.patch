@@ -8,3 +8,12 @@
                                                      try {
                                                          entityliving = (EntityLiving)biomegenbase$spawnlistentry.field_76300_b
                                                              .getConstructor(World.class)
+@@ -154,7 +155,7 @@
+     public static void func_77191_a(
+         World p_77191_0_, BiomeGenBase p_77191_1_, int p_77191_2_, int p_77191_3_, int p_77191_4_, int p_77191_5_, Random p_77191_6_
+     ) {
+-        List list = p_77191_1_.func_76747_a(EnumCreatureType.creature);
++        List<BiomeGenBase.SpawnListEntry> list = p_77191_1_.func_76747_a(EnumCreatureType.creature);
+         if (!list.isEmpty()) {
+             while (p_77191_6_.nextFloat() < p_77191_1_.func_76741_f()) {
+                 BiomeGenBase.SpawnListEntry biomegenbase$spawnlistentry = WeightedRandom.func_76271_a(p_77191_0_.field_73012_v, list);

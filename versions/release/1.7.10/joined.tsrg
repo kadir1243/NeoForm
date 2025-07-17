@@ -19610,7 +19610,7 @@ bav net/minecraft/client/Minecraft$15
 	a Lbao; field_152389_a
 	<init> (Lbao;)V <init>
 		0 o p_i1101_1_
-	a ()Ljava/lang/String; func_152388_a
+	a ()Ljava/lang/String; call
 	call ()Ljava/lang/Object; call
 baw net/minecraft/client/Minecraft$16
 	a Lbao; field_152128_a
@@ -31796,7 +31796,7 @@ brk net/minecraft/client/resources/SkinManager$1
 	a Lbrj; field_152787_a
 	<init> (Lbrj;)V <init>
 		0 o p_i1042_1_
-	a (Lcom/mojang/authlib/GameProfile;)Ljava/util/Map; func_152786_a
+	a (Lcom/mojang/authlib/GameProfile;)Ljava/util/Map; load
 		0 o p_152786_1_
 	load (Ljava/lang/Object;)Ljava/lang/Object; load
 		0 o p_load_1_
@@ -40942,11 +40942,11 @@ nw net/minecraft/server/management/PlayerProfileCache$Serializer
 		1 o p_i46332_2_
 	<init> (Lns;)V <init>
 		0 o p_i1162_1_
-	a (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnv; func_152675_a
+	a (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnv; deserialize
 		0 o p_152675_1_
 		1 o p_152675_2_
 		2 o p_152675_3_
-	a (Lnv;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement; func_152676_a
+	a (Lnv;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement; serialize
 		0 o p_152676_1_
 		1 o p_152676_2_
 		2 o p_152676_3_
@@ -41323,7 +41323,7 @@ oj net/minecraft/server/management/UserListOps
 		0 o p_152682_1_
 	a (Ljava/lang/String;)Lcom/mojang/authlib/GameProfile; func_152700_a
 		0 o p_152700_1_
-	b (Lcom/mojang/authlib/GameProfile;)Ljava/lang/String; func_152699_b
+	b (Lcom/mojang/authlib/GameProfile;)Ljava/lang/String; func_152681_a
 		0 o p_152699_1_
 ok net/minecraft/server/management/UserListOpsEntry
 	a I field_152645_a
@@ -41394,11 +41394,11 @@ oo net/minecraft/server/management/UserList$Serializer
 		1 o p_i1141_2_
 	<init> (Lom;)V <init>
 		0 o p_i1140_1_
-	a (Lol;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement; func_152751_a
+	a (Lol;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement; serialize
 		0 o p_152751_1_
 		1 o p_152751_2_
 		2 o p_152751_3_
-	a (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lol; func_152750_a
+	a (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lol; deserialize
 		0 o p_152750_1_
 		1 o p_152750_2_
 		2 o p_152750_3_
@@ -41422,7 +41422,7 @@ op net/minecraft/server/management/UserListBans
 		0 o p_152702_1_
 	a (Ljava/lang/String;)Lcom/mojang/authlib/GameProfile; func_152703_a
 		0 o p_152703_1_
-	b (Lcom/mojang/authlib/GameProfile;)Ljava/lang/String; func_152701_b
+	b (Lcom/mojang/authlib/GameProfile;)Ljava/lang/String; func_152681_a
 		0 o p_152701_1_
 oq net/minecraft/server/management/UserListBansEntry
 	<init> (Lcom/mojang/authlib/GameProfile;Ljava/util/Date;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)V <init>
@@ -41452,7 +41452,7 @@ or net/minecraft/server/management/UserListWhitelist
 		0 o p_152705_1_
 	a (Ljava/lang/String;)Lcom/mojang/authlib/GameProfile; func_152706_a
 		0 o p_152706_1_
-	b (Lcom/mojang/authlib/GameProfile;)Ljava/lang/String; func_152704_b
+	b (Lcom/mojang/authlib/GameProfile;)Ljava/lang/String; func_152681_a
 		0 o p_152704_1_
 os net/minecraft/server/management/UserListWhitelistEntry
 	<init> (Lcom/google/gson/JsonObject;)V <init>

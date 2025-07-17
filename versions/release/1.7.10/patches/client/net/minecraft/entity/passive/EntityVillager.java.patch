@@ -4,8 +4,8 @@
      }
  
      private static int func_146092_b(Item p_146092_0_, Random p_146092_1_) {
--        Tuple tuple = (Tuple)field_70958_bB.get(p_146092_0_);
-+        Tuple<Integer, Integer> tuple = (Tuple)field_70958_bB.get(p_146092_0_);
+-        Tuple tuple = field_70958_bB.get(p_146092_0_);
++        Tuple<Integer, Integer> tuple = field_70958_bB.get(p_146092_0_);
          if (tuple == null) {
              return 1;
          } else {
@@ -13,8 +13,8 @@
      }
  
      private static int func_146090_c(Item p_146090_0_, Random p_146090_1_) {
--        Tuple tuple = (Tuple)field_70960_bC.get(p_146090_0_);
-+        Tuple<Integer, Integer> tuple = (Tuple)field_70960_bC.get(p_146090_0_);
+-        Tuple tuple = field_70960_bC.get(p_146090_0_);
++        Tuple<Integer, Integer> tuple = field_70960_bC.get(p_146090_0_);
          if (tuple == null) {
              return 1;
          } else {

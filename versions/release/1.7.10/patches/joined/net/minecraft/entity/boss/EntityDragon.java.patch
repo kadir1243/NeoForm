@@ -9,12 +9,3 @@
              EntityEnderCrystal entityendercrystal = null;
              double d0 = Double.MAX_VALUE;
  
-@@ -361,7 +361,7 @@
-         }
-     }
- 
--    private void func_70970_a(List p_70970_1_) {
-+    private void func_70970_a(List<Entity> p_70970_1_) {
-         double d0 = (this.field_70987_i.field_70121_D.field_72340_a + this.field_70987_i.field_70121_D.field_72336_d) / 2.0;
-         double d1 = (this.field_70987_i.field_70121_D.field_72339_c + this.field_70987_i.field_70121_D.field_72334_f) / 2.0;
- 

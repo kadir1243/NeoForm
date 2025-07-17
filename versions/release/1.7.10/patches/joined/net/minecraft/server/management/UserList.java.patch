@@ -27,19 +27,3 @@
                  if (userlistentry.func_152640_f() != null) {
                      this.field_152696_d.put(this.func_152681_a((U)userlistentry.func_152640_f()), (T)userlistentry);
                  }
-@@ -177,13 +177,13 @@
-         private Serializer() {
-         }
- 
--        public JsonElement func_152751_a(UserListEntry<U> p_152751_1_, Type p_152751_2_, JsonSerializationContext p_152751_3_) {
-+        public JsonElement serialize(UserListEntry<U> p_152751_1_, Type p_152751_2_, JsonSerializationContext p_152751_3_) {
-             JsonObject jsonobject = new JsonObject();
-             p_152751_1_.func_152641_a(jsonobject);
-             return jsonobject;
-         }
- 
--        public UserListEntry<U> func_152750_a(JsonElement p_152750_1_, Type p_152750_2_, JsonDeserializationContext p_152750_3_) {
-+        public UserListEntry<U> deserialize(JsonElement p_152750_1_, Type p_152750_2_, JsonDeserializationContext p_152750_3_) {
-             if (p_152750_1_.isJsonObject()) {
-                 JsonObject jsonobject = p_152750_1_.getAsJsonObject();
-                 return UserList.this.func_152682_a(jsonobject);

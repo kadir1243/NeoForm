@@ -9,14 +9,3 @@
          Collections.addAll(hashset, Display.getAvailableDisplayModes());
          DisplayMode displaymode = Display.getDesktopDisplayMode();
          if (!hashset.contains(displaymode) && Util.func_110647_a() == Util.EnumOS.OSX) {
-@@ -1931,8 +1931,8 @@
-                 return b0 + " (" + i + " bytes; " + j + " MB) allocated, " + b1 + " (" + k + " bytes; " + l + " MB) used";
-             }
-         });
--        p_71396_1_.func_85056_g().func_71500_a("Anisotropic Filtering", new Callable() {
--            public String func_152388_a() {
-+        p_71396_1_.func_85056_g().func_71500_a("Anisotropic Filtering", new Callable<String>() {
-+            public String call() {
-                 return Minecraft.this.field_71474_y.field_151443_J == 1 ? "Off (1)" : "On (" + Minecraft.this.field_71474_y.field_151443_J + ")";
-             }
-         });

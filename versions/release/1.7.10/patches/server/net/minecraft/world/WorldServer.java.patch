@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/WorldServer.java
++++ b/net/minecraft/world/WorldServer.java
+@@ -168,7 +168,7 @@
+     }
+ 
+     public BiomeGenBase.SpawnListEntry func_73057_a(EnumCreatureType p_73057_1_, int p_73057_2_, int p_73057_3_, int p_73057_4_) {
+-        List list = this.func_72863_F().func_73155_a(p_73057_1_, p_73057_2_, p_73057_3_, p_73057_4_);
++        List<BiomeGenBase.SpawnListEntry> list = this.func_72863_F().func_73155_a(p_73057_1_, p_73057_2_, p_73057_3_, p_73057_4_);
+         return list != null && !list.isEmpty() ? WeightedRandom.func_76271_a(this.field_73012_v, list) : null;
+     }
+ 

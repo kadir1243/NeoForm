@@ -36,21 +36,3 @@
          synchronized (this.field_152663_e) {
              arraylist1 = Lists.newArrayList(Iterators.limit(this.field_152663_e.iterator(), p_152656_1_));
          }
-@@ -267,7 +267,7 @@
-         private Serializer() {
-         }
- 
--        public JsonElement func_152676_a(PlayerProfileCache.ProfileEntry p_152676_1_, Type p_152676_2_, JsonSerializationContext p_152676_3_) {
-+        public JsonElement serialize(PlayerProfileCache.ProfileEntry p_152676_1_, Type p_152676_2_, JsonSerializationContext p_152676_3_) {
-             JsonObject jsonobject = new JsonObject();
-             jsonobject.addProperty("name", p_152676_1_.func_152668_a().getName());
-             UUID uuid = p_152676_1_.func_152668_a().getId();
-@@ -276,7 +276,7 @@
-             return jsonobject;
-         }
- 
--        public PlayerProfileCache.ProfileEntry func_152675_a(JsonElement p_152675_1_, Type p_152675_2_, JsonDeserializationContext p_152675_3_) {
-+        public PlayerProfileCache.ProfileEntry deserialize(JsonElement p_152675_1_, Type p_152675_2_, JsonDeserializationContext p_152675_3_) {
-             if (p_152675_1_.isJsonObject()) {
-                 JsonObject jsonobject = p_152675_1_.getAsJsonObject();
-                 JsonElement jsonelement = jsonobject.get("name");
