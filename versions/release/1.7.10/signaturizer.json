@@ -848,7 +848,7 @@
     "methods": [
       {
         "name": "<init>",
-        "descriptor": "Lnet/minecraft/item/ItemStack;(Ljava/util/List;)V",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Ljava/util/List;)V",
         "signature": "(Lnet/minecraft/item/ItemStack;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
       }
     ]
@@ -1616,6 +1616,16 @@
         "name": "func_77834_f",
         "descriptor": "(I)Ljava/util/List;",
         "signature": "(I)Ljava/util/List<Lnet/minecraft/potion/PotionEffect;>;"
+      },
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      },
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
       }
     ],
     "fields": [
@@ -2346,6 +2356,23 @@
         "name": "field_74516_a",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/client/settings/KeyBinding;>;"
+      },
+      {
+        "name": "field_74514_b",
+        "descriptor": "Lnet/minecraft/util/IntHashMap;",
+        "signature": "Lnet/minecraft/util/IntHashMap<Lnet/minecraft/client/settings/KeyBinding;>;"
+      },
+      {
+        "name": "field_151473_c",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Ljava/lang/String;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_151467_c",
+        "descriptor": "()Ljava/util/Set;",
+        "signature": "()Ljava/util/Set<Ljava/lang/String;>;"
       }
     ]
   },
@@ -4585,6 +4612,247 @@
         "name": "func_149666_a",
         "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
         "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemCoal",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemRecord",
+    "methods": [
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_150928_b",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/item/ItemRecord;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemFishFood",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemMap",
+    "methods": [
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemEditableBook",
+    "methods": [
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemSkull",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemEnchantedBook",
+    "methods": [
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
+      },
+      {
+        "name": "func_92113_a",
+        "descriptor": "(Lnet/minecraft/enchantment/Enchantment;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/enchantment/Enchantment;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemFirework",
+    "methods": [
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemFireworkCharge",
+    "methods": [
+      {
+        "name": "func_77624_a",
+        "descriptor": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List;Z)V",
+        "signature": "(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Ljava/util/List<Ljava/lang/String;>;Z)V"
+      },
+      {
+        "name": "func_150902_a",
+        "descriptor": "(Lnet/minecraft/nbt/NBTTagCompound;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/nbt/NBTTagCompound;Ljava/util/List<Ljava/lang/String;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemBlock",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemAppleGold",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemMonsterPlacer",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemStack",
+    "methods": [
+      {
+        "name": "func_82840_a",
+        "descriptor": "(Lnet/minecraft/entity/player/EntityPlayer;Z)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/entity/player/EntityPlayer;Z)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_111283_C",
+        "descriptor": "()Lcom/google/common/collect/Multimap;",
+        "signature": "()Lcom/google/common/collect/Multimap<Ljava/lang/String;Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemDye",
+    "methods": [
+      {
+        "name": "func_150895_a",
+        "descriptor": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemSword",
+    "methods": [
+      {
+        "name": "func_111205_h",
+        "descriptor": "()Lcom/google/common/collect/Multimap;",
+        "signature": "()Lcom/google/common/collect/Multimap<Ljava/lang/String;Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemTool",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(FLnet/minecraft/item/Item$ToolMaterial;Ljava/util/Set;)V",
+        "signature": "(FLnet/minecraft/item/Item$ToolMaterial;Ljava/util/Set<Lnet/minecraft/block/Block;>;)V"
+      },
+      {
+        "name": "func_111205_h",
+        "descriptor": "()Lcom/google/common/collect/Multimap;",
+        "signature": "()Lcom/google/common/collect/Multimap<Ljava/lang/String;Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_150914_c",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/block/Block;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemAxe",
+    "fields": [
+      {
+        "name": "field_150917_c",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/block/Block;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemSpade",
+    "fields": [
+      {
+        "name": "field_150916_c",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/block/Block;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemPickaxe",
+    "fields": [
+      {
+        "name": "field_150915_c",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/block/Block;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/item/ItemHangingEntity",
+    "fields": [
+      {
+        "name": "field_82811_a",
+        "descriptor": "Ljava/lang/Class;",
+        "signature": "Ljava/lang/Class<+Lnet/minecraft/entity/EntityHanging;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Class;)V",
+        "signature": "(Ljava/lang/Class<+Lnet/minecraft/entity/EntityHanging;>;)V"
       }
     ]
   }

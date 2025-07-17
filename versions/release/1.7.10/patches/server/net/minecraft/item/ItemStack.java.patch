@@ -1,12 +1,10 @@
 --- a/net/minecraft/item/ItemStack.java
 +++ b/net/minecraft/item/ItemStack.java
-@@ -463,8 +463,8 @@
-         this.field_77990_d.func_74768_a("RepairCost", p_82841_1_);
+@@ -464,7 +464,7 @@
      }
  
--    public Multimap func_111283_C() {
+     public Multimap<String, AttributeModifier> func_111283_C() {
 -        Object object;
-+    public Multimap<String, AttributeModifier> func_111283_C() {
 +        Multimap<String, AttributeModifier> object;
          if (this.func_77942_o() && this.field_77990_d.func_150297_b("AttributeModifiers", 9)) {
              object = HashMultimap.create();

@@ -20,7 +20,7 @@
                  if (Potion.field_76425_a[potioneffect.func_76456_a()].func_76403_b()) {
 @@ -212,13 +212,13 @@
      @Override
-     public void func_77624_a(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List p_77624_3_, boolean p_77624_4_) {
+     public void func_77624_a(ItemStack p_77624_1_, EntityPlayer p_77624_2_, List<String> p_77624_3_, boolean p_77624_4_) {
          if (p_77624_1_.func_77960_j() != 0) {
 -            List list = Items.field_151068_bn.func_77832_l(p_77624_1_);
 -            HashMultimap hashmultimap = HashMultimap.create();
