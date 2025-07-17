@@ -36,13 +36,11 @@
              if (map.size() <= 0) {
                  throw new CommandException("commands.scoreboard.players.list.player.empty", s);
              }
-@@ -657,8 +657,8 @@
-         }
+@@ -658,7 +658,7 @@
      }
  
--    protected List func_147184_a(boolean p_147184_1_) {
+     protected List<String> func_147184_a(boolean p_147184_1_) {
 -        Collection collection = this.func_147192_d().func_96514_c();
-+    protected List<String> func_147184_a(boolean p_147184_1_) {
 +        Collection<ScoreObjective> collection = this.func_147192_d().func_96514_c();
          ArrayList arraylist = new ArrayList();
  

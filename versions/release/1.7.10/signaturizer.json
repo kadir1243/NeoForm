@@ -478,6 +478,11 @@
         "name": "func_71514_a",
         "descriptor": "()Ljava/util/List;",
         "signature": "()Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
       }
     ]
   },
@@ -488,6 +493,26 @@
         "name": "func_71514_a",
         "descriptor": "()Ljava/util/List;",
         "signature": "()Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_71531_a",
+        "descriptor": "([Ljava/lang/String;Ljava/lang/Iterable;)Ljava/util/List;",
+        "signature": "([Ljava/lang/String;Ljava/lang/Iterable<Ljava/lang/String;>;)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_71530_a",
+        "descriptor": "([Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "([Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_96333_a",
+        "descriptor": "(Ljava/util/Collection;)Ljava/lang/String;",
+        "signature": "(Ljava/util/Collection<Ljava/lang/String;>;)Ljava/lang/String;"
       }
     ]
   },
@@ -508,6 +533,11 @@
         "name": "func_71514_a",
         "descriptor": "()Ljava/util/List;",
         "signature": "()Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
       }
     ]
   },
@@ -850,16 +880,6 @@
         "name": "<init>",
         "descriptor": "(Lnet/minecraft/item/ItemStack;Ljava/util/List;)V",
         "signature": "(Lnet/minecraft/item/ItemStack;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
-      }
-    ]
-  },
-  {
-    "className": "net/minecraft/command/CommandBase",
-    "methods": [
-      {
-        "name": "func_71531_a",
-        "descriptor": "([Ljava/lang/String;Ljava/lang/Iterable;)Ljava/util/List;",
-        "signature": "([Ljava/lang/String;Ljava/lang/Iterable<Ljava/lang/String;>;)Ljava/util/List<Ljava/lang/String;>;"
       }
     ]
   },
@@ -5308,5 +5328,326 @@
         "signature": "(Lnet/minecraft/world/World;Ljava/util/List<Lnet/minecraft/tileentity/TileEntity;>;IIII)V"
       }
     ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandSummon",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandPardonIp",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandBroadcast",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandTestForBlock",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandAchievement",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandGameRule",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandSetSpawnpoint",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandSetBlock",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandListBans",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandDebug",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandTeleport",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandScoreboard",
+    "methods": [
+      {
+        "name": "func_147184_a",
+        "descriptor": "(Z)Ljava/util/List;",
+        "signature": "(Z)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandGive",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandTime",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandPardonPlayer",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandXP",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandDeOp",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandMessageRaw",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandWeather",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandGameMode",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandEmote",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandDifficulty",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandWhitelist",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandOp",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandBanIp",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandEffect",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandClearInventory",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/server/CommandBanPlayer",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandEnchant",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/command/CommandServerKick",
+    "methods": [
+      {
+        "name": "func_71516_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
   }
 ]
