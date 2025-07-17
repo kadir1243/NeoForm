@@ -5110,5 +5110,81 @@
         "signature": "Ljava/util/List<Ljava/lang/String;>;"
       }
     ]
+  },
+  {
+    "className": "net/minecraft/util/LongHashMap",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;",
+    "fields": [
+      {
+        "name": "field_76169_a",
+        "descriptor": "[Lnet/minecraft/util/LongHashMap$Entry;",
+        "signature": "[Lnet/minecraft/util/LongHashMap$Entry<TT;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_76159_d",
+        "descriptor": "(J)Ljava/lang/Object;",
+        "signature": "(J)TT;"
+      },
+      {
+        "name": "func_76154_a",
+        "descriptor": "([Lnet/minecraft/util/LongHashMap$Entry;)V",
+        "signature": "([Lnet/minecraft/util/LongHashMap$Entry<TT;>;)V"
+      },
+      {
+        "name": "func_76163_a",
+        "descriptor": "(JLjava/lang/Object;)V",
+        "signature": "(JTT;)V"
+      },
+      {
+        "name": "func_76156_a",
+        "descriptor": "(IJLjava/lang/Object;I)V",
+        "signature": "(IJTT;I)V"
+      },
+      {
+        "name": "func_76164_a",
+        "descriptor": "(J)Ljava/lang/Object;",
+        "signature": "(J)TT;"
+      },
+      {
+        "name": "func_76160_c",
+        "descriptor": "(J)Lnet/minecraft/util/LongHashMap$Entry;",
+        "signature": "(J)Lnet/minecraft/util/LongHashMap$Entry<TT;>;"
+      },
+      {
+        "name": "func_76152_e",
+        "descriptor": "(J)Lnet/minecraft/util/LongHashMap$Entry;",
+        "signature": "(J)Lnet/minecraft/util/LongHashMap$Entry<TT;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/LongHashMap$Entry",
+    "signature": "<T:Ljava/lang/Object;>Ljava/lang/Object;",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(IJLjava/lang/Object;Lnet/minecraft/util/LongHashMap$Entry;)V",
+        "signature": "(IJTT;Lnet/minecraft/util/LongHashMap$Entry<TT;>;)V"
+      },
+      {
+        "name": "func_76145_b",
+        "descriptor": "()Ljava/lang/Object;",
+        "signature": "()TT;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_76149_c",
+        "descriptor": "Lnet/minecraft/util/LongHashMap$Entry;",
+        "signature": "Lnet/minecraft/util/LongHashMap$Entry<TT;>;"
+      },
+      {
+        "name": "field_76148_b",
+        "descriptor": "Ljava/lang/Object;",
+        "signature": "TT;"
+      }
+    ]
   }
 ]

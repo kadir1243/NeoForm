@@ -1,0 +1,20 @@
+--- a/net/minecraft/util/LongHashMap.java
++++ b/net/minecraft/util/LongHashMap.java
+@@ -32,7 +32,7 @@
+     public T func_76164_a(long p_76164_1_) {
+         int i = func_76155_g(p_76164_1_);
+ 
+-        for (LongHashMap.Entry longhashmap$entry = this.field_76169_a[func_76158_a(i, this.field_76169_a.length)];
++        for (LongHashMap.Entry<T> longhashmap$entry = this.field_76169_a[func_76158_a(i, this.field_76169_a.length)];
+             longhashmap$entry != null;
+             longhashmap$entry = longhashmap$entry.field_76149_c
+         ) {
+@@ -115,7 +115,7 @@
+     }
+ 
+     public T func_76159_d(long p_76159_1_) {
+-        LongHashMap.Entry longhashmap$entry = this.func_76152_e(p_76159_1_);
++        LongHashMap.Entry<T> longhashmap$entry = this.func_76152_e(p_76159_1_);
+         return longhashmap$entry == null ? null : longhashmap$entry.field_76148_b;
+     }
+ 
