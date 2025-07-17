@@ -146,7 +146,7 @@
     "className": "net/minecraft/inventory/ICrafting",
     "methods": [
       {
-        "name": "field_148330_a",
+        "name": "func_71110_a",
         "descriptor": "(Lnet/minecraft/inventory/Container;Ljava/util/List;)V",
         "signature": "(Lnet/minecraft/inventory/Container;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
       }
@@ -955,6 +955,18 @@
         "descriptor": "(Ljava/util/List;)V",
         "signature": "(Ljava/util/List<Lnet/minecraft/client/network/LanServerDetector$LanServer;>;)V"
       }
+    ],
+    "fields": [
+      {
+        "name": "field_148198_l",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/gui/GuiListExtended$IGuiListEntry;>;"
+      },
+      {
+        "name": "field_148199_m",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/gui/GuiListExtended$IGuiListEntry;>;"
+      }
     ]
   },
   {
@@ -1034,6 +1046,11 @@
         "name": "field_146412_t",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_152175_f",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Ljava/lang/String;>;"
       }
     ]
   },
@@ -1059,6 +1076,13 @@
         "name": "field_152327_i",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/util/ChatComponentTranslation;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/gui/stream/GuiStreamUnavailable$Reason;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/gui/stream/GuiStreamUnavailable$Reason;Ljava/util/List<Lnet/minecraft/util/ChatComponentTranslation;>;)V"
       }
     ]
   },
@@ -1243,6 +1267,13 @@
         "name": "func_146421_a",
         "descriptor": "(Ljava/lang/String;Lnet/minecraft/item/Item;Lnet/minecraft/world/biome/BiomeGenBase;Ljava/util/List;[Lnet/minecraft/world/gen/FlatLayerInfo;)V",
         "signature": "(Ljava/lang/String;Lnet/minecraft/item/Item;Lnet/minecraft/world/biome/BiomeGenBase;Ljava/util/List<Ljava/lang/String;>;[Lnet/minecraft/world/gen/FlatLayerInfo;)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_146431_f",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/gui/GuiFlatPresets$LayerItem;>;"
       }
     ]
   },
@@ -2721,6 +2752,26 @@
         "name": "field_148625_l",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/client/audio/ITickableSound;>;"
+      },
+      {
+        "name": "field_148626_m",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/client/audio/ISound;Ljava/lang/Integer;>;"
+      },
+      {
+        "name": "field_148627_j",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/client/audio/ISound;Lnet/minecraft/client/audio/SoundPoolEntry;>;"
+      },
+      {
+        "name": "field_148630_i",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/client/audio/ISound;Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_148624_n",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;"
       }
     ]
   },
@@ -4853,6 +4904,210 @@
         "name": "<init>",
         "descriptor": "(Ljava/lang/Class;)V",
         "signature": "(Ljava/lang/Class<+Lnet/minecraft/entity/EntityHanging;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/achievement/GuiStats$Stats",
+    "fields": [
+      {
+        "name": "field_148219_m",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/stats/StatCrafting;>;"
+      },
+      {
+        "name": "field_148216_n",
+        "descriptor": "Ljava/util/Comparator;",
+        "signature": "Ljava/util/Comparator<Lnet/minecraft/stats/StatCrafting;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/achievement/GuiStats$StatsMobsList",
+    "fields": [
+      {
+        "name": "field_148222_l",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/entity/EntityList$EntityEggInfo;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/inventory/CreativeCrafting",
+    "methods": [
+      {
+        "name": "func_71110_a",
+        "descriptor": "(Lnet/minecraft/inventory/Container;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/inventory/Container;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/entity/player/EntityPlayerMP",
+    "methods": [
+      {
+        "name": "func_71110_a",
+        "descriptor": "(Lnet/minecraft/inventory/Container;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/inventory/Container;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiRepair",
+    "methods": [
+      {
+        "name": "func_71110_a",
+        "descriptor": "(Lnet/minecraft/inventory/Container;Ljava/util/List;)V",
+        "signature": "(Lnet/minecraft/inventory/Container;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/inventory/GuiContainerCreative",
+    "fields": [
+      {
+        "name": "field_147063_B",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/inventory/Slot;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiLabel",
+    "fields": [
+      {
+        "name": "field_146173_k",
+        "descriptor": "Ljava/util/ArrayList;",
+        "signature": "Ljava/util/ArrayList<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiLanguage$List",
+    "fields": [
+      {
+        "name": "field_148176_l",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_148177_m",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/client/resources/Language;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiOptionsRowList",
+    "fields": [
+      {
+        "name": "field_148184_k",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/gui/GuiOptionsRowList$Row;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiNewChat",
+    "fields": [
+      {
+        "name": "field_146252_h",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/gui/ChatLine;>;"
+      },
+      {
+        "name": "field_146248_g",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_146253_i",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/gui/ChatLine;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_146238_c",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiResourcePackList",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/client/Minecraft;IILjava/util/List;)V",
+        "signature": "(Lnet/minecraft/client/Minecraft;IILjava/util/List<Lnet/minecraft/client/resources/ResourcePackListEntry;>;)V"
+      },
+      {
+        "name": "func_148201_l",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/client/resources/ResourcePackListEntry;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_148204_l",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/client/resources/ResourcePackListEntry;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiResourcePackSelected",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/client/Minecraft;IILjava/util/List;)V",
+        "signature": "(Lnet/minecraft/client/Minecraft;IILjava/util/List<Lnet/minecraft/client/resources/ResourcePackListEntry;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiResourcePackAvailable",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/client/Minecraft;IILjava/util/List;)V",
+        "signature": "(Lnet/minecraft/client/Minecraft;IILjava/util/List<Lnet/minecraft/client/resources/ResourcePackListEntry;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiSelectWorld",
+    "fields": [
+      {
+        "name": "field_146639_s",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/storage/SaveFormatComparator;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiSnooper",
+    "fields": [
+      {
+        "name": "field_146604_g",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_146609_h",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Ljava/lang/String;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiWinGame",
+    "fields": [
+      {
+        "name": "field_146582_i",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Ljava/lang/String;>;"
       }
     ]
   }
