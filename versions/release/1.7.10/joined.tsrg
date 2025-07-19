@@ -41062,7 +41062,7 @@ o net/minecraft/crash/CrashReportCategory$Entry
 	b ()Ljava/lang/String; func_85090_b
 oa net/minecraft/server/management/PreYggdrasilConverter$1
 	<init> ()V <init>
-	a (Ljava/lang/String;)Z func_152733_a
+	a (Ljava/lang/String;)Z apply
 		0 o p_152733_1_
 	apply (Ljava/lang/Object;)Z apply
 		0 o p_apply_1_

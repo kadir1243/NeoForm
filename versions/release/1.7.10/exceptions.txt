@@ -52,7 +52,6 @@ net/minecraft/client/shader/ShaderLoader/func_148057_a (Lnet/minecraft/client/re
 net/minecraft/client/shader/ShaderManager/<init> (Lnet/minecraft/client/resources/IResourceManager;Ljava/lang/String;)V net/minecraft/client/util/JsonException
 net/minecraft/client/shader/ShaderManager/func_147987_b (Lcom/google/gson/JsonElement;)V net/minecraft/client/util/JsonException
 net/minecraft/client/stream/IngestServerTester/finalize ()V java/lang/Throwable
-net/minecraft/crash/CrashReport$8/call ()Ljava/lang/String; java/lang/SecurityException java/lang/NoSuchFieldException java/lang/IllegalAccessException java/lang/IllegalArgumentException
 net/minecraft/entity/DataWatcher/func_151507_a (Ljava/util/List;Lnet/minecraft/network/PacketBuffer;)V java/io/IOException
 net/minecraft/entity/DataWatcher/func_151508_b (Lnet/minecraft/network/PacketBuffer;)Ljava/util/List; java/io/IOException
 net/minecraft/entity/DataWatcher/func_151509_a (Lnet/minecraft/network/PacketBuffer;)V java/io/IOException

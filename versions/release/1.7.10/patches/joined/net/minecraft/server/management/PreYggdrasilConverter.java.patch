@@ -3,23 +3,12 @@
 @@ -42,7 +42,7 @@
  
      @OnlyIn(Dist.DEDICATED_SERVER)
-     static List func_152721_a(File p_152721_0_, Map p_152721_1_) throws IOException {
+     static List<String> func_152721_a(File p_152721_0_, Map<String, String[]> p_152721_1_) throws IOException {
 -        List list = Files.readLines(p_152721_0_, Charsets.UTF_8);
 +        List<String> list = Files.readLines(p_152721_0_, Charsets.UTF_8);
  
          for (String s : list) {
              s = s.trim();
-@@ -56,8 +56,8 @@
-     }
- 
-     private static void func_152717_a(MinecraftServer p_152717_0_, Collection p_152717_1_, ProfileLookupCallback p_152717_2_) {
--        String[] astring = Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate() {
--            public boolean func_152733_a(String p_152733_1_) {
-+        String[] astring = Iterators.toArray(Iterators.filter(p_152717_1_.iterator(), new Predicate<String>() {
-+            public boolean apply(String p_152733_1_) {
-                 return !StringUtils.func_151246_b(p_152733_1_);
-             }
-         }), String.class);
 @@ -144,7 +144,7 @@
              }
  

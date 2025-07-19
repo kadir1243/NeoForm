@@ -46,7 +46,14 @@
   },
   {
     "className": "net/minecraft/network/NettyEncryptingDecoder",
-    "signature": "Lio/netty/handler/codec/MessageToMessageDecoder<Lio/netty/buffer/ByteBuf;>;"
+    "signature": "Lio/netty/handler/codec/MessageToMessageDecoder<Lio/netty/buffer/ByteBuf;>;",
+    "methods": [
+      {
+        "name": "decode",
+        "descriptor": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V",
+        "signature": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List<Ljava/lang/Object;>;)V"
+      }
+    ]
   },
   {
     "className": "net/minecraft/network/NettyEncryptingEncoder",
@@ -292,6 +299,11 @@
         "name": "field_96542_e",
         "descriptor": "Ljava/util/Map;",
         "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/scoreboard/ScorePlayerTeam;>;"
+      },
+      {
+        "name": "field_96540_f",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/scoreboard/ScorePlayerTeam;>;"
       }
     ],
     "methods": [
@@ -472,6 +484,11 @@
         "name": "field_73248_b",
         "descriptor": "Ljava/util/Set;",
         "signature": "Ljava/util/Set<Ljava/lang/Long;>;"
+      },
+      {
+        "name": "field_73244_f",
+        "descriptor": "Lnet/minecraft/util/LongHashMap;",
+        "signature": "Lnet/minecraft/util/LongHashMap<Lnet/minecraft/world/chunk/Chunk;>;"
       }
     ],
     "methods": [
@@ -730,7 +747,7 @@
       {
         "name": "func_82449_a",
         "descriptor": "(Lnet/minecraft/util/ChunkCoordinates;IIIIIILjava/util/Map;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/World;)Ljava/util/List;",
-        "signature": "(Lnet/minecraft/util/ChunkCoordinates;IIIIIILjava/util/Map;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/World;)Ljava/util/List<Lnet/minecraft/entity/player/EntityPlayerMP;>;"
+        "signature": "(Lnet/minecraft/util/ChunkCoordinates;IIIIIILjava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/World;)Ljava/util/List<Lnet/minecraft/entity/player/EntityPlayerMP;>;"
       }
     ],
     "fields": [
@@ -738,6 +755,11 @@
         "name": "field_72404_b",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/entity/player/EntityPlayerMP;>;"
+      },
+      {
+        "name": "field_148547_k",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/util/UUID;Lnet/minecraft/stats/StatisticsFile;>;"
       }
     ]
   },
@@ -1072,6 +1094,13 @@
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/crash/CrashReportCategory$Entry;>;"
       }
+    ],
+    "methods": [
+      {
+        "name": "func_71500_a",
+        "descriptor": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+        "signature": "(Ljava/lang/String;Ljava/util/concurrent/Callable<*>;)V"
+      }
     ]
   },
   {
@@ -1230,6 +1259,16 @@
         "name": "field_76203_h",
         "descriptor": "Ljava/util/Map;",
         "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/world/storage/MapData$MapCoord;>;"
+      },
+      {
+        "name": "field_76202_j",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/storage/MapData$MapInfo;>;"
+      },
+      {
+        "name": "field_76196_g",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/storage/MapData$MapInfo;>;"
       }
     ]
   },
@@ -1384,6 +1423,16 @@
         "name": "func_75813_a",
         "descriptor": "(Ljava/io/File;Ljava/lang/Iterable;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V",
         "signature": "(Ljava/io/File;Ljava/lang/Iterable<Ljava/io/File;>;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V"
+      },
+      {
+        "name": "func_75810_a",
+        "descriptor": "(Ljava/io/File;Ljava/util/Collection;)V",
+        "signature": "(Ljava/io/File;Ljava/util/Collection<Ljava/io/File;>;)V"
+      },
+      {
+        "name": "func_75799_b",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/world/storage/SaveFormatComparator;>;"
       }
     ]
   },
@@ -1675,6 +1724,11 @@
         "name": "func_94576_a",
         "descriptor": "(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/command/IEntitySelector;)Ljava/util/List;",
         "signature": "(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/command/IEntitySelector;)Ljava/util/List<Lnet/minecraft/entity/Entity;>;"
+      },
+      {
+        "name": "func_72910_y",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/entity/Entity;>;"
       }
     ]
   },
@@ -1685,6 +1739,33 @@
         "name": "func_72920_a",
         "descriptor": "(Lnet/minecraft/world/chunk/Chunk;Z)Ljava/util/List;",
         "signature": "(Lnet/minecraft/world/chunk/Chunk;Z)Ljava/util/List<Lnet/minecraft/world/NextTickListEntry;>;"
+      },
+      {
+        "name": "func_147486_a",
+        "descriptor": "(IIIIII)Ljava/util/List;",
+        "signature": "(IIIIII)Ljava/util/List<Lnet/minecraft/tileentity/TileEntity;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_73066_T",
+        "descriptor": "Lnet/minecraft/util/IntHashMap;",
+        "signature": "Lnet/minecraft/util/IntHashMap<Lnet/minecraft/entity/Entity;>;"
+      },
+      {
+        "name": "field_94579_S",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/NextTickListEntry;>;"
+      },
+      {
+        "name": "field_73065_O",
+        "descriptor": "Ljava/util/TreeSet;",
+        "signature": "Ljava/util/TreeSet<Lnet/minecraft/world/NextTickListEntry;>;"
+      },
+      {
+        "name": "field_73064_N",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/world/NextTickListEntry;>;"
       }
     ]
   },
@@ -2161,6 +2242,13 @@
         "descriptor": "(Lnet/minecraft/scoreboard/ScoreObjective;)Ljava/util/List;",
         "signature": "(Lnet/minecraft/scoreboard/ScoreObjective;)Ljava/util/List<Lnet/minecraft/network/Packet;>;"
       }
+    ],
+    "fields": [
+      {
+        "name": "field_96553_b",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/scoreboard/ScoreObjective;>;"
+      }
     ]
   },
   {
@@ -2441,6 +2529,23 @@
         "descriptor": "(I)Ljava/util/Collection;",
         "signature": "(I)Ljava/util/Collection<Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;"
       }
+    ],
+    "fields": [
+      {
+        "name": "field_111134_d",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Ljava/util/Set<Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;>;"
+      },
+      {
+        "name": "field_111135_e",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/util/UUID;Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;"
+      },
+      {
+        "name": "field_111137_c",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/Integer;Ljava/util/Set<Lnet/minecraft/entity/ai/attributes/AttributeModifier;>;>;"
+      }
     ]
   },
   {
@@ -2704,6 +2809,13 @@
   {
     "className": "net/minecraft/client/renderer/entity/RenderBiped",
     "signature": "<T:Lnet/minecraft/entity/EntityLiving;>Lnet/minecraft/client/renderer/entity/RenderLiving<TT;>;",
+    "fields": [
+      {
+        "name": "field_110859_k",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/util/ResourceLocation;>;"
+      }
+    ],
     "methods": [
       {
         "name": "func_77032_a",
@@ -3260,10 +3372,6 @@
     "signature": "Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer<Lnet/minecraft/tileentity/TileEntityPiston;>;"
   },
   {
-    "className": "net/minecraft/client/renderer/tileentity/TileEntityRendererPiston",
-    "signature": "Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer<Lnet/minecraft/tileentity/TileEntityPiston;>;"
-  },
-  {
     "className": "net/minecraft/client/renderer/tileentity/TileEntityMobSpawnerRenderer",
     "signature": "Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer<Lnet/minecraft/tileentity/TileEntityMobSpawner;>;"
   },
@@ -3353,7 +3461,14 @@
   },
   {
     "className": "net/minecraft/client/renderer/entity/RenderHorse",
-    "signature": "Lnet/minecraft/client/renderer/entity/RenderLiving<Lnet/minecraft/entity/passive/EntityHorse;>;"
+    "signature": "Lnet/minecraft/client/renderer/entity/RenderLiving<Lnet/minecraft/entity/passive/EntityHorse;>;",
+    "fields": [
+      {
+        "name": "field_110852_a",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/util/ResourceLocation;>;"
+      }
+    ]
   },
   {
     "className": "net/minecraft/client/renderer/entity/RenderIronGolem",
@@ -3614,7 +3729,21 @@
   },
   {
     "className": "net/minecraft/network/play/server/S0FPacketSpawnMob",
-    "signature": "Lnet/minecraft/network/Packet<Lnet/minecraft/network/play/INetHandlerPlayClient;>;"
+    "signature": "Lnet/minecraft/network/Packet<Lnet/minecraft/network/play/INetHandlerPlayClient;>;",
+    "methods": [
+      {
+        "name": "func_149027_c",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/entity/DataWatcher$WatchableObject;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_149044_m",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/entity/DataWatcher$WatchableObject;>;"
+      }
+    ]
   },
   {
     "className": "net/minecraft/network/play/server/S2CPacketSpawnGlobalEntity",
@@ -3699,7 +3828,21 @@
   },
   {
     "className": "net/minecraft/network/play/server/S0CPacketSpawnPlayer",
-    "signature": "Lnet/minecraft/network/Packet<Lnet/minecraft/network/play/INetHandlerPlayClient;>;"
+    "signature": "Lnet/minecraft/network/Packet<Lnet/minecraft/network/play/INetHandlerPlayClient;>;",
+    "methods": [
+      {
+        "name": "func_148944_c",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/entity/DataWatcher$WatchableObject;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_148958_j",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/entity/DataWatcher$WatchableObject;>;"
+      }
+    ]
   },
   {
     "className": "net/minecraft/network/play/client/C0APacketAnimation",
@@ -5185,6 +5328,18 @@
         "descriptor": "(Lnet/minecraft/inventory/Container;Ljava/util/List;)V",
         "signature": "(Lnet/minecraft/inventory/Container;Ljava/util/List<Lnet/minecraft/item/ItemStack;>;)V"
       }
+    ],
+    "fields": [
+      {
+        "name": "field_71130_g",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Ljava/lang/Integer;>;"
+      },
+      {
+        "name": "field_71129_f",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/ChunkCoordIntPair;>;"
+      }
     ]
   },
   {
@@ -5840,22 +5995,6 @@
     ]
   },
   {
-    "className": "net/minecraft/client/particle/EffectRenderer$1",
-    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
-  },
-  {
-    "className": "net/minecraft/client/particle/EffectRenderer$2",
-    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
-  },
-  {
-    "className": "net/minecraft/client/particle/EffectRenderer$3",
-    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
-  },
-  {
-    "className": "net/minecraft/client/particle/EffectRenderer$4",
-    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
-  },
-  {
     "className": "net/minecraft/client/resources/SkinManager$1",
     "signature": "Lcom/google/common/cache/CacheLoader<Lcom/mojang/authlib/GameProfile;Ljava/util/Map<Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;>;>;",
     "methods": [
@@ -5870,7 +6009,7 @@
     "className": "net/minecraft/client/resources/SkinManager",
     "methods": [
       {
-        "name": "load",
+        "name": "func_152788_a",
         "descriptor": "(Lcom/mojang/authlib/GameProfile;)Ljava/util/Map;",
         "signature": "(Lcom/mojang/authlib/GameProfile;)Ljava/util/Map<Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;>;"
       }
@@ -6107,6 +6246,686 @@
         "name": "func_70971_b",
         "descriptor": "(Ljava/util/List;)V",
         "signature": "(Ljava/util/List<Lnet/minecraft/entity/Entity;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/biome/BiomeGenBase$SpawnListEntry",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Class;III)V",
+        "signature": "(Ljava/lang/Class<+Lnet/minecraft/entity/EntityLiving;>;III)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_76300_b",
+        "descriptor": "Ljava/lang/Class;",
+        "signature": "Ljava/lang/Class<+Lnet/minecraft/entity/EntityLiving;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/layer/IntCache",
+    "fields": [
+      {
+        "name": "field_76449_b",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<[I>;"
+      },
+      {
+        "name": "field_76450_c",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<[I>;"
+      },
+      {
+        "name": "field_76447_d",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<[I>;"
+      },
+      {
+        "name": "field_76448_e",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<[I>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/network/NetworkSystem$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/network/NetHandlerPlayServer$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/nbt/NBTTagCompound$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/nbt/NBTTagCompound$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/entity/Entity$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/entity/player/InventoryPlayer$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/entity/EntityTracker$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/entity/Entity$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$14",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$9",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$12",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/multiplayer/WorldClient$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/multiplayer/WorldClient$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/multiplayer/WorldClient$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/multiplayer/WorldClient$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$5",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$7",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$15",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$11",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/particle/EffectRenderer$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$8",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$6",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/EntityRenderer$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/texture/TextureMap$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/texture/TextureMap$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/texture/TextureMap$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/texture/TextureManager$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/texture/TextureAtlasSprite$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/EntityRenderer$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/EntityRenderer$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/entity/RenderItem$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/entity/RenderItem$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/entity/RenderItem$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/entity/RenderItem$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/renderer/RenderGlobal$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$10",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/Minecraft$13",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$7",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReportCategory$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReportCategory$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$6",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$5",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReportCategory$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/crash/CrashReport$8",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/tileentity/TileEntity$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/tileentity/TileEntity$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/tileentity/TileEntity$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/integrated/IntegratedServer$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/integrated/IntegratedServer$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/dedicated/DedicatedServer$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/dedicated/DedicatedServer$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/MinecraftServer$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/MinecraftServer$6",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/server/MinecraftServer$5",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/World$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/chunk/Chunk$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/MapGenStructure$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/MapGenStructure$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/MapGenStructure$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/gen/layer/GenLayer$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/gen/layer/GenLayer$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$8",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$6",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$7",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$5",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$9",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/storage/WorldInfo$4",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/World$3",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/World$1",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/world/World$2",
+    "signature": "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/inventory/InventoryBasic",
+    "fields": [
+      {
+        "name": "field_70480_d",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/inventory/IInvBasic;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/MessageDeserializer",
+    "methods": [
+      {
+        "name": "decode",
+        "descriptor": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V",
+        "signature": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List<Ljava/lang/Object;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/MessageDeserializer2",
+    "methods": [
+      {
+        "name": "decode",
+        "descriptor": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V",
+        "signature": "(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List<Ljava/lang/Object;>;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/audio/SoundCategory",
+    "fields": [
+      {
+        "name": "field_147168_j",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/client/audio/SoundCategory;>;"
+      },
+      {
+        "name": "field_147169_k",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/Integer;Lnet/minecraft/client/audio/SoundCategory;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockRedstoneTorch",
+    "fields": [
+      {
+        "name": "field_150112_b",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/world/World;Ljava/util/List<Lnet/minecraft/block/BlockRedstoneTorch$Toggle;>;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/MapGenStructureIO",
+    "methods": [
+      {
+        "name": "func_143031_a",
+        "descriptor": "(Ljava/lang/Class;Ljava/lang/String;)V",
+        "signature": "(Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/lang/String;)V"
+      },
+      {
+        "name": "func_143034_b",
+        "descriptor": "(Ljava/lang/Class;Ljava/lang/String;)V",
+        "signature": "(Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStart;>;Ljava/lang/String;)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_143037_d",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_143038_b",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStart;>;Ljava/lang/String;>;"
+      },
+      {
+        "name": "field_143039_c",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureComponent;>;>;"
+      },
+      {
+        "name": "field_143040_a",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStart;>;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/PreYggdrasilConverter",
+    "methods": [
+      {
+        "name": "func_152721_a",
+        "descriptor": "(Ljava/io/File;Ljava/util/Map;)Ljava/util/List;",
+        "signature": "(Ljava/io/File;Ljava/util/Map<Ljava/lang/String;[Ljava/lang/String;>;)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_152717_a",
+        "descriptor": "(Lnet/minecraft/server/MinecraftServer;Ljava/util/Collection;Lcom/mojang/authlib/ProfileLookupCallback;)V",
+        "signature": "(Lnet/minecraft/server/MinecraftServer;Ljava/util/Collection<Ljava/lang/String;>;Lcom/mojang/authlib/ProfileLookupCallback;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/server/management/PreYggdrasilConverter$1",
+    "signature": "Ljava/lang/Object;Lcom/google/common/base/Predicate<Ljava/lang/String;>;"
+  },
+  {
+    "className": "net/minecraft/client/resources/data/LanguageMetadataSectionSerializer",
+    "signature": "Lnet/minecraft/client/resources/data/BaseMetadataSectionSerializer<Lnet/minecraft/client/resources/data/LanguageMetadataSection;>;"
+  },
+  {
+    "className": "net/minecraft/client/resources/data/FontMetadataSectionSerializer",
+    "signature": "Lnet/minecraft/client/resources/data/BaseMetadataSectionSerializer<Lnet/minecraft/client/resources/data/FontMetadataSection;>;"
+  },
+  {
+    "className": "net/minecraft/client/resources/data/TextureMetadataSectionSerializer",
+    "signature": "Lnet/minecraft/client/resources/data/BaseMetadataSectionSerializer<Lnet/minecraft/client/resources/data/TextureMetadataSection;>;"
+  },
+  {
+    "className": "net/minecraft/client/resources/data/IMetadataSerializer$Registration",
+    "signature": "<T::Lnet/minecraft/client/resources/data/IMetadataSection;>Ljava/lang/Object;",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/client/resources/data/IMetadataSerializer;Lnet/minecraft/client/resources/data/IMetadataSectionSerializer;Ljava/lang/Class;)V",
+        "signature": "(Lnet/minecraft/client/resources/data/IMetadataSectionSerializer<TT;>;Ljava/lang/Class<TT;>;)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_110502_a",
+        "descriptor": "Lnet/minecraft/client/resources/data/IMetadataSectionSerializer;",
+        "signature": "Lnet/minecraft/client/resources/data/IMetadataSectionSerializer<TT;>;"
+      },
+      {
+        "name": "field_110500_b",
+        "descriptor": "Ljava/lang/Class;",
+        "signature": "Ljava/lang/Class<TT;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/client/resources/data/IMetadataSerializer",
+    "methods": [
+      {
+        "name": "func_110504_a",
+        "descriptor": "(Lnet/minecraft/client/resources/data/IMetadataSectionSerializer;Ljava/lang/Class;)V",
+        "signature": "<T::Lnet/minecraft/client/resources/data/IMetadataSection;>(Lnet/minecraft/client/resources/data/IMetadataSectionSerializer<TT;>;Ljava/lang/Class<TT;>;)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_110508_a",
+        "descriptor": "Lnet/minecraft/util/IRegistry;",
+        "signature": "Lnet/minecraft/util/IRegistry<Ljava/lang/String;Lnet/minecraft/client/resources/data/IMetadataSerializer$Registration<*>;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/chunk/storage/AnvilChunkLoader",
+    "fields": [
+      {
+        "name": "field_75828_a",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/chunk/storage/AnvilChunkLoader$PendingChunk;>;"
+      },
+      {
+        "name": "field_75826_b",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/world/ChunkCoordIntPair;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/biome/BiomeCache",
+    "fields": [
+      {
+        "name": "field_76843_c",
+        "descriptor": "Lnet/minecraft/util/LongHashMap;",
+        "signature": "Lnet/minecraft/util/LongHashMap<Lnet/minecraft/world/biome/BiomeCache$Block;>;"
+      },
+      {
+        "name": "field_76841_d",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeCache$Block;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/biome/WorldChunkManager",
+    "methods": [
+      {
+        "name": "func_150795_a",
+        "descriptor": "(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;",
+        "signature": "(IIILjava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;"
+      },
+      {
+        "name": "func_76932_a",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;"
+      },
+      {
+        "name": "func_76940_a",
+        "descriptor": "(IIILjava/util/List;)Z",
+        "signature": "(IIILjava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;)Z"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_76943_g",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/biome/WorldChunkManagerHell",
+    "methods": [
+      {
+        "name": "func_150795_a",
+        "descriptor": "(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;",
+        "signature": "(IIILjava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;"
+      },
+      {
+        "name": "func_76940_a",
+        "descriptor": "(IIILjava/util/List;)Z",
+        "signature": "(IIILjava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;)Z"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/storage/ThreadedFileIOBase",
+    "fields": [
+      {
+        "name": "field_75739_b",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/storage/IThreadedFileIO;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/block/BlockRedstoneWire",
+    "fields": [
+      {
+        "name": "field_150179_b",
+        "descriptor": "Ljava/util/Set;",
+        "signature": "Ljava/util/Set<Lnet/minecraft/world/ChunkPosition;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/util/Session$Type",
+    "fields": [
+      {
+        "name": "field_152425_c",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/util/Session$Type;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/network/rcon/RConThreadQuery",
+    "fields": [
+      {
+        "name": "field_72641_s",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/net/SocketAddress;Lnet/minecraft/network/rcon/RConThreadQuery$Auth;>;"
+      },
+      {
+        "name": "field_72644_p",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<**>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/network/rcon/RConThreadMain",
+    "fields": [
+      {
+        "name": "field_72648_l",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/net/SocketAddress;Lnet/minecraft/network/rcon/RConThreadClient;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/event/HoverEvent$Action",
+    "fields": [
+      {
+        "name": "field_150690_d",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/event/HoverEvent$Action;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/event/ClickEvent$Action",
+    "fields": [
+      {
+        "name": "field_150679_e",
+        "descriptor": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/event/ClickEvent$Action;>;"
       }
     ]
   }
