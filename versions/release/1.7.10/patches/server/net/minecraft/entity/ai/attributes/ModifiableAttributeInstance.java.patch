@@ -4,8 +4,8 @@
          if (this.func_111127_a(p_111121_1_.func_111167_a()) != null) {
              throw new IllegalArgumentException("Modifier is already applied on this attribute!");
          } else {
--            Object object = (Set)this.field_111134_d.get(p_111121_1_.func_111166_b());
-+            Set object = (Set)this.field_111134_d.get(p_111121_1_.func_111166_b());
+-            Object object = this.field_111134_d.get(p_111121_1_.func_111166_b());
++            Set<AttributeModifier> object = this.field_111134_d.get(p_111121_1_.func_111166_b());
              if (object == null) {
                  object = new HashSet();
-                 this.field_111134_d.put(p_111121_1_.func_111166_b(), object);
+                 this.field_111134_d.put(p_111121_1_.func_111166_b(), (Set<AttributeModifier>)object);

@@ -6,7 +6,7 @@
  
 +                                                    EntityLiving entityliving;
                                                      try {
-                                                         entityliving = (EntityLiving)biomegenbase$spawnlistentry.field_76300_b
+                                                         entityliving = biomegenbase$spawnlistentry.field_76300_b
                                                              .getConstructor(World.class)
 @@ -154,7 +155,7 @@
      public static void func_77191_a(

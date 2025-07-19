@@ -233,6 +233,11 @@
         "name": "func_82650_c",
         "descriptor": "()Ljava/util/List;",
         "signature": "()Ljava/util/List<Lnet/minecraft/world/gen/FlatLayerInfo;>;"
+      },
+      {
+        "name": "func_82652_b",
+        "descriptor": "(Ljava/lang/String;)Ljava/util/List;",
+        "signature": "(Ljava/lang/String;)Ljava/util/List<Lnet/minecraft/world/gen/FlatLayerInfo;>;"
       }
     ],
     "fields": [
@@ -1963,6 +1968,13 @@
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureBoundingBox;>;"
       }
+    ],
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
     ]
   },
   {
@@ -1972,6 +1984,28 @@
         "name": "field_75206_c",
         "descriptor": "Ljava/util/List;",
         "signature": "Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$PieceWeight;>;"
+      },
+      {
+        "name": "field_75203_d",
+        "descriptor": "Ljava/lang/Class;",
+        "signature": "Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;>;"
+      }
+    ],
+    "methods": [
+      {
+        "name": "func_75200_a",
+        "descriptor": "(Ljava/lang/Class;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;",
+        "signature": "(Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;>;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;"
+      },
+      {
+        "name": "func_75201_b",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;"
+      },
+      {
+        "name": "func_75196_c",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;"
       }
     ]
   },
@@ -2024,6 +2058,11 @@
         "name": "func_74883_a",
         "descriptor": "(Ljava/util/List;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Lnet/minecraft/world/gen/structure/StructureComponent;",
         "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
       }
     ]
   },
@@ -2095,6 +2134,26 @@
         "name": "func_75079_a",
         "descriptor": "(Ljava/util/List;)I",
         "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureVillagePieces$PieceWeight;>;)I"
+      },
+      {
+        "name": "func_75081_c",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Village;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Village;"
+      },
+      {
+        "name": "func_75083_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Lnet/minecraft/world/gen/structure/StructureVillagePieces$PieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Village;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Lnet/minecraft/world/gen/structure/StructureVillagePieces$PieceWeight;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Village;"
+      },
+      {
+        "name": "func_75077_d",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_75080_e",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;"
       }
     ]
   },
@@ -2253,6 +2312,13 @@
   },
   {
     "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Start",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Lnet/minecraft/world/biome/WorldChunkManager;ILjava/util/Random;IILjava/util/List;I)V",
+        "signature": "(Lnet/minecraft/world/biome/WorldChunkManager;ILjava/util/Random;IILjava/util/List<Lnet/minecraft/world/gen/structure/StructureVillagePieces$PieceWeight;>;I)V"
+      }
+    ],
     "fields": [
       {
         "name": "field_74930_j",
@@ -2283,6 +2349,26 @@
         "name": "func_74959_a",
         "descriptor": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;",
         "signature": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;>;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;"
+      },
+      {
+        "name": "func_74962_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIIIIZ)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIIIZ)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74965_c",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74961_b",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74963_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;"
       }
     ]
   },
@@ -3132,6 +3218,13 @@
         "name": "func_75052_o_",
         "descriptor": "()Ljava/util/List;",
         "signature": "()Ljava/util/List<Lnet/minecraft/world/ChunkPosition;>;"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_151546_e",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/biome/BiomeGenBase;>;"
       }
     ]
   },
@@ -6926,6 +7019,648 @@
         "name": "field_150679_e",
         "descriptor": "Ljava/util/Map;",
         "signature": "Ljava/util/Map<Ljava/lang/String;Lnet/minecraft/event/ClickEvent$Action;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs",
+    "methods": [
+      {
+        "name": "func_75022_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Prison",
+    "methods": [
+      {
+        "name": "func_75016_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Prison;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Prison;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Village",
+    "methods": [
+      {
+        "name": "func_74891_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74894_b",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor4",
+    "methods": [
+      {
+        "name": "func_74985_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor4;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor4;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor2",
+    "methods": [
+      {
+        "name": "func_74980_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor2;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor2;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$House3",
+    "methods": [
+      {
+        "name": "func_74921_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House3;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House3;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureMineshaftPieces",
+    "methods": [
+      {
+        "name": "func_78815_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_78817_b",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold",
+    "methods": [
+      {
+        "name": "func_74986_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74989_b",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      },
+      {
+        "name": "func_74987_c",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing",
+    "methods": [
+      {
+        "name": "func_74974_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces",
+    "methods": [
+      {
+        "name": "func_78738_b",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$RoomCrossing",
+    "methods": [
+      {
+        "name": "func_75012_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$RoomCrossing;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$RoomCrossing;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      },
+      {
+        "name": "func_74978_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Crossing",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      },
+      {
+        "name": "func_74994_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Crossing;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Crossing;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$House4Garden",
+    "methods": [
+      {
+        "name": "func_74912_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House4Garden;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House4Garden;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureMineshaftPieces$Cross",
+    "methods": [
+      {
+        "name": "func_74951_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing3",
+    "methods": [
+      {
+        "name": "func_74966_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing3;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing3;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Straight",
+    "methods": [
+      {
+        "name": "func_75018_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Straight;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Straight;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureMineshaftPieces$Stairs",
+    "methods": [
+      {
+        "name": "func_74950_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$StairsStraight",
+    "methods": [
+      {
+        "name": "func_75028_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$StairsStraight;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$StairsStraight;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$PortalRoom",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      },
+      {
+        "name": "func_75004_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$PortalRoom;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$PortalRoom;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$House2",
+    "methods": [
+      {
+        "name": "func_74915_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House2;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House2;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$LeftTurn",
+    "methods": [
+      {
+        "name": "func_75010_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$LeftTurn;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$LeftTurn;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Torch",
+    "methods": [
+      {
+        "name": "func_74904_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Well",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Straight",
+    "methods": [
+      {
+        "name": "func_74983_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Straight;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Straight;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2",
+    "fields": [
+      {
+        "name": "field_75026_c",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Field2",
+    "methods": [
+      {
+        "name": "func_74902_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Field2;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Field2;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$PieceWeight",
+    "methods": [
+      {
+        "name": "<init>",
+        "descriptor": "(Ljava/lang/Class;II)V",
+        "signature": "(Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;>;II)V"
+      }
+    ],
+    "fields": [
+      {
+        "name": "field_75194_a",
+        "descriptor": "Ljava/lang/Class;",
+        "signature": "Ljava/lang/Class<+Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Throne",
+    "methods": [
+      {
+        "name": "func_74975_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Throne;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Throne;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$RightTurn",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor3",
+    "methods": [
+      {
+        "name": "func_74982_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor3;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor3;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$House1",
+    "methods": [
+      {
+        "name": "func_74898_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House1;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House1;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Church",
+    "methods": [
+      {
+        "name": "func_74919_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Church;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Church;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureMineshaftPieces$Corridor",
+    "methods": [
+      {
+        "name": "func_74954_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Path",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      },
+      {
+        "name": "func_74933_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$End",
+    "methods": [
+      {
+        "name": "func_74971_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$End;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$End;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Field1",
+    "methods": [
+      {
+        "name": "func_74900_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Field1;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Field1;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Stairs",
+    "methods": [
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      },
+      {
+        "name": "func_74973_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Stairs;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Stairs;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$ChestCorridor",
+    "methods": [
+      {
+        "name": "func_75000_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$ChestCorridor;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$ChestCorridor;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$WoodHut",
+    "methods": [
+      {
+        "name": "func_74908_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$WoodHut;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$WoodHut;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$NetherStalkRoom",
+    "methods": [
+      {
+        "name": "func_74977_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$NetherStalkRoom;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$NetherStalkRoom;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureVillagePieces$Hall",
+    "methods": [
+      {
+        "name": "func_74906_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Hall;",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Hall;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Corridor",
+    "methods": [
+      {
+        "name": "func_74992_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor5",
+    "methods": [
+      {
+        "name": "func_74981_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor5;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Corridor5;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Start",
+    "fields": [
+      {
+        "name": "field_74968_b",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;>;"
+      },
+      {
+        "name": "field_74969_c",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;>;"
+      },
+      {
+        "name": "field_74967_d",
+        "descriptor": "Ljava/util/ArrayList;",
+        "signature": "Ljava/util/ArrayList<Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Entrance",
+    "methods": [
+      {
+        "name": "func_74984_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Entrance;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Entrance;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing2",
+    "methods": [
+      {
+        "name": "func_74979_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing2;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Crossing2;"
+      },
+      {
+        "name": "func_74861_a",
+        "descriptor": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V",
+        "signature": "(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/world/gen/structure/StructureStrongholdPieces$Library",
+    "methods": [
+      {
+        "name": "func_75006_a",
+        "descriptor": "(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Library;",
+        "signature": "(Ljava/util/List<Lnet/minecraft/world/gen/structure/StructureComponent;>;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Library;"
       }
     ]
   }

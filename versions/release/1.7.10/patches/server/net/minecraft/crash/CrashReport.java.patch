@@ -1,7 +1,7 @@
 --- a/net/minecraft/crash/CrashReport.java
 +++ b/net/minecraft/crash/CrashReport.java
 @@ -71,7 +71,7 @@
-         this.field_85061_c.func_71500_a("JVM Flags", new Callable() {
+         this.field_85061_c.func_71500_a("JVM Flags", new Callable<String>() {
              public String call() {
                  RuntimeMXBean runtimemxbean = ManagementFactory.getRuntimeMXBean();
 -                List list = runtimemxbean.getInputArguments();
