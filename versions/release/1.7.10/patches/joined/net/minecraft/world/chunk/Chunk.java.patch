@@ -1,0 +1,11 @@
+--- a/net/minecraft/world/chunk/Chunk.java
++++ b/net/minecraft/world/chunk/Chunk.java
+@@ -743,7 +743,7 @@
+                 if (p_76618_1_.isAssignableFrom(entity.getClass())
+                     && entity.field_70121_D.func_72326_a(p_76618_2_)
+                     && (p_76618_4_ == null || p_76618_4_.func_82704_a(entity))) {
+-                    p_76618_3_.add(entity);
++                    p_76618_3_.add((T) entity);
+                 }
+             }
+         }
