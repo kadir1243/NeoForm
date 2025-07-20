@@ -735,6 +735,11 @@
         "name": "func_73122_a",
         "descriptor": "(Ljava/util/List;)V",
         "signature": "(Ljava/util/List<Lnet/minecraft/entity/player/EntityPlayer;>;)V"
+      },
+      {
+        "name": "func_73125_b",
+        "descriptor": "(Ljava/util/List;)V",
+        "signature": "(Ljava/util/List<Lnet/minecraft/entity/player/EntityPlayer;>;)V"
       }
     ]
   },
@@ -1032,6 +1037,16 @@
   {
     "className": "net/minecraft/command/CommandSpreadPlayers",
     "methods": [
+      {
+        "name": "func_110669_a",
+        "descriptor": "(Lnet/minecraft/command/ICommandSender;Ljava/util/List;Lnet/minecraft/command/CommandSpreadPlayers$Position;DDLnet/minecraft/world/World;Z)V",
+        "signature": "(Lnet/minecraft/command/ICommandSender;Ljava/util/List<Lnet/minecraft/entity/EntityLivingBase;>;Lnet/minecraft/command/CommandSpreadPlayers$Position;DDLnet/minecraft/world/World;Z)V"
+      },
+      {
+        "name": "func_110671_a",
+        "descriptor": "(Ljava/util/List;Lnet/minecraft/world/World;[Lnet/minecraft/command/CommandSpreadPlayers$Position;Z)D",
+        "signature": "(Ljava/util/List<Lnet/minecraft/entity/EntityLivingBase;>;Lnet/minecraft/world/World;[Lnet/minecraft/command/CommandSpreadPlayers$Position;Z)D"
+      },
       {
         "name": "func_110667_a",
         "descriptor": "(Ljava/util/List;)I",
@@ -8166,5 +8181,109 @@
         "signature": "Ljava/lang/Class<*>;"
       }
     ]
+  },
+  {
+    "className": "net/minecraft/client/gui/GuiScreenRealmsProxy",
+    "methods": [
+      {
+        "name": "func_154323_a",
+        "descriptor": "(Ljava/lang/String;I)Ljava/util/List;",
+        "signature": "(Ljava/lang/String;I)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "func_154320_j",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/realms/RealmsButton;>;"
+      },
+      {
+        "name": "func_146283_a",
+        "descriptor": "(Ljava/util/List;II)V",
+        "signature": "(Ljava/util/List<Ljava/lang/String;>;II)V"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/realms/RealmsScreen",
+    "methods": [
+      {
+        "name": "fontSplit",
+        "descriptor": "(Ljava/lang/String;I)Ljava/util/List;",
+        "signature": "(Ljava/lang/String;I)Ljava/util/List<Ljava/lang/String;>;"
+      },
+      {
+        "name": "renderTooltip",
+        "descriptor": "(Ljava/util/List;II)V",
+        "signature": "(Ljava/util/List<Ljava/lang/String;>;II)V"
+      },
+      {
+        "name": "buttons",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/realms/RealmsButton;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/realms/RealmsAnvilLevelStorageSource",
+    "methods": [
+      {
+        "name": "getLevelList",
+        "descriptor": "()Ljava/util/List;",
+        "signature": "()Ljava/util/List<Lnet/minecraft/realms/RealmsLevelSummary;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/realms/RealmsServerStatusPinger",
+    "fields": [
+      {
+        "name": "connections",
+        "descriptor": "Ljava/util/List;",
+        "signature": "Ljava/util/List<Lnet/minecraft/network/NetworkManager;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/pathfinding/PathFinder",
+    "fields": [
+      {
+        "name": "field_75867_c",
+        "descriptor": "Lnet/minecraft/util/IntHashMap;",
+        "signature": "Lnet/minecraft/util/IntHashMap<Lnet/minecraft/pathfinding/PathPoint;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/network/NetHandlerPlayServer",
+    "fields": [
+      {
+        "name": "field_147372_n",
+        "descriptor": "Lnet/minecraft/util/IntHashMap;",
+        "signature": "Lnet/minecraft/util/IntHashMap<Ljava/lang/Short;>;"
+      }
+    ]
+  },
+  {
+    "className": "net/minecraft/network/NetworkSystem$4",
+    "signature": "Ljava/lang/Object;Lio/netty/util/concurrent/GenericFutureListener<Lio/netty/util/concurrent/Future<*>;>;"
+  },
+  {
+    "className": "net/minecraft/network/NetworkSystem$1",
+    "signature": "Lio/netty/channel/ChannelInitializer<Lio/netty/channel/Channel;>;"
+  },
+  {
+    "className": "net/minecraft/network/NetHandlerPlayServer$1",
+    "signature": "Ljava/lang/Object;Lio/netty/util/concurrent/GenericFutureListener<Lio/netty/util/concurrent/Future<*>;>;"
+  },
+  {
+    "className": "net/minecraft/client/network/NetHandlerLoginClient$1",
+    "signature": "Ljava/lang/Object;Lio/netty/util/concurrent/GenericFutureListener<Lio/netty/util/concurrent/Future<*>;>;"
+  },
+  {
+    "className": "net/minecraft/client/network/OldServerPinger$2",
+    "signature": "Lio/netty/channel/ChannelInitializer<Lio/netty/channel/Channel;>;"
+  },
+  {
+    "className": "net/minecraft/network/NetworkSystem$1",
+    "signature": "Lio/netty/channel/ChannelInitializer<Lio/netty/channel/Channel;>;"
   }
 ]
